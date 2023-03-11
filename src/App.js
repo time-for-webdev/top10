@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <h1>from paras</h1>
+      <h1>by harsh</h1>
     </div>
   );
 }
