@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Piazzolla:opsz,wght@8..30,100;8..30,200;8..30,300;8..30,400;8..30,500;8..30,600;8..30,700;8..30,800;8..30,900&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+body {
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 1;
+  color: #37474f;
+  background: #fff;
+  font-family: Cabin, Arial, Sans-Serif;
+  font-size: 1rem;
+  direction: ltr;
+}
+* {
+  list-style: none;
+  text-decoration: none;
+}
+a,
+a *,
+a:after,
+a:before {
+  text-decoration: none;
+  transition: 0.2s;
+}
