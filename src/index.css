@@ -3,8 +3,25 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+a,
+a *,
+a:after,
+a:before {
+  text-decoration: none;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
 /* h1 {
   font-family: "Piazzolla", serif;
 }
