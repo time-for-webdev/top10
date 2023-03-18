@@ -1,0 +1,40 @@
+.btm_para {
+  color: #37474f;
+  margin-bottom: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: Cabin, Arial, Sans-Serif;
+  opacity: 0.9;
+}
+.btm_wrap {
+  width: 1170px;
+  margin: 5px auto;
+  margin-top: 36px;
+}
+.btm_wrap img {
+  margin-bottom: 36px;
+  max-width: 100%;
+}
+.updateDate img {
+  width: 12px;
+  margin-bottom: 0;
+}
+
+.updateDate {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 36px;
+}
+.updateDate p {
+  letter-spacing: 0;
+  color: #37474f;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: Cabin, Arial, Sans-Serif;
+  opacity: 0.8;
+}

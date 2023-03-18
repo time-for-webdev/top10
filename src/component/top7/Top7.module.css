@@ -6,7 +6,7 @@
   margin-bottom: 6px;
 }
 .top_wrap {
-  width: 1170px;
+  width: 100%;
   margin: 5px auto;
 }
 .top_wrap p {
@@ -16,7 +16,7 @@
   margin-bottom: 14px;
 }
 .top_wrap ul span img {
-  width: 15px;
+  width: 13px;
 }
 .top_wrap ul span li {
   list-style: none;
@@ -30,5 +30,5 @@
   display: flex;
   gap: 5px;
   align-items: center;
-  margin-bottom: 12px;
+  padding-bottom: 12px;
 }

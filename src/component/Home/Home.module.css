@@ -1,0 +1,16 @@
+.home_container {
+  background: url("../../assects/Home/header_background_blob.svg");
+  background-position: calc(100% - 20px) 200px;
+  background-size: auto 557px;
+  background-repeat: no-repeat;
+}
+.first_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 1170px;
+  margin: 10px auto;
+}
+.first_left {
+  width: 50%;
+}
