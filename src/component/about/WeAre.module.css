@@ -1,0 +1,90 @@
+* {
+    font-family: Arial, Helvetica, Sans-Serif;
+}
+
+.we_are {
+    background-color: #e0f5ff;
+    padding: 20px 0;
+}
+
+.wacontainer {
+    margin: 5.55vw;
+
+}
+
+.waicon {
+    height: 60px;
+}
+
+.wacontent h2 {
+    font-size: 26px;
+    line-height: 200%;
+    font-weight: 700;
+    word-break: break-word;
+    color: #333333
+}
+
+.wacontent p {
+    line-height: 175%;
+    color: #333;
+    font-size: 17px;
+}
+
+.wacontent p span {
+    color: #005eab;
+    font-weight: 700;
+}
+
+.wafirst {
+    border-bottom: 2px solid #c4c4c4;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+}
+
+.wacontainer {
+    display: flex;
+}
+
+.wacontent {
+    display: flex;
+}
+
+.wafirst,
+.wasecond {
+    max-width: 250px;
+    margin-left: 25px;
+    margin-right: 30px;
+}
+
+@media only screen and (max-width:1060px) {
+
+    .wacontainer,
+    .wacontent {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .wafirst,
+    .wasecond {
+        max-width: 500px;
+    }
+
+    .wamap {
+        margin-top: 30px;
+    }
+
+    .wafirst {
+        margin-bottom: 40px;
+
+    }
+
+}
+
+@media only screen and (max-width:690px) {
+    .wamap {
+        width: 330px;
+    }
+
+}
