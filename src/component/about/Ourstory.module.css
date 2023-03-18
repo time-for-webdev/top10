@@ -6,12 +6,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .oscontainer {
     min-height: 190px;
-    margin-left: 5.55vw;
-    margin-right: 5.55vw;
+    width:70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,6 +40,7 @@
 
     .oscontainer {
         font-size: 17px;
+        width:88%;
     }
 
 }

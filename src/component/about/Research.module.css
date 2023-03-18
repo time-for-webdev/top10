@@ -3,15 +3,18 @@
     align-items: center;
     background-color: #e0f5ff;
     padding-bottom: 130px;
+    justify-content: center;
 }
 
 .lab_wrapper {
     display: flex;
-    margin: 6.55vw;
+    margin-top: 6.55vw;
+    margin-bottom: 6.55vw;
+    width:70%;
 }
 
 .lab_img img {
-    width: 400px;
+    width: 325px;
 }
 
 .lab_desc {
@@ -42,6 +45,7 @@
         flex-direction: column;
         align-items: center;
         margin-top: 65px;
+        width:88%;
 
     }
 

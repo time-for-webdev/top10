@@ -1,11 +1,14 @@
 .methodology_block_content {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .methodology_wrapper {
     display: flex;
-    margin: 6.55vw;
+    margin-top: 6.55vw;
+    margin-bottom: 6.55vw;
+    width:70%;
 }
 
 .methodology_img img {
@@ -116,6 +119,7 @@
     .methodology_wrapper {
         flex-direction: column;
         align-items: center;
+        width:88%;
     }
 
     .block_content_desc {

@@ -1,4 +1,13 @@
-.our_mission .omcontainer {
+.our_mission{
+    display: flex;
+    flex-direction: row;
+    
+}
+.our_mission{
+    justify-content: center;
+}
+.omcontainer{
+    width:70%;
     display: flex;
     flex-direction: row;
     margin: 6vw;
@@ -66,10 +75,16 @@
 }
 
 @media only screen and (max-width:1060px) {
-    .our_mission .omcontainer {
+    .our_mission {
         flex-direction: column-reverse;
-    }
 
+    }
+    .omcontainer {
+        flex-direction: column-reverse;
+        width:88%;
+    
+    }
+    
     .omcards {
         margin-top: 35px;
     }
