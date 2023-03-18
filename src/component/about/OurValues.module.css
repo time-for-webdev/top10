@@ -1,11 +1,14 @@
 .value_block {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .block_content_wrapper {
     display: flex;
-    margin: 6.55vw;
+    margin-top: 6.55vw;
+    margin-bottom: 6.55vw;
+    width:70%;
 }
 
 .value_img img {
@@ -39,6 +42,7 @@
     .block_content_wrapper {
         flex-direction: column;
         align-items: center;
+        width:88%;
     }
 
     .block_desc {

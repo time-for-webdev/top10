@@ -7,9 +7,6 @@ import Card from "./component/Card/Card";
 function App() {
   return (
     <>
-      <Navbar />
-      <Card/>
-      
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
