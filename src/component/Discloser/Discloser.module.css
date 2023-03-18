@@ -1,0 +1,41 @@
+.disclosure__label {
+  font-size: 14px;
+  line-height: 18px;
+  color: #37474f;
+}
+
+.disclosure__item p {
+  position: absolute;
+  z-index: 2;
+  background: #fff;
+  box-shadow: 0 0 15px #0000001a;
+  border-radius: 6px;
+  width: 230px;
+  padding: 8px;
+  color: rgba(55, 71, 79, 0.8);
+  margin-top: 5px;
+}
+
+.Discloser_group span {
+  font-size: 14px;
+  line-height: 18px;
+  color: #37474f;
+  cursor: pointer;
+  list-style: none;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+.discloser_wrap {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  font-size: 14px;
+  line-height: 18px;
+  color: #37474f;
+  gap: 12px;
+  width: 1170px;
+  margin: 10px auto;
+}
+.disclosure__item {
+  position: relative;
+}
