@@ -1,0 +1,81 @@
+.our_mission .omcontainer {
+    display: flex;
+    flex-direction: row;
+    margin: 6vw;
+}
+
+.imgdiv img {
+    width: 30px;
+}
+
+.imgdiv {
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    border: 1px solid #e1e1ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+
+}
+
+.omcards .card {
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 8px rgb(0 105 191 / 20%);
+    border-radius: 6px;
+    border-inline-start: 10px solid #fc682d;
+    min-height: 95px;
+    min-width: 315px;
+    margin-bottom: 18px;
+    margin-right: 45px;
+    padding-right: 10px;
+    padding-left: 25px;
+
+}
+
+.card h5 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #373737;
+}
+
+.card p {
+
+    font-size: 16px;
+    color: #333;
+    line-height: 175%;
+
+}
+
+.ompara p {
+    line-height: 175%;
+    color: #333;
+    font-size: 14.5px;
+}
+
+.ompara h2 {
+    font-size: 26px;
+    line-height: 108%;
+    font-weight: 700;
+    word-break: break-word;
+    margin-bottom: 21px;
+    color: #333;
+}
+
+@media only screen and (max-width:1060px) {
+    .our_mission .omcontainer {
+        flex-direction: column-reverse;
+    }
+
+    .omcards {
+        margin-top: 35px;
+    }
+
+    .ompara p {
+        font-size: 16px;
+    }
+
+}

@@ -1,65 +1,31 @@
 import React from "react";
-import styles from "./About.module.css";
-import { useState } from "react";
-const About = () => {
-  const [linkClass, setlinkClass] = useState();
-  // const changeActive=(e)=>{
-  //   e.preventDefault();
-  //   document.getElementsByClassName(styles.active).classList.add(styles.activer)
-  // }
+import Navbar2 from "./Navbar2";
+import Ourstory from "./Ourstory";
+import WeAre from "./WeAre";
+import OurMission from "./OurMission";
+import Team from "./Team";
+import OurValues from "./OurValues";
+import Methodology from "./Methodology";
+import Research from "./Research";
+import Advantages from "./Advantages";
+import { useInView } from 'react-intersection-observer';
+
+export default function About() {
+  const { ref: ref1, inView: iv1 } = useInView();
+  const { ref: ref2, inView: iv2 } = useInView();
+  const { ref: ref3, inView: iv3 } = useInView();
+  const { ref: ref4, inView: iv4 } = useInView();
   return (
     <>
-      <section className={styles.page_nav}></section>
-      <div className={styles.page_nav_link}>
-        <ul>
-          <li>
-            <a
-              className={linkClass == 0 ? `${styles.active}` : ``}
-              onClick={(e) => {
-                setlinkClass(0);
-              }}
-              href="#"
-            >
-              We Are
-            </a>
-          </li>
-          <li>
-            <a
-              className={linkClass == 1 ? `${styles.active}` : ``}
-              onClick={(e) => {
-                setlinkClass(1);
-              }}
-              href="#"
-            >
-              Our Values
-            </a>
-          </li>
-          <li>
-            <a
-              className={linkClass == 2 ? `${styles.active}` : ``}
-              onClick={(e) => {
-                setlinkClass(2);
-              }}
-              href="#"
-            >
-              Review Methodology
-            </a>
-          </li>
-          <li>
-            <a
-              className={linkClass == 3 ? `${styles.active}` : ``}
-              onClick={(e) => {
-                setlinkClass(3);
-              }}
-              href="#"
-            >
-              The Research Lab
-            </a>
-          </li>
-        </ul>
-      </div>
+      <Navbar2 iv1={iv1} iv2={iv2} iv3={iv3} iv4={iv4} />
+      <Ourstory />
+      <WeAre ref1={ref1} />
+      <OurMission />
+      <Team />
+      <OurValues ref2={ref2} />
+      <Methodology ref3={ref3} />
+      <Research ref4={ref4} />
+      <Advantages />
     </>
-  );
-};
-
-export default About;
+  )
+}
