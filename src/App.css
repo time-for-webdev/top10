@@ -4,11 +4,11 @@ body {
   line-height: 1;
   color: #37474f;
   background: #fff;
-  font-family: Cabin, Arial, Sans-Serif;
   font-size: 1rem;
   direction: ltr;
 }
 * {
+  font-family: Cabin, Arial, Sans-Serif;
   list-style: none;
   text-decoration: none;
 }

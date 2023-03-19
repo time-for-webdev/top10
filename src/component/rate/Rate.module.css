@@ -1,0 +1,65 @@
+.rate_wrap {
+  float: right;
+  margin: 20px 0 15px;
+  width: 60%;
+  padding-right: 10rem;
+  padding-left: 2rem;
+}
+.rate_type .logo_wrap {
+  display: flex;
+  border-radius: 20px;
+  width: 39px;
+  height: 39px;
+  background: #00acc1;
+  text-align: center;
+  padding: 3px;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.rate_type li {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.rate_type svg {
+  width: 20px;
+}
+.rate_wrap p {
+  line-height: 24px;
+  font-size: 16px;
+  font-family: Cabin, Arial, Sans-Serif;
+}
+.rate_wrap h1 {
+  font-size: 32px;
+  color: #fff;
+  line-height: 32px;
+  margin: 25px 0;
+  font-family: Cabin, Arial, Sans-Serif;
+}
+.rate_container {
+  background-image: url(../../assects/Home/rating_illustration.svg),
+    linear-gradient(180deg, #266ba9 0, #1d5b8a 100%);
+  background-repeat: no-repeat, no-repeat;
+  /* background-position: -61% bottom,0 0; */
+  /* background-size: 62%,100%; */
+  background-origin: padding-box;
+  font-family: Cabin, Arial, Sans-Serif;
+  color: #fff;
+  background-position: 3% bottom, 0 0;
+  background-size: 38%, 100%;
+  display: block;
+  margin-top: 70px;
+  height: 476px;
+}
+.rate_type {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.rate_body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
