@@ -3,6 +3,7 @@
   list-style: none;
   position: relative;
   border-top: 3px solid #1d69a7;
+  box-shadow: 0 4px 6px 0 rgb(0 0 0 / 50%);
 }
 
 .Nav_wrap {
