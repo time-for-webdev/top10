@@ -6,6 +6,7 @@ import Contact from "./component/Contact/Contact";
 function App() {
   return (
     <>
+    
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -13,6 +14,7 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
         </Routes>
       </Router>
+      
     </>
   );
 }
