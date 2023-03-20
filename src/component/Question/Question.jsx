@@ -3,11 +3,13 @@ import { useState } from "react";
 import styles from './Question.module.css';
 
 function Question(){
-     const [drop1,setDrop1]=useState(true);
-     const [drop2,setDrop2]=useState(true);
-     const [drop3,setDrop3]=useState(true);
-     const [drop4,setDrop4]=useState(true);
-  
+     const [drop,setDrop] =useState({
+        first:1,
+        second:1,
+        third:1,
+        fourth:1
+     });
+    
     return <>
              <div className={styles.faqs} id="faqs">
                <div className={styles.container}>
@@ -16,9 +18,13 @@ function Question(){
                  </h3>
                 <div className={styles.faqs__list}>
                     <details className={styles.faq} onClick={()=>{
-                          setDrop1(!drop1);
+                         const val = !drop.first;
+                          setDrop((prev)=>{
+                            return {...prev,first:val}
+                          })
+                          
                     }}>
-                        <summary  className={drop1 ? `${styles.faq__title}` : `${styles.faq__title1}` }>
+                        <summary  className={drop.first? `${styles.faq__title}` : `${styles.faq__title1}`}>
                                 Why do I need a VPN?                        
                         </summary>
 
@@ -30,10 +36,15 @@ function Question(){
                         </div>
                     </details>
                     <details className={styles.faq} onClick={()=>{
-                        setDrop2(!drop2);
+                       
+                          const val = !drop.second;
+                          setDrop((prev)=>{
+                            return {...prev,second:val}
+                          })
+                          
                     }}>
                         
-                        <summary className={drop2 ? `${styles.faq__title}` : `${styles.faq__title1}`}>
+                        <summary className={drop.second ? `${styles.faq__title}` : `${styles.faq__title1}`}>
                                 
                             How can I get the best price for a VPN?                                                
                         </summary>
@@ -45,9 +56,14 @@ function Question(){
                         </div>
                     </details>
                     <details className={styles.faq} onClick={()=>{
-                          setDrop3(!drop3);
-                        }} >
-                        <summary className={drop3 ? `${styles.faq__title}` : `${styles.faq__title1}`}>
+                         const val = !drop.third;
+                         console.log(val);
+                          setDrop((prev)=>{
+                            return {...prev,third:val}
+                          })
+                          
+                    }} >
+                        <summary className={drop.third ? `${styles.faq__title}` : `${styles.faq__title1}`}>
                                 How do I connect a VPN?                       
                         </summary>
 
@@ -58,9 +74,13 @@ function Question(){
                         </div>
                     </details>
                     <details className={styles.faq} onClick={()=>{
-                        setDrop4(!drop4);
+                         const val = !drop.fourth;
+                          setDrop((prev)=>{
+                            return {...prev,fourth:val}
+                          })
+                          
                     }}>
-                        <summary className={drop4 ? `${styles.faq__title}` : `${styles.faq__title1}`}>
+                        <summary className={drop.fourth ? `${styles.faq__title}` : `${styles.faq__title1}`}>
                             Can I set up a VPN on my smartphone?                        
                         </summary>
 
