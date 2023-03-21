@@ -3,7 +3,7 @@ import styles from "./Card.module.css";
 import expresslogo from "../../assects/Home/ExpressVPN_Horizontal_Logo_Red-svg.svg";
 import check from "../../assects/Card/check.png";
 
-function Card() {
+function Card(prop) {
   return (
     <>
       <div className={styles.vendors}>
@@ -31,7 +31,7 @@ function Card() {
                   <span
                     className={styles.dynamic__text_ribbon1__ribbon_desktop}
                   >
-                    Get 3 Months Free
+                    {prop.title}
                   </span>
                   <span className={styles.dynamic__text_ribbon1__ribbon_mobile}>
                     Get 3 Months Free
