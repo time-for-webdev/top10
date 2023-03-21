@@ -95,7 +95,7 @@ footer {
 }
 @media only screen and (max-width: 771px) {
   .footer_wrap {
-    width: 95%;
+    width: 85%;
   }
   footer hr {
     display: none;

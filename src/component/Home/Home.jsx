@@ -29,7 +29,11 @@ const Home = () => {
             <Top7 />
             <Top10btm />
           </div>
-          <img src={web} />
+          <div className={styles.second_left}>
+            <div className={styles.hero__image}>
+              <img src={web} />
+            </div>
+          </div>
         </div>
         {/* <div className={styles.vpn_card}>
           {data.map((val, ind) => (
