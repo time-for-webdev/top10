@@ -1,0 +1,129 @@
+.footer_top p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #37474f;
+  /* width: 30%; */
+}
+.footer_top {
+  width: 50%;
+}
+.footer_wrap {
+  width: 1170px;
+  margin: 25px auto;
+}
+.footer_top img {
+  display: block;
+  max-width: 175px;
+  margin: 0 0 15px;
+}
+.routes {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.routes li a {
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 10px;
+  color: #37474f;
+  display: block;
+  opacity: 0.8;
+}
+.social_link svg,
+.social_link img {
+  font-size: 24px;
+  width: 24px;
+}
+.social_link a {
+  color: #37474fcc;
+}
+.social {
+  display: flex;
+  align-items: center;
+}
+.social p {
+  margin-bottom: 0;
+  margin-right: 15px;
+  font: 14px/14px Cabin;
+  opacity: 0.8;
+}
+.social_link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer_link_route {
+  padding: 25px 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.copyright p {
+  margin-top: 35px;
+  /* text-align: center; */
+  font: 14px/14px Cabin;
+  color: #37474f;
+  opacity: 0.8;
+}
+.routes {
+  padding: 21px 0;
+}
+footer {
+  background: linear-gradient(
+    180deg,
+    rgba(55, 71, 79, 0.0509804) 0,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.footer_container {
+  padding: 25px 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer_wrap {
+    width: 970px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .footer_wrap {
+    width: 750px;
+  }
+  .routes {
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 771px) {
+  .footer_wrap {
+    width: 85%;
+  }
+  footer hr {
+    display: none;
+  }
+  .footer_top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer_link_route {
+    padding: 0;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .routes {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .copyright p {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .footer_wrap {
+    margin-bottom: 10px;
+  }
+}

@@ -34,8 +34,26 @@
   color: #37474f;
   gap: 12px;
   width: 1170px;
-  margin: 10px auto;
+  margin: 15px auto;
 }
 .disclosure__item {
   position: relative;
+}
+
+@media only screen and (max-width: 1200px) {
+  .discloser_wrap {
+    width: 970px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .discloser_wrap {
+    width: 750px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .discloser_wrap {
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }

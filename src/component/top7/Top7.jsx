@@ -7,7 +7,7 @@ const Top7 = () => {
       <div className={styles.top_container}>
         <div className={styles.top_wrap}>
           <h1>7 Best VPNs for 2023</h1>
-          <p>
+          <p className={styles.top_desc}>
             Excellent security features, widespread server networks, and
             reliable refund policies — secure internet access is just a few
             clicks away.

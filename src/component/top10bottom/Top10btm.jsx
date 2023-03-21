@@ -8,7 +8,7 @@ const Top10btm = () => {
     <div className={styles.bottom_container}>
       <div className={styles.btm_wrap}>
         <div className={styles.btm_para}>vpnMentor has been featured on:</div>
-        <img src={web} />
+        {/* <img src={web} /> */}
         <div className={styles.updateDate}>
           <img src={web2} />
           <p>Updated on 16th March 2023</p>
