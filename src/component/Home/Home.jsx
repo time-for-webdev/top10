@@ -41,9 +41,10 @@ const Home = () => {
           ))}
         </div> */}
         <Card />
-        <Rate />
+        <Rate /> 
         <Category />
       </div>
+      
     </>
   );
 };
