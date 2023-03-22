@@ -8,12 +8,10 @@ import Card from "../Card/Card";
 import web from "../../assects/Home/header_background_people_default.svg";
 import Category from "../Category/Category";
 import Rate from "../rate/Rate";
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { getVpn } from "../API/Vpn";
-=======
-import Question from '../Question/Question'
->>>>>>> f8f21b4 (started Compare component)
+import Compare from "../Compare/Compare";
+import Question from "../Question/Question" ;
 const Home = () => {
   const [data, setdata] = useState([]);
   useEffect(() => {
@@ -45,9 +43,10 @@ const Home = () => {
           ))}
         </div> */}
         <Card />
-        {/* <Rate /> */}
+        <Rate /> 
         <Category />
       </div>
+      
     </>
   );
 };
