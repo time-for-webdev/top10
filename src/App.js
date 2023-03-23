@@ -4,10 +4,11 @@ import Home from "./component/Home/Home";
 import About from "./component/about/About";
 import Contact from "./component/Contact/Contact";
 import Footer from "./component/footer/Footer";
+import Question from "./component/Question/Question";
 function App() {
   return (
     <>
-   
+     
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -16,7 +17,6 @@ function App() {
         </Routes>
         <Footer/>
       </Router>
-      
     </>
   );
 }
