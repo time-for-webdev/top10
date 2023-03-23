@@ -10,6 +10,8 @@ import Category from "../Category/Category";
 import Rate from "../rate/Rate";
 import { useState, useEffect } from "react";
 import { getVpn } from "../API/Vpn";
+import Question from "../Question/Question";
+import Compare from "../Compare/Compare";
 const Home = () => {
   const [data, setdata] = useState([]);
   useEffect(() => {
@@ -43,8 +45,8 @@ const Home = () => {
         <Card />
         <Rate /> 
         <Category />
+        <Compare/>
       </div>
-      
     </>
   );
 };
