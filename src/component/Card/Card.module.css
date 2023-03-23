@@ -10,6 +10,16 @@
   font-family: Cabin, Arial, Sans-Serif;
   justify-content: center;
 }
+.available__os {
+  margin-top: 20px;
+}
+.available__os svg {
+  font-size: 19px;
+  display: inline-block;
+  margin-right: 20px;
+  opacity: 0.5;
+  color: #37474f;
+}
 @media (min-width: 768px) {
   .vendors {
     display: flex;
@@ -91,8 +101,8 @@ a:before {
   left: 0;
   border-radius: 6px 0;
 }
-#blue_position{
-  background: no-repeat padding-box #00838f;;
+#blue_position {
+  background: no-repeat padding-box #00838f;
 }
 .vendor_ribbon {
   font-weight: 700;
@@ -112,8 +122,7 @@ a:before {
   left: 30px;
   border-radius: 6px 0;
 }
-#blue_ribbon{
-
+#blue_ribbon {
   background-color: #00acc1;
 }
 
@@ -121,8 +130,8 @@ a:before {
   color: #fff;
   font-size: 14px;
   font-weight: 700;
-  /* display: inline-block; */
-  /* vertical-align: center; */
+  display: inline-block;
+  vertical-align: center;
 }
 .dynamic__text_ribbon1__ribbon_desktop {
   display: none;
@@ -473,10 +482,8 @@ svg:not(:root) {
   }
 }
 
-
 .button:after {
-
-  content: '';
+  content: "";
   width: 17px;
   height: 17px;
   background-position: center;
@@ -484,14 +491,13 @@ svg:not(:root) {
   display: inline-block;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:none;%7D.b%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cpath class='a' d='M0,0H24V24H0Z'/%3E%3Cpath class='b' d='M10.02,6,8.61,7.41,13.19,12,8.61,16.59,10.02,18l6-6Z'/%3E%3C/svg%3E");
   vertical-align: bottom;
-  transition: .5s;
+  transition: 0.5s;
   transform: rotate(0);
 }
 
-.button:hover::after{
-    
+.button:hover::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:none;%7D.b%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cpath class='a' d='M0,0H24V24H0Z'/%3E%3Cpath class='b' d='M10.02,6,8.61,7.41,13.19,12,8.61,16.59,10.02,18l6-6Z'/%3E%3C/svg%3E");
- background-position:5px center;
+  background-position: 5px center;
 }
 
 .vendor__btn_site_link {

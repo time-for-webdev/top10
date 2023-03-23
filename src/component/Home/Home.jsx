@@ -20,7 +20,7 @@ const Home = () => {
       setdata(res.data.data);
     });
   }, []);
-   //console.log(data);
+  //console.log(data);
   return (
     <>
       <Navbar />
@@ -37,15 +37,15 @@ const Home = () => {
             </div>
           </div>
         </div>
-         <div className={styles.vpn_card}>
+        <div className={styles.vpn_card}>
           {data.map((val, ind) => (
-            <Card val={val} index={ind}  />
+            <Card key={ind} val={val} index={ind} />
           ))}
-        </div> 
-       
-        <Rate /> 
+        </div>
+
+        <Rate />
         <Category />
-        <Compare/>
+        <Compare />
       </div>
     </>
   );
