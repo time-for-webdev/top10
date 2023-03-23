@@ -17,10 +17,10 @@ const Home = () => {
   useEffect(() => {
     getVpn((err, res) => {
       if (err) return;
-      setdata(res.data);
+      setdata(res.data.data);
     });
   }, []);
-  // console.log(data);
+   //console.log(data);
   return (
     <>
       <Navbar />
@@ -37,12 +37,12 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* <div className={styles.vpn_card}>
+         <div className={styles.vpn_card}>
           {data.map((val, ind) => (
-            <Card title={val.title} key={ind} website_url={val.website_url} />
+            <Card val={val} index={ind}  />
           ))}
-        </div> */}
-        <Card />
+        </div> 
+       
         <Rate /> 
         <Category />
         <Compare/>
