@@ -2,8 +2,14 @@ import React from "react";
 import styles from "./Card.module.css";
 import expresslogo from "../../assects/Home/ExpressVPN_Horizontal_Logo_Red-svg.svg";
 import check from "../../assects/Card/check.png";
-
+import { FaWindows } from "react-icons/fa";
+import { BsAndroid2 } from "react-icons/bs";
+import { BsApple } from "react-icons/bs";
+import { BsUbuntu } from "react-icons/bs";
+import { FaLinux } from "react-icons/fa";
+import { GiWifiRouter } from "react-icons/gi";
 function Card(prop) {
+  console.log(prop);
   return (
     <>
       <div className={styles.vendors}>
@@ -12,30 +18,38 @@ function Card(prop) {
             <a
               className="overlay-link"
               data-qa-id="vendor_link"
-            href={prop.val.website_url}        
+              href={prop.val?.website_url}
               rel="nofollow noopener noreferrer"
               target="_blank"
               data-tracked="yes"
             ></a>
-            <div className={styles.vendor_position} id={prop.index >0 ? `${styles.blue_position}` :""}>{prop.index+1}</div>
-            <div className={styles.vendor_ribbon} id={prop.index >0 ? `${styles.blue_ribbon}` :""}>
+            <div
+              className={styles.vendor_position}
+              id={prop.index > 0 ? `${styles.blue_position}` : ""}
+            >
+              {prop.index + 1}
+            </div>
+            <div
+              className={styles.vendor_ribbon}
+              id={prop.index > 0 ? `${styles.blue_ribbon}` : ""}
+            >
               <div className={styles.vendor_ribbon_dynamic}>
                 <a
-                href={prop.val.website_url}
-                  
+                  href={prop.val.website_url}
                   rel="nofollow noopener noreferrer"
                   target="_blank"
                   data-tracked="yes"
                 />
-                  
+
                 <a
-                  className={styles.dynamic__text_ribbon2} 
-                href={prop.val.website_url}             onclick="clickedLinkExternal('Windows - Best Ribbon', 'ExpressVPN')"
+                  className={styles.dynamic__text_ribbon2}
+                  href={prop.val.website_url}
+                  onclick="clickedLinkExternal('Windows - Best Ribbon', 'ExpressVPN')"
                   rel="nofollow noopener noreferrer"
                   target="_blank"
                   data-tracked="yes"
                 >
-                  <span>{prop.val.riben_text}</span>
+                  <span>{prop.val?.riben_text}</span>
                 </a>
               </div>
             </div>
@@ -53,9 +67,7 @@ function Card(prop) {
                 className={styles.vendor__logoSection_description}
                 data-qa-id="vendor_description"
               >
-                <strong>
-                  {prop.val.description}
-                </strong>
+                <strong>{prop.val?.description}</strong>
               </div>
               <div
                 className={styles.vendor__logoSection_listing}
@@ -64,11 +76,11 @@ function Card(prop) {
                 <ul>
                   <li className={styles.listing__item}>
                     <img alt="logoSection_listing" src={check}></img>
-                    High-speed connections, extremely reliable &amp; secure{" "}
+                    {prop.val.specification[0]?.description}
                   </li>
                   <li className={styles.listing__item}>
                     <img alt="logoSection_listing" src={check}></img>
-                    Native, user-friendly apps for Windows 11, 10, 8 and 7{" "}
+                    {prop.val.specification[1]?.description}
                   </li>
                 </ul>
               </div>
@@ -85,29 +97,34 @@ function Card(prop) {
                   className="featured__list featured__list_desktop"
                   data-qa-id="vendor_bullets_desktop"
                 >
-                  {prop.val.specification.map(el=><li><img alt="features" src={check}></img>{el.description}</li>)}
-                   </ul>
+                  {prop.val.specification.map((el) => (
+                    <li>
+                      <img alt="features" src={check}></img>
+                      {el?.description}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               <div className={styles.available}>
                 <div className={styles.available__os}>
                   <span className={styles.has_tooltip} aria-label="Windows">
-                    <i class="fa fa-windows" aria-hidden="false"></i>
+                    <FaWindows />
                   </span>
                   <span className={styles.has_tooltip} aria-label="macOS">
-                    <i class="fa fa-mac"></i>
+                    <BsAndroid2 />
                   </span>
                   <span className={styles.has_tooltip} aria-label="iOS">
-                    <i class="fa fa-ios"></i>
+                    <BsApple />
                   </span>
                   <span className={styles.has_tooltip} aria-label="Android">
-                    <i class="fa fa-android"></i>
+                    <FaLinux />
                   </span>
                   <span className={styles.has_tooltip} aria-label="Linux">
-                    <i class="fa fa-linux"></i>
+                    <GiWifiRouter />
                   </span>
                   <span class="has-tooltip" aria-label="Router">
-                    <i class="fa fa-router"></i>
+                    <BsUbuntu />
                   </span>
                 </div>
               </div>
@@ -145,17 +162,21 @@ function Card(prop) {
                       fill="transparent"
                       stroke-width="2"
                       stroke-linecap="round"
-                      stroke-dasharray="98 2"
+                      stroke-dasharray={`${prop.val?.rating * 10} ${
+                        100 - prop.val?.rating * 10
+                      }`}
                       stroke-dashoffset="0"
                     ></circle>
                     <g className="chart-text">
                       <text x="23%" y="65%" className="progress-value">
-                        {prop.val.rating}
+                        {prop.val?.rating < 10
+                          ? (prop.val.rating * 1.0).toFixed(1)
+                          : (prop.val.rating * 1.0).toFixed(0)}
                       </text>
                     </g>
                   </svg>
                   <div className={styles.vendor__mark} data-qa-id="vendor_mark">
-                  OUTSTANDING
+                    {prop.val.remark?.remarks}
                   </div>
                 </div>
               </div>
@@ -164,7 +185,8 @@ function Card(prop) {
                   <a
                     className={styles.button}
                     data-qa-id="vendor_button"
-                  href={prop.val.website_url}              onclick="clickedLinkExternal('Windows - Visit website', 'ExpressVPN')"
+                    href={prop.val?.website_url}
+                    onclick="clickedLinkExternal('Windows - Visit website', 'ExpressVPN')"
                     rel="nofollow noopener noreferrer"
                     target="_blank"
                     data-tracked="yes"
@@ -174,12 +196,13 @@ function Card(prop) {
                   <a
                     className={styles.vendor__btn_site_link}
                     data-qa-id="lower_vendor_link"
-                  href={prop.val.website_url}              onclick="clickedLinkExternal('Windows - Vendor URL', 'ExpressVPN')"
+                    href={prop.val?.website_url}
+                    onclick="clickedLinkExternal('Windows - Vendor URL', 'ExpressVPN')"
                     rel="nofollow noopener noreferrer"
                     target="_blank"
                     data-tracked="yes"
                   >
-                    {prop.val.title}.com{" "}
+                    {prop.val?.title}.com{" "}
                   </a>
                 </div>
               </div>
