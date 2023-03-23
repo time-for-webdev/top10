@@ -74,7 +74,7 @@ a:before {
   transition: 0.2s;
 }
 .vendor_position {
-  color: #37474f;
+  color: #fff;
   background: no-repeat padding-box #f57c00;
   padding: 10px 14px;
   height: 35px;
@@ -91,6 +91,9 @@ a:before {
   left: 0;
   border-radius: 6px 0;
 }
+#blue_position{
+  background: no-repeat padding-box #00838f;;
+}
 .vendor_ribbon {
   font-weight: 700;
   position: absolute;
@@ -101,7 +104,6 @@ a:before {
   background-color: #ff9800;
   color: #fff;
   font-style: normal;
-
   font-size: 14px;
   line-height: 18px;
   font-family: Cabin, Arial, Sans-Serif;
@@ -109,6 +111,10 @@ a:before {
   top: 0;
   left: 30px;
   border-radius: 6px 0;
+}
+#blue_ribbon{
+
+  background-color: #00acc1;
 }
 
 .vendor_ribbon a {

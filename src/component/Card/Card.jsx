@@ -12,41 +12,30 @@ function Card(prop) {
             <a
               className="overlay-link"
               data-qa-id="vendor_link"
-              href="https://www.vpn-mentors.com/?Track_link=MTQ2MHw=&amp;dl=windows&amp;vid=1460&amp;target=ppcVendorRow_1460_Windows_0&amp;pageid=111_en_ppc&amp;type=ppc&amp;org_referer=https://www.vpn-mentors.com/best-windows-vpn/&amp;ve=1&amp;pos=0&amp;pageview_id=1|LFAO0TLCP1OK5&amp;clickout_id=1|LFAO0TLCP1OK5|1|1460"
-              onclick="clickedLinkExternal('Windows - Vendor Row', 'ExpressVPN')"
+            href={prop.val.website_url}        
               rel="nofollow noopener noreferrer"
               target="_blank"
               data-tracked="yes"
             ></a>
-            <div className={styles.vendor_position}>1</div>
-            <div className={styles.vendor_ribbon}>
+            <div className={styles.vendor_position} id={prop.index >0 ? `${styles.blue_position}` :""}>{prop.index+1}</div>
+            <div className={styles.vendor_ribbon} id={prop.index >0 ? `${styles.blue_ribbon}` :""}>
               <div className={styles.vendor_ribbon_dynamic}>
                 <a
-                  href="https://www.vpn-mentors.com/?Track_link=MTQ2MHw=&amp;dl=windows&amp;vid=1460&amp;target=ppcFastestVpnRibbon_1460_Windows_0&amp;pageid=111_en_ppc&amp;type=ppc&amp;org_referer=https://www.vpn-mentors.com/best-windows-vpn/&amp;ve=1&amp;pos=0&amp;pageview_id=1|LFAO0TLCP1OK5&amp;clickout_id=1|LFAO0TLCP1OK5|1|1460"
-                  onclick="clickedLinkExternal('Windows - Fastest VPN Ribbon', 'ExpressVPN')"
+                href={prop.val.website_url}
+                  
                   rel="nofollow noopener noreferrer"
                   target="_blank"
                   data-tracked="yes"
-                >
-                  <span
-                    className={styles.dynamic__text_ribbon1__ribbon_desktop}
-                  >
-                    {prop.title}
-                  </span>
-                  <span className={styles.dynamic__text_ribbon1__ribbon_mobile}>
-                    Get 3 Months Free
-                  </span>
-                </a>
-                <span className={styles.seperator}>|</span>
+                />
+                  
                 <a
-                  className={styles.dynamic__text_ribbon2}
-                  href="https://www.vpn-mentors.com/?Track_link=MTQ2MHw=&amp;dl=windows&amp;vid=1460&amp;target=ppcBestRibbon_1460_Windows_0&amp;pageid=111_en_ppc&amp;type=ppc&amp;org_referer=https://www.vpn-mentors.com/best-windows-vpn/&amp;ve=1&amp;pos=0&amp;pageview_id=1|LFAO0TLCP1OK5&amp;clickout_id=1|LFAO0TLCP1OK5|1|1460"
-                  onclick="clickedLinkExternal('Windows - Best Ribbon', 'ExpressVPN')"
+                  className={styles.dynamic__text_ribbon2} 
+                href={prop.val.website_url}             onclick="clickedLinkExternal('Windows - Best Ribbon', 'ExpressVPN')"
                   rel="nofollow noopener noreferrer"
                   target="_blank"
                   data-tracked="yes"
                 >
-                  <span>30-Day Money Back Guarantee</span>
+                  <span>{prop.val.riben_text}</span>
                 </a>
               </div>
             </div>
@@ -54,8 +43,8 @@ function Card(prop) {
               <div className={styles.vendor__logoSection_logo}>
                 <img
                   loading="lazy"
-                  src={expresslogo}
-                  alt="ExpressVPN"
+                  src={prop.val.logo}
+                  alt="brand logo"
                   width="640"
                   height="140"
                 ></img>
@@ -65,8 +54,7 @@ function Card(prop) {
                 data-qa-id="vendor_description"
               >
                 <strong>
-                  Uninterrupted, high-speed browsing, zero logs so your online
-                  activity is always private.
+                  {prop.val.description}
                 </strong>
               </div>
               <div
@@ -88,7 +76,7 @@ function Card(prop) {
                 className={styles.vendor__logoSection_discount}
                 data-qa-id="vendor_discount"
               >
-                70% of our users choose EXPRESSVPN
+                {prop.val.offer}
               </div>
             </div>
             <div className={styles.vendor__featured}>
@@ -97,27 +85,8 @@ function Card(prop) {
                   className="featured__list featured__list_desktop"
                   data-qa-id="vendor_bullets_desktop"
                 >
-                  <li className={styles.featured__item}>
-                    <img alt="features" src={check}></img>Connects lag-free with
-                    all popular platforms &amp; services
-                  </li>
-                  <li className={styles.featured__item}>
-                    <img alt="features" src={check}></img>Native, user-friendly
-                    apps for Windows 11, 10, 8 and 7
-                  </li>
-                  <li className={styles.featured__item}>
-                    <img alt="features" src={check}></img>Low ping rate for
-                    gaming, fast uploads &amp; downloading
-                  </li>
-                  <li className={styles.featured__item}>
-                    <img alt="features" src={check}></img>No activity logs, no
-                    connection logs, no data leaks
-                  </li>
-                  <li className={styles.featured__item}>
-                    <img alt="features" src={check}></img>Try all features for
-                    free for 30 days + Get 3 months free
-                  </li>
-                </ul>
+                  {prop.val.specification.map(el=><li><img alt="features" src={check}></img>{el.description}</li>)}
+                   </ul>
               </div>
 
               <div className={styles.available}>
@@ -181,12 +150,12 @@ function Card(prop) {
                     ></circle>
                     <g className="chart-text">
                       <text x="23%" y="65%" className="progress-value">
-                        9.8
+                        {prop.val.rating}
                       </text>
                     </g>
                   </svg>
                   <div className={styles.vendor__mark} data-qa-id="vendor_mark">
-                    Outstanding!
+                  OUTSTANDING
                   </div>
                 </div>
               </div>
@@ -195,8 +164,7 @@ function Card(prop) {
                   <a
                     className={styles.button}
                     data-qa-id="vendor_button"
-                    href="https://www.vpn-mentors.com/?Track_link=MTQ2MHw=&amp;dl=windows&amp;vid=1460&amp;target=ppcCTAButton_1460_Windows_0&amp;pageid=111_en_ppc&amp;type=ppc&amp;org_referer=https://www.vpn-mentors.com/best-windows-vpn/&amp;ve=1&amp;pos=0&amp;pageview_id=1|LFBPH6EOSPAJP&amp;clickout_id=1|LFBPH6EOSPAJP|1|1460"
-                    onclick="clickedLinkExternal('Windows - Visit website', 'ExpressVPN')"
+                  href={prop.val.website_url}              onclick="clickedLinkExternal('Windows - Visit website', 'ExpressVPN')"
                     rel="nofollow noopener noreferrer"
                     target="_blank"
                     data-tracked="yes"
@@ -206,13 +174,12 @@ function Card(prop) {
                   <a
                     className={styles.vendor__btn_site_link}
                     data-qa-id="lower_vendor_link"
-                    href="https://www.vpn-mentors.com/?Track_link=MTQ2MHw=&amp;dl=windows&amp;vid=1460&amp;target=ppcVendorURL_1460_Windows_0&amp;pageid=111_en_ppc&amp;type=ppc&amp;org_referer=https://www.vpn-mentors.com/best-windows-vpn/&amp;ve=1&amp;pos=0&amp;pageview_id=1|LFBPH6EOSPAJP&amp;clickout_id=1|LFBPH6EOSPAJP|1|1460"
-                    onclick="clickedLinkExternal('Windows - Vendor URL', 'ExpressVPN')"
+                  href={prop.val.website_url}              onclick="clickedLinkExternal('Windows - Vendor URL', 'ExpressVPN')"
                     rel="nofollow noopener noreferrer"
                     target="_blank"
                     data-tracked="yes"
                   >
-                    expressvpn.com{" "}
+                    {prop.val.title}.com{" "}
                   </a>
                 </div>
               </div>

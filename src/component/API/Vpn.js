@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const domain = "http://piyushcse.pythonanywhere.com/api";
+const domain = "https://piyushcse.pythonanywhere.com/api";
 
 const getHeaders = () => {
   const headers = {
