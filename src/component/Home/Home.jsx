@@ -45,7 +45,8 @@ const Home = () => {
 
         <Rate />
         <Category />
-        <Compare />
+        <Compare/>
+        <Question/>
       </div>
     </>
   );
