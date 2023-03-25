@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./NavbarGlobal.module.css";
-import c_logo from "../../assects/Home/vm_new_logo.svg";
+import c_logo from "../../assects/discount.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [drop1, setdrop1] = useState(false);
   const [drop2, setdrop2] = useState(false);
@@ -18,7 +19,9 @@ const Navbar = () => {
       <div className={styles.Nav_container}>
         <div className={styles.Nav_wrap}>
           <div className={styles.nav_logo_right}>
-            <img src={c_logo} alt="company logo" />
+            <Link to="/">
+              <img src={c_logo} alt="company logo" />
+            </Link>
           </div>
           <div className={styles.nav_right}>
             <div

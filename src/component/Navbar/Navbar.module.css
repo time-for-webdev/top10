@@ -3,7 +3,10 @@
   list-style: none;
   position: relative;
 }
-
+.nav_logo_right {
+  max-width: 158px;
+  margin-top: 5px;
+}
 .Nav_wrap {
   height: 43px;
   width: 1170px;
