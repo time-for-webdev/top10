@@ -3,6 +3,7 @@
   background-position: calc(100% - 20px) 200px;
   background-size: auto 557px;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 .first_box {
   display: flex;
