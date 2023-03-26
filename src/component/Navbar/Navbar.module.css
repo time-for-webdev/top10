@@ -3,7 +3,16 @@
   list-style: none;
   position: relative;
 }
-
+.logo_wrap {
+  width: 21px;
+}
+.logo_wrap_like {
+  width: 23px;
+}
+.nav_logo_right {
+  max-width: 158px;
+  margin-top: 5px;
+}
 .Nav_wrap {
   height: 43px;
   width: 1170px;

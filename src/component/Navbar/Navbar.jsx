@@ -1,7 +1,16 @@
 import React from "react";
 import styles from "./Navbar.module.css";
-import c_logo from "../../assects/Home/vm_new_logo.svg";
+import c_logo from "../../assects/discount.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
+import os1 from "../../assects/Home/icons8-android-os.svg";
+import os2 from "../../assects/Home/icons8-iphone-se-48.png";
+import os3 from "../../assects/Home/icons8-apple-logo-30.png";
+import os4 from "../../assects/Home/icons8-wi-fi-26.png";
+import os5 from "../../assects/Home/icons8-monitor-32.png";
+import os6 from "../../assects/Home/icons8-windows-10-30.png";
+import like from "../../assects/Home/icons8-facebook-like-50.png";
 const Navbar = () => {
   const [drop1, setdrop1] = useState(false);
   const [drop2, setdrop2] = useState(false);
@@ -18,12 +27,14 @@ const Navbar = () => {
       <div className={styles.Nav_container}>
         <div className={styles.Nav_wrap}>
           <div className={styles.nav_logo_right}>
-            <img src={c_logo} alt="company logo" />
+            <Link to="/">
+              <img src={c_logo} alt="company logo" />
+            </Link>
           </div>
           <div className={styles.nav_right}>
             <div
               className={styles.nav_drop1}
-              onMouseOver={handelmousedown}
+              onMouseOver={() => setdrop1(true)}
               onMouseOut={() => setdrop1(false)}
             >
               <div
@@ -39,6 +50,9 @@ const Navbar = () => {
                   <p>BY SERVICE </p>
                   <ul>
                     <li>
+                      <div className={styles.logo_wrap_like}>
+                        <img src={like} alt="" />
+                      </div>
                       <a href="">Overall Best VPN of 2023 </a>
                     </li>
                   </ul>
@@ -47,21 +61,27 @@ const Navbar = () => {
                   <p>BY Location</p>
                   <ul>
                     <li>
+                      <span class="fi fi-cn"></span>
                       <a href="">China</a>
                     </li>
                     <li>
+                      <span class="fi fi-us"></span>
                       <a href="">USA</a>
                     </li>
                     <li>
+                      <span class="fi fi-ae"></span>
                       <a href="">United Arab Emirates</a>
                     </li>
                     <li>
+                      <span class="fi fi-au"></span>
                       <a href="">Australia </a>
                     </li>
                     <li>
+                      <span class="fi fi-gb"></span>
                       <a href="">United Kingdom </a>
                     </li>
                     <li>
+                      <span class="fi fi-ca"></span>
                       <a href="">Canada </a>
                     </li>
                   </ul>
@@ -70,21 +90,39 @@ const Navbar = () => {
                   <p>BY device</p>
                   <ul>
                     <li>
+                      <div className={styles.logo_wrap}>
+                        <img src={os1} alt="" />
+                      </div>
                       <a href="">Android </a>
                     </li>
                     <li>
+                      <div className={styles.logo_wrap}>
+                        <img src={os2} alt="" />
+                      </div>
                       <a href="">iPhone & iPad </a>
                     </li>
                     <li>
+                      <div className={styles.logo_wrap}>
+                        <img src={os3} alt="" />
+                      </div>
                       <a href="">Mac </a>
                     </li>
                     <li>
+                      <div className={styles.logo_wrap}>
+                        <img src={os4} alt="" />
+                      </div>
                       <a href="">Routers </a>
                     </li>
                     <li>
+                      <div className={styles.logo_wrap}>
+                        <img src={os5} alt="" />
+                      </div>
                       <a href="">PC </a>
                     </li>
                     <li>
+                      <div className={styles.logo_wrap}>
+                        <img src={os6} alt="" />
+                      </div>
                       <a href="">Windows </a>
                     </li>
                   </ul>

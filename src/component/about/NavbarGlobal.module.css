@@ -5,7 +5,16 @@
   border-top: 3px solid #1d69a7;
   box-shadow: 0 4px 6px 0 rgb(0 0 0 / 50%);
 }
-
+.logo_wrap {
+  width: 21px;
+}
+.logo_wrap_like {
+  width: 23px;
+}
+.nav_logo_right {
+  max-width: 158px;
+  margin-top: 5px;
+}
 .Nav_wrap {
   height: 57px;
   width: 1170px;
@@ -255,7 +264,6 @@
   transform: rotate(225deg);
   transition: transform 0.25s;
 }
-
 
 @media only screen and (max-width: 1200px) {
   .drop1_list_location ul li a {

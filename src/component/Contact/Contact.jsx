@@ -9,6 +9,8 @@ import twitter from "../../assects/Contact/twitter.png";
 import youtube from "../../assects/Contact/youtube.png";
 import { useState } from "react";
 import { postContact } from "../API/contact";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 //import secured from "../../assects/Contact/secured.png";
 export default function Methodology() {
   const [data, setdata] = useState({
@@ -16,6 +18,13 @@ export default function Methodology() {
     email: "",
     Comment: "",
   });
+
+  const showToastMessage = () => {
+    toast.success("Success Notification !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+
   const handleChnage = (event) => {
     // console.log(event.target.name);
     // console.log(event.target.value);
@@ -41,10 +50,15 @@ export default function Methodology() {
     }
     postContact(formData, (err, res) => {
       if (err || res.data === "err") {
-        alert("something went wrong! ");
+        // alert("something went wrong! ");
+        toast.error("Enter a valid email address!", {
+          position: toast.POSITION.TOP_RIGHT,
+        });
         return;
       } else {
-        alert("done");
+        toast.success("sent successfully!", {
+          position: toast.POSITION.TOP_RIGHT,
+        });
         setdata({
           Name: "",
           email: "",
@@ -140,6 +154,7 @@ export default function Methodology() {
             </div>
           </div>
         </div>
+        <ToastContainer />
       </section>
     </>
   );
