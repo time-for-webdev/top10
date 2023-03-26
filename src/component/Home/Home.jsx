@@ -46,9 +46,9 @@ const Home = () => {
 
         <Rate />
         <Category />
+        <Carousel />
         <Compare />
         <Question />
-        <Carousel />
       </div>
     </>
   );
