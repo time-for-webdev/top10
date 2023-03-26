@@ -13,15 +13,28 @@ import { getVpn } from "../API/Vpn";
 import Question from "../Question/Question";
 import Carousel from "../carousel/Carousel";
 import Compare from "../Compare/Compare";
+import useStartupCtx from "../Hooks/useContext";
+import { getVpnstate } from "../API/Vpn";
 const Home = () => {
   const [data, setdata] = useState([]);
+  const [data_demo, setdata_demo] = useState([]);
   useEffect(() => {
     getVpn((err, res) => {
       if (err) return;
-      setdata(res.data.data);
+      setdata(res.data);
     });
   }, []);
-  //console.log(data);
+  // console.log("for data --> " + JSON.stringify(data));
+  const { vpn } = useStartupCtx();
+  // console.log("-----------> " + vpn);
+
+  useEffect(() => {
+    getVpnstate((err, res) => {
+      if (err) return;
+      setdata_demo(res.data);
+    });
+  }, []);
+  console.log("for demo_data" + JSON.stringify(data_demo));
   return (
     <>
       <Navbar />
@@ -38,11 +51,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className={styles.vpn_card}>
+        {/* <div className={styles.vpn_card}>
           {data.map((val, ind) => (
             <Card key={ind} val={val} index={ind} />
           ))}
-        </div>
+        </div> */}
 
         <Rate />
         <Category />

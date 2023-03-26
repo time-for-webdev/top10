@@ -16,6 +16,13 @@ export const getVpn = async (cb) => {
     .then((res) => cb(null, res))
     .catch((err) => cb(err, null));
 };
+export const getVpnstate = async (cb) => {
+  const header = getHeaders();
+  await axios
+    .get(`${domain}/Top_ten/india/`, { header })
+    .then((res) => cb(null, res))
+    .catch((err) => cb(err, null));
+};
 
 // export const getprofile_pic = async (cb) => {
 //     const headers = getHeaders();
