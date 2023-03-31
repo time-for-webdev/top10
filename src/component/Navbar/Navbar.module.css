@@ -3,6 +3,7 @@
   list-style: none;
   position: relative;
 }
+
 .logo_wrap {
   width: 21px;
 }
@@ -51,7 +52,7 @@
   border-top: 1px solid rgba(55, 71, 79, 0.25);
   padding: 0;
 }
-.drop1_list_location ul li a {
+.drop1_list_location ul li p {
   color: #37474f;
   display: flex;
   align-items: center;
@@ -59,6 +60,7 @@
   height: 30px;
   padding: 0 10px;
   font-size: 12px;
+  cursor: pointer;
 }
 .drop1,
 .drop2 {
@@ -269,7 +271,7 @@
     background-color: transparent;
     /* color: red; */
   }
-  .drop1_list_location ul li a {
+  .drop1_list_location ul li p {
     cursor: pointer;
     position: relative;
     color: #fff;

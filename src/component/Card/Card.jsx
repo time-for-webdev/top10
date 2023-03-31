@@ -9,7 +9,7 @@ import { BsUbuntu } from "react-icons/bs";
 import { FaLinux } from "react-icons/fa";
 import { GiWifiRouter } from "react-icons/gi";
 function Card(prop) {
-  console.log(prop);
+  // console.log(prop);
   return (
     <>
       <div className={styles.vendors}>
@@ -35,7 +35,7 @@ function Card(prop) {
             >
               <div className={styles.vendor_ribbon_dynamic}>
                 <a
-                  href={prop.val.website_url}
+                  href={prop.val?.website_url}
                   rel="nofollow noopener noreferrer"
                   target="_blank"
                   data-tracked="yes"
@@ -43,7 +43,7 @@ function Card(prop) {
 
                 <a
                   className={styles.dynamic__text_ribbon2}
-                  href={prop.val.website_url}
+                  href={prop.val?.website_url}
                   onclick="clickedLinkExternal('Windows - Best Ribbon', 'ExpressVPN')"
                   rel="nofollow noopener noreferrer"
                   target="_blank"
@@ -57,7 +57,7 @@ function Card(prop) {
               <div className={styles.vendor__logoSection_logo}>
                 <img
                   loading="lazy"
-                  src={prop.val.logo}
+                  src={prop.val?.logo}
                   alt="brand logo"
                   width="640"
                   height="140"
@@ -76,11 +76,11 @@ function Card(prop) {
                 <ul>
                   <li className={styles.listing__item}>
                     <img alt="logoSection_listing" src={check}></img>
-                    {prop.val.specification[0]?.description}
+                    {prop.val?.specification[0]?.description}
                   </li>
                   <li className={styles.listing__item}>
                     <img alt="logoSection_listing" src={check}></img>
-                    {prop.val.specification[1]?.description}
+                    {prop.val?.specification[1]?.description}
                   </li>
                 </ul>
               </div>
@@ -88,7 +88,7 @@ function Card(prop) {
                 className={styles.vendor__logoSection_discount}
                 data-qa-id="vendor_discount"
               >
-                {prop.val.offer}
+                {prop.val?.offer}
               </div>
             </div>
             <div className={styles.vendor__featured}>
@@ -97,7 +97,7 @@ function Card(prop) {
                   className="featured__list featured__list_desktop"
                   data-qa-id="vendor_bullets_desktop"
                 >
-                  {prop.val.specification.map((el) => (
+                  {prop.val?.specification.map((el) => (
                     <li>
                       <img alt="features" src={check}></img>
                       {el?.description}
@@ -170,13 +170,13 @@ function Card(prop) {
                     <g className="chart-text">
                       <text x="23%" y="65%" className="progress-value">
                         {prop.val?.rating < 10
-                          ? (prop.val.rating * 1.0).toFixed(1)
-                          : (prop.val.rating * 1.0).toFixed(0)}
+                          ? (prop.val?.rating * 1.0).toFixed(1)
+                          : (prop.val?.rating * 1.0).toFixed(0)}
                       </text>
                     </g>
                   </svg>
                   <div className={styles.vendor__mark} data-qa-id="vendor_mark">
-                    {prop.val.remark?.remarks}
+                    {prop.val?.remark?.remarks}
                   </div>
                 </div>
               </div>
