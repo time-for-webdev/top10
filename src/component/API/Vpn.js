@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const domain = "https://piyushcse.pythonanywhere.com/api";
+const domain = "https://top-7-vpn.onrender.com/api";
 
 const getHeaders = () => {
   const headers = {
@@ -16,18 +16,31 @@ export const getVpn = async (cb) => {
     .then((res) => cb(null, res))
     .catch((err) => cb(err, null));
 };
-export const getVpnstate = async (cb) => {
+export const getbylocation = async (cb) => {
   const header = getHeaders();
   await axios
-    .get(`${domain}/Top_ten/india/`, { header })
+    .get(`${domain}/location/`, { header })
     .then((res) => cb(null, res))
     .catch((err) => cb(err, null));
 };
-
-// export const getprofile_pic = async (cb) => {
-//     const headers = getHeaders();
-//     await axios
-//       .get(`${domain}/profileSetup/`, { headers })
-//       .then((res) => cb(null, res))
-//       .catch((err) => cb(err, null));
-//   };
+export const getbylocationbyname = async (name, cb) => {
+  const header = getHeaders();
+  await axios
+    .get(`${domain}/location/${name}`, { header })
+    .then((res) => cb(null, res))
+    .catch((err) => cb(err, null));
+};
+export const getbydevicebyname = async (name, cb) => {
+  const header = getHeaders();
+  await axios
+    .get(`${domain}/device/${name}`, { header })
+    .then((res) => cb(null, res))
+    .catch((err) => cb(err, null));
+};
+export const getbyservicebyname = async (name, cb) => {
+  const header = getHeaders();
+  await axios
+    .get(`${domain}/service/${name}`, { header })
+    .then((res) => cb(null, res))
+    .catch((err) => cb(err, null));
+};

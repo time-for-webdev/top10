@@ -49,6 +49,7 @@ export default function Methodology() {
       formData.append("Ques_comment", data.Comment);
     }
     postContact(formData, (err, res) => {
+      console.log(res);
       if (err || res.data === "err") {
         // alert("something went wrong! ");
         toast.error("Enter a valid email address!", {
