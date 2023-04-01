@@ -28,7 +28,7 @@ const Navbar = () => {
 
   /* API CALL*/
 
-  const { location, setdrop, setforVpn } = useStartupCtx();
+  const { location, setdrop, setforVpn, setLoading } = useStartupCtx();
   // console.log("-----------> " + location);
   // const code = lookup.byCountry(location[0])?.iso2;
   // console.log(code.toLowerCase());
@@ -62,8 +62,10 @@ const Navbar = () => {
                   <ul>
                     <li
                       onClick={() => {
+                        setLoading(true);
                         setdrop(1);
                         setforVpn("Overall Best Vpn of 2023");
+                        setLoading(true);
                       }}
                     >
                       <div className={styles.logo_wrap_like}>
@@ -80,6 +82,7 @@ const Navbar = () => {
                       <li
                         key={ind}
                         onClick={() => {
+                          setLoading(true);
                           setdrop(2);
                           setforVpn(val);
                         }}
@@ -99,6 +102,7 @@ const Navbar = () => {
                   <ul>
                     <li
                       onClick={() => {
+                        setLoading(true);
                         setdrop(3);
                         setforVpn("Andriod");
                       }}
@@ -110,6 +114,7 @@ const Navbar = () => {
                     </li>
                     <li
                       onClick={() => {
+                        setLoading(true);
                         setdrop(3);
                         setforVpn("iPhone&iPad");
                       }}
@@ -121,6 +126,7 @@ const Navbar = () => {
                     </li>
                     <li
                       onClick={() => {
+                        setLoading(true);
                         setdrop(3);
                         setforVpn("Mac");
                       }}
@@ -132,6 +138,7 @@ const Navbar = () => {
                     </li>
                     <li
                       onClick={() => {
+                        setLoading(true);
                         setdrop(3);
                         setforVpn("Routers");
                       }}
@@ -143,6 +150,7 @@ const Navbar = () => {
                     </li>
                     <li
                       onClick={() => {
+                        setLoading(true);
                         setdrop(3);
                         setforVpn("Pc");
                       }}
@@ -154,6 +162,7 @@ const Navbar = () => {
                     </li>
                     <li
                       onClick={() => {
+                        setLoading(true);
                         setdrop(3);
                         setforVpn("Windows");
                       }}
@@ -530,8 +539,10 @@ const Navbar = () => {
                       >
                         <li
                           onClick={() => {
+                            setLoading(true);
                             setdrop(1);
                             setforVpn("Overall Best Vpn of 2023");
+                            setopen(false);
                           }}
                         >
                           <p>Overall Best VPN of 2023 </p>
@@ -562,6 +573,8 @@ const Navbar = () => {
                           <li
                             key={ind}
                             onClick={() => {
+                              setopen(false);
+                              setLoading(true);
                               setdrop(2);
                               setforVpn(val);
                             }}
@@ -591,48 +604,60 @@ const Navbar = () => {
                       >
                         <li
                           onClick={() => {
+                            setLoading(true);
                             setdrop(3);
                             setforVpn("Andriod");
+                            setopen(false);
                           }}
                         >
                           <p>Android </p>
                         </li>
                         <li
                           onClick={() => {
+                            setLoading(true);
                             setdrop(3);
                             setforVpn("iPhone&iPad");
+                            setopen(false);
                           }}
                         >
                           <p>iPhone & iPad </p>
                         </li>
                         <li
                           onClick={() => {
+                            setLoading(true);
                             setdrop(3);
                             setforVpn("Mac");
+                            setopen(false);
                           }}
                         >
                           <p>Mac </p>
                         </li>
                         <li
                           onClick={() => {
+                            setLoading(true);
                             setdrop(3);
                             setforVpn("Routers");
+                            setopen(false);
                           }}
                         >
                           <p>Routers </p>
                         </li>
                         <li
                           onClick={() => {
+                            setLoading(true);
                             setdrop(3);
                             setforVpn("Pc");
+                            setopen(false);
                           }}
                         >
                           <p>PC </p>
                         </li>
                         <li
                           onClick={() => {
+                            setLoading(true);
                             setdrop(3);
                             setforVpn("Windows");
+                            setopen(false);
                           }}
                         >
                           <p>Windows </p>

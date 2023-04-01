@@ -8,21 +8,21 @@ import Question from "./component/Question/Question";
 import PuffLoader from "react-spinners/HashLoader";
 import { useState, useEffect } from "react";
 import { FaCentercode } from "react-icons/fa";
+import useStartupCtx from "./component/Hooks/useContext";
+
 function App() {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {document.body.style.overflow = 'hidden';
-    setTimeout(() => { setLoading(false);document.body.style.overflow = 'visible'; }, 3000)
-  }
-    , []);
+  const { loading } = useStartupCtx();
+
   return (
     <>
-
       <Router>
-        {loading ?
-          <div className="preloader"><PuffLoader color={"#ff9800"}
-            loading={loading}
-            size={40}
-          /></div> : ""}
+        {loading ? (
+          <div className="preloader">
+            <PuffLoader color={"#ff9800"} loading={loading} size={40} />
+          </div>
+        ) : (
+          ""
+        )}
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

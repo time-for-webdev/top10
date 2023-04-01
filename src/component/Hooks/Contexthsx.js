@@ -8,6 +8,16 @@ const Vpncontext = ({ children }) => {
   const [location, setlocation] = useState([]);
   const [forVpn, setforVpn] = useState("Overall Best Vpn of 2023");
   const [drop, setdrop] = useState(1);
+  const [loading, setLoading] = useState(true);
+
+  if (loading) {
+    document.body.style.overflow = "hidden";
+    setTimeout(() => {
+      setLoading(false);
+      document.body.style.overflow = "visible";
+    }, 3000);
+  }
+
   useEffect(() => {
     getVpn((err, res) => {
       if (err) return;
@@ -20,7 +30,16 @@ const Vpncontext = ({ children }) => {
   }, []);
   return (
     <vpncontext.Provider
-      value={{ vpn, location, forVpn, setforVpn, drop, setdrop }}
+      value={{
+        vpn,
+        location,
+        forVpn,
+        setforVpn,
+        drop,
+        setdrop,
+        loading,
+        setLoading,
+      }}
     >
       {children}
     </vpncontext.Provider>
