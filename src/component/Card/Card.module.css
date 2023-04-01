@@ -272,7 +272,7 @@ li {
 }
 .vendor__featured {
   display: none;
-  width: auto;
+  width: 34%;
   padding: 0 15px;
 }
 @media (min-width: 768px) {
@@ -317,6 +317,11 @@ li {
     margin-left: auto;
     justify-content: center;
     flex-shrink: 0;
+  }
+}
+@media (max-width: 992px) {
+  .vendor__featured {
+    width: auto;
   }
 }
 @media (min-width: 992px) {
