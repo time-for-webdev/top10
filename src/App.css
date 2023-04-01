@@ -16,13 +16,10 @@ b,
 strong {
   font-weight: 700;
 }
-
-/* for preloader*/
-
 .preloader {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   top: 0;
   left: 0;
