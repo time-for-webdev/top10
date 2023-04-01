@@ -19,6 +19,7 @@ import {
   getbyservicebyname,
   getbydevicebyname,
 } from "../API/Vpn";
+import Item from "../Item/Item"
 const Home = () => {
   const [data, setdata] = useState([]);
   // useEffect(() => {
@@ -81,7 +82,7 @@ const Home = () => {
           {data.Sixth ? <Card val={data.Sixth} index={count++} /> : null}
           {data.Seventh ? <Card val={data.Seventh} index={count++} /> : null}
         </div>
-
+        <Item/>
         <Rate />
         <Category />
         <Carousel />
