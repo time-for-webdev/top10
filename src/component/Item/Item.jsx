@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Item.module.css";
 import check from "../../assects/Card/check.png";
-import video from '../../assects/Item/hero.mp4';
+import video from "../../assects/Item/hero.mp4";
 const Item = () => {
   return (
     <main className={styles.app}>
@@ -11,25 +11,24 @@ const Item = () => {
             VPN Reviews You Can Trust
           </h1>
           <p className={styles.subhead}>
-            Make the right choice with{" "}
-            <a href="">unbiased VPN reviews</a> and in-depth advice
-            from our team of experts.
+            Make the right choice with <a href="">unbiased VPN reviews</a> and
+            in-depth advice from our team of experts.
           </p>
         </div>
         <div className={styles.video_container}>
           <video
             loop="true"
-            autoplay=""
-            muted=""
+            autoplay="true"
+            muted="true"
             preload="auto"
-            playsinline=""
+            playsinline="true"
             src={video}
             class=""
           ></video>
         </div>
         <div className={styles.roundup_tiles}>
           <div className={styles.container}>
-            <p className={styles.subhead}>Compare VPNs by category</p>
+            <p className={styles.subhead}>Get VPNs by category</p>
             <ol className={styles.list}>
               <li className={styles.list_item}>
                 <div className={styles.tile}>
@@ -150,7 +149,7 @@ const Item = () => {
                       </svg>
                     </div>
                     <a href="" className="">
-                      Best Free VPNs
+                      Best VPNs by country
                     </a>
                   </div>
                 </div>
@@ -240,7 +239,7 @@ const Item = () => {
                       </svg>
                     </div>
                     <a href="" className="">
-                      Best Vpn Free trials
+                      Best VPNs by Device
                     </a>
                   </div>
                 </div>
