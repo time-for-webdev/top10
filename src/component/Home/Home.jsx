@@ -30,26 +30,32 @@ const Home = () => {
   // }, []);
 
   /* for seven */
-  const { drop, forVpn } = useStartupCtx();
+  const { drop, forVpn, setLoading } = useStartupCtx();
   useEffect(() => {
     if (drop === 1) {
       getbyservicebyname(forVpn, (err, res) => {
         if (err) return;
         setdata(res.data);
+        setLoading(false);
+        document.body.style.overflow = "visible";
       });
     } else if (drop === 2) {
       getbylocationbyname(forVpn, (err, res) => {
         if (err) return;
         setdata(res.data);
+        setLoading(false);
+        document.body.style.overflow = "visible";
       });
     } else if (drop === 3) {
       getbydevicebyname(forVpn, (err, res) => {
         if (err) return;
         setdata(res.data);
+        setLoading(false);
+        document.body.style.overflow = "visible";
       });
     }
   }, [forVpn]);
-  // console.log(data);
+  console.log(data);
   var count = 0;
 
   return (

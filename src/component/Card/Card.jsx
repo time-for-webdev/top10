@@ -155,7 +155,11 @@ function Card(prop) {
                       stroke-width="2"
                     ></circle>
                     <circle
-                      className={styles.donut_segment}
+                      className={
+                        prop.val?.rating < 9
+                          ? `${styles.donut_segment_else}`
+                          : `${styles.donut_segment}`
+                      }
                       cx="21"
                       cy="21"
                       r="20"
@@ -175,7 +179,14 @@ function Card(prop) {
                       </text>
                     </g>
                   </svg>
-                  <div className={styles.vendor__mark} data-qa-id="vendor_mark">
+                  <div
+                    className={
+                      prop.val?.rating < 9
+                        ? `${styles.vendor__mark_else}`
+                        : `${styles.vendor__mark}`
+                    }
+                    data-qa-id="vendor_mark"
+                  >
                     {prop.val?.remark?.remarks}
                   </div>
                 </div>
