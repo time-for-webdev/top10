@@ -6,6 +6,7 @@ body {
   background: #fff;
   font-size: 1rem;
   direction: ltr;
+  top:0 !important;
 }
 * {
   font-family: Cabin, Arial, Sans-Serif;
