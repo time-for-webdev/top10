@@ -386,9 +386,16 @@ svg:not(:root) {
 .donut_segment {
   stroke: #ff9800;
 }
+.donut_segment_else {
+  stroke: #00acc1;
+}
+
 @media (min-width: 768px) {
   .donut_segment {
     stroke: #ff9800;
+  }
+  .donut_segment_else {
+    stroke: #00acc1;
   }
 }
 
@@ -415,6 +422,16 @@ svg:not(:root) {
     margin-top: 12px;
     display: block;
     color: #ff9800;
+    font-weight: 700;
+  }
+  .vendor__mark_else {
+    text-align: center;
+    font-size: 14px;
+    line-height: 27px;
+    text-transform: uppercase;
+    margin-top: 12px;
+    display: block;
+    color: #00acc1;
     font-weight: 700;
   }
 }
