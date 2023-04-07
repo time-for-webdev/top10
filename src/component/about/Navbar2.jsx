@@ -2,17 +2,17 @@ import React from "react";
 import styles from "./Navbar2.module.css";
 import { useState, useEffect } from "react";
 import { HashLink } from 'react-router-hash-link';
-const Navbar2 = ({ iv1, iv2, iv3, iv4 }) => {
+const Navbar2 = ({ iv1, iv2, iv3}) => {
   const [linkClass, setlinkClass] = useState();
   const [Dropdown, setDropdown] = useState(true);
-  const [Selected, setSelected] = useState("We Are");
+  const [Selected, setSelected] = useState("Our Blogs");
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
-    if (iv1) { setlinkClass(0); setSelected("We Are") }
+    if (iv1) { setlinkClass(0); setSelected("Our Blogs") }
     else if (iv2) { setlinkClass(1); setSelected("Our Values") }
     else if (iv3) { setlinkClass(2); setSelected("Review Methodology") }
-    else if (iv4) { setlinkClass(3); setSelected("The Research Lab") }
+   
     else { };
 
     if (window.scrollY > 200) { setSticky(true) }
@@ -38,7 +38,7 @@ const Navbar2 = ({ iv1, iv2, iv3, iv4 }) => {
               }}
               smooth to="#weare"
             >
-              We Are
+            Our Blogs
             </HashLink>
           </li>
           <li>
@@ -63,17 +63,7 @@ const Navbar2 = ({ iv1, iv2, iv3, iv4 }) => {
               Review Methodology
             </HashLink>
           </li>
-          <li>
-            <HashLink
-              className={linkClass == 3 ? `${styles.active}` : ``}
-              onClick={(e) => {
-                setlinkClass(3);
-              }}
-              smooth to="#lab"
-            >
-              The Research Lab
-            </HashLink>
-          </li>
+         
         </ul>
       </div></section>
       <section className={styles.nav_wrapper2}>
@@ -81,10 +71,10 @@ const Navbar2 = ({ iv1, iv2, iv3, iv4 }) => {
           {Dropdown ? <HashLink smooth to="" onClick={() => setDropdown(false)} className={styles.drop_head} >{Selected}<p></p></HashLink>
             :
             <div className={styles.drop_items_con} onClick={() => setDropdown(true)}>
-              <HashLink className={styles.drop_items} onClick={(e) => { setSelected(e.target.textContent) }} smooth to="#weare">We Are<p></p></HashLink>
+              <HashLink className={styles.drop_items} onClick={(e) => { setSelected(e.target.textContent) }} smooth to="#weare">Our Blogs<p></p></HashLink>
               <HashLink className={styles.drop_items} onClick={(e) => { setSelected(e.target.textContent) }} smooth to="#value">Our Values</HashLink>
               <HashLink className={styles.drop_items} onClick={(e) => { setSelected(e.target.textContent) }} smooth to="#method">Review Methodology</HashLink>
-              <HashLink className={styles.drop_items} onClick={(e) => { setSelected(e.target.textContent) }} smooth to="#lab">The Research Lab</HashLink>
+              
             </div>
           }
         </div>
