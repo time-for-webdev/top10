@@ -10,24 +10,27 @@
 .logo_wrap_like {
   width: 23px;
 }
-.nav_logo_right {
-  max-width: 158px;
-  margin-top: 5px;
-}
+
 .Nav_wrap {
   height: 43px;
   width: 1170px;
   margin: 0 auto;
-  margin-top: 25px;
+  margin-top: 13px;
+  margin-bottom: 13px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: flex-end;
+}
+.nav_logo_right {
+  max-width: 158px;
+  margin-top: 5px;
+  margin-right: auto;
 }
 .nav_right .drop1 p,
 .nav_right .drop2 p,
 .drop_active p {
   font-size: 16px;
-  color: #37474f;
+  color: #1d69a7;
   cursor: pointer;
 }
 .drop1_list_location {
@@ -97,7 +100,7 @@
   border-top: 8px solid #fff;
   border-right: 8px solid transparent;
   transition: transform 0.25s;
-  border-top: 8px solid #37474f;
+  border-top: 8px solid #1d69a7;
 }
 .drop1 p::after,
 .drop2 p::after {
@@ -111,7 +114,7 @@
   border-right: 8px solid transparent;
   transform: rotate(225deg);
   transition: transform 0.25s;
-  border-top: 8px solid #37474f;
+  border-top: 8px solid #1d69a7;
 }
 .nav_right {
   display: flex;

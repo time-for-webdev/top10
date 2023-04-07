@@ -8,7 +8,7 @@ import OurValues from "./OurValues";
 import Methodology from "./Methodology";
 import Research from "./Research";
 import Advantages from "./Advantages";
-import NavbarGlobal from "./NavbarGlobal";
+import Navbar from "../Navbar/Navbar";
 import { useInView } from 'react-intersection-observer';
 
 export default function About() {
@@ -18,7 +18,7 @@ export default function About() {
   const { ref: ref4, inView: iv4 } = useInView();
   return (
     <>
-      <NavbarGlobal />
+      <Navbar />
       <Navbar2 iv1={iv1} iv2={iv2} iv3={iv3} iv4={iv4} />
       <Ourstory />
       <WeAre ref1={ref1} />
