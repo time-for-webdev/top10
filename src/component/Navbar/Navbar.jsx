@@ -176,7 +176,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <div id="google_translate_element"></div>
+            
            {/*} <div
               className={styles.nav_drop2}
               onClick={() => {
@@ -329,6 +329,7 @@ const Navbar = () => {
               </ul>
             </div> */}
           </div>
+          <div id="google_translate_element"></div>
           <div className={styles.nav_right_mob}>
             <div
               onClick={() => {
@@ -350,7 +351,9 @@ const Navbar = () => {
                   ? `${styles.slidebar} ${styles.menu__block}`
                   : `${styles.menu__block}`
               }
-            >  {/*
+            >  
+            
+            {/*
               <div className={styles.slide_first}>
                 <div
                   className={styles.nav_drop2}

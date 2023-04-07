@@ -12,10 +12,10 @@ const Vpncontext = ({ children }) => {
 
   if (loading) {
     document.body.style.overflow = "hidden";
-    // setTimeout(() => {
-    // setLoading(false);
-    // document.body.style.overflow = "visible";
-    // }, 3000);
+     setTimeout(() => {
+     setLoading(false);
+     document.body.style.overflow = "visible";
+   }, 3000);
   }
 
   useEffect(() => {

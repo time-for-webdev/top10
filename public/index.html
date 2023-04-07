@@ -43,30 +43,39 @@
     .goog-te-combo {
       border: none;
       font-size: 16px;
-
+      outline: 0pt !important;
+      border: 0pt !important
     }
 
     .goog-te-gadget {
       margin-top: 9%;
-      margin-left: 0% !important;
+      
+      margin-right: 0% !important;
+      outline: 0pt !important;
+      border: 0pt !important
     }
 
     .goog-te-combo {
       font-family: Arial, Helvetica, sans-serif !important;
       font-size: 13pt !important;
       width: 100%;
-      color: #37474f !important;
+      color: #1d69a7 !important;
       cursor: pointer !important;
       background-color: #fff !important;
+      outline: 0pt !important;
+      border: 0pt !important;
 
     }
+  #google_translate_element{
+      width:70pt;
+      margin-left: 30pt;
+  }
+  @media only screen and (max-width: 1200px) {
     #google_translate_element{
-      width:85pt;
-      position: absolute !important;
-      top:0.39%;
-      left:73%;
-    z-index: 200;
-    }
+      margin-right: 20pt;
+  }
+  }
+  
     #helper{
     position: absolute !important;
     left:-9999px !important;
@@ -77,7 +86,6 @@
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  
   <div id="root"></div>
   <span id="helper">jj</span>
   
@@ -92,11 +100,11 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
 
-  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?
+  <script async type="text/javascript" src="https://translate.google.com/translate_a/element.js?
 cb=googleTranslateElementInit">
 </script>
 
-  <script type="text/javascript">
+  <script async type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement(
         { pageLanguage: 'en' },

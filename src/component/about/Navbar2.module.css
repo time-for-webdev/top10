@@ -5,7 +5,7 @@
   height: 56px;
   background: #e0f5ff;
   z-index: -1;
-
+  border-top: 2px solid #1d69a7;
   width: 100%;
 }
 

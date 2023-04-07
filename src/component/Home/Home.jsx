@@ -36,22 +36,22 @@ const Home = () => {
       getbyservicebyname(forVpn, (err, res) => {
         if (err) return;
         setdata(res.data);
-        setLoading(false);
-        document.body.style.overflow = "visible";
+       // setLoading(false);
+       // document.body.style.overflow = "visible";
       });
     } else if (drop === 2) {
       getbylocationbyname(forVpn, (err, res) => {
         if (err) return;
         setdata(res.data);
-        setLoading(false);
-        document.body.style.overflow = "visible";
+       // setLoading(false);
+      //  document.body.style.overflow = "visible";
       });
     } else if (drop === 3) {
       getbydevicebyname(forVpn, (err, res) => {
         if (err) return;
-        setdata(res.data);
-        setLoading(false);
-        document.body.style.overflow = "visible";
+       setdata(res.data);
+       // setLoading(false);
+      //  document.body.style.overflow = "visible";
       });
     }
   }, [forVpn]);

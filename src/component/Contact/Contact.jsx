@@ -1,7 +1,7 @@
 import react from "react";
 import styles from "./Contact.module.css";
 import Discloser from "../Discloser/Discloser";
-import NavbarGlobal from "../about/NavbarGlobal";
+import Navbar from "../Navbar/Navbar";
 import tele from "../../assects/Contact/telegram.jpg";
 import email from "../../assects/Contact/email.png";
 import fb from "../../assects/Contact/fb.png";
@@ -70,7 +70,7 @@ export default function Methodology() {
   };
   return (
     <>
-      <NavbarGlobal />
+      <Navbar />
       <Discloser />
       <section className={styles.contact_us}>
         <div className={styles.contact_heading}>
