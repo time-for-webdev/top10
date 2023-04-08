@@ -83,7 +83,7 @@ const Terms = () => {
                     className={styles.legal_content}
                     id={styles.block_text}
                   >
-                    <h4>
+                    <h4 className={styles.topic}>
                       <u>Use of Website</u>
                     </h4>
                     <div>
@@ -136,7 +136,7 @@ const Terms = () => {
                     className={styles.legal_content}
                     id={styles.block_text}
                   >
-                    <h4>
+                    <h4 className={styles.topic}>
                       <u>Access</u>
                     </h4>
                     <div>
@@ -156,7 +156,7 @@ const Terms = () => {
                     className={styles.legal_content}
                     id={styles.block_text}
                   >
-                    <h4>
+                    <h4 className={styles.topic}>
                       <u>Prohibited Use</u>
                     </h4>
                     <div>
@@ -182,7 +182,7 @@ const Terms = () => {
                     className={styles.legal_content}
                     id={styles.block_text}
                   >
-                    <h4>
+                    <h4 className={styles.topic}>
                       <u>Termination</u>
                     </h4>
                     <div>
@@ -203,7 +203,7 @@ const Terms = () => {
                     className={styles.legal_content}
                     id={styles.block_text}
                   >
-                    <h4>
+                    <h4 className={styles.topic}>
                       <u>Disclaimers</u>
                     </h4>
                     <div>
@@ -289,7 +289,7 @@ const Terms = () => {
                     className={styles.legal_content}
                     id={styles.block_text}
                   >
-                    <h4>
+                    <h4 className={styles.topic}>
                       <u>Limitation of Liability</u>
                     </h4>
                     <div>
@@ -315,7 +315,7 @@ const Terms = () => {
                     className={styles.legal_content}
                     id={styles.block_text}
                   >
-                    <h4>
+                    <h4 className={styles.topic}>
                       <u>User submissions</u>
                     </h4>
                     <div>
@@ -357,7 +357,7 @@ const Terms = () => {
                     className={styles.legal_content}
                     id={styles.block_text}
                   >
-                    <h4>
+                    <h4 className={styles.topic}>
                       <u>Privacy</u>
                     </h4>
                     <p>
@@ -449,7 +449,7 @@ const Terms = () => {
                     className={styles.legal_content}
                     id={styles.block_text}
                   >
-                    <h4>
+                    <h4 className={styles.topic}>
                       <u>Electronic communications</u>
                     </h4>
                     <div>
@@ -468,7 +468,7 @@ const Terms = () => {
                     className={styles.legal_content}
                     id={styles.block_text}
                   >
-                    <h4>
+                    <h4 className={styles.topic}>
                       <u>General</u>
                     </h4>
                     <div>
