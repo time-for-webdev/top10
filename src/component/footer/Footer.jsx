@@ -46,10 +46,10 @@ const Footer = () => {
                 <a href="/">Blogs</a>
               </li>
               <li>
-                <a href="/">Privacy Policy</a>
+                <a href="/Privacy">Privacy Policy</a>
               </li>
               <li>
-                <a href="/">Terms and Conditions of Use</a>
+                <a href="/Terms">Terms and Conditions of Use</a>
               </li>
               <li>
                 <a href="/">DMCA Policy</a>
