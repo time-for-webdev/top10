@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import c_logo from "../../assects/discount.png";
+import c_logo from "../../assects/discount-vpn.png";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaYoutubeSquare } from "react-icons/fa";

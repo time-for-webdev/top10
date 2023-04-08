@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.css";
-import c_logo from "../../assects/discount.png";
+import c_logo from "../../assects/discount-vpn.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
@@ -176,8 +176,8 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            
-           {/*} <div
+
+            {/*} <div
               className={styles.nav_drop2}
               onClick={() => {
                 setdrop2(!drop2);
@@ -351,9 +351,8 @@ const Navbar = () => {
                   ? `${styles.slidebar} ${styles.menu__block}`
                   : `${styles.menu__block}`
               }
-            >  
-            
-            {/*
+            >
+              {/*
               <div className={styles.slide_first}>
                 <div
                   className={styles.nav_drop2}
