@@ -130,8 +130,8 @@ export const Privacy = () => {
                     id={styles.block_text}
                   >
                     <div>
-                      <h2>Table of contents</h2>
-                      <ul style={{ marginTop: "30px" }}>
+                      <h4>Table of contents</h4>
+                      <ul >
                         <li>
                           What information we collect, why we collect it, and
                           how it is used
