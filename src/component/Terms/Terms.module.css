@@ -151,10 +151,10 @@
         padding-top: calc(1rem*3.2)
     }
 }
-p, main a, p a {
+.legal p {
     font-family: Calibre,"Arial Calibre Fallback",sans-serif;
 }
-p {
+.legal p {
     font-size: 0.9rem;
     line-height: 1.5;
     color: #232434;
@@ -162,7 +162,7 @@ p {
     overflow-wrap: anywhere;
 }
 @media(min-width:768px){
-    p{
+    .legal p{
         font-size: 1.1rem;
         line-height: 1.5;
         color: #232434;
@@ -171,7 +171,7 @@ p {
     }
 }
 @media(min-width:1024px){
-    p{
+    .legal p{
         font-size: 1.2rem;
         line-height: 1.5;
         color: #232434;
