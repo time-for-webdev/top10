@@ -98,30 +98,34 @@
     /* margin-right: -0.5rem;
     margin-left: -0.5rem; */
 }
-h1:not([class*="heading"]), h2:not([class*="heading-"]), h3:not([class*="heading-"]), h4:not([class*="heading-"]) {
+/* h1:not([class*="heading"]), h2:not([class*="heading-"]), h3:not([class*="heading-"]), h4:not([class*="heading-"]) {
     font-family: CircularPro,"Arial CircularPro Fallback",sans-serif;
     font-weight: 600;
     color: #232434;
-}
+} */
 .header h1{
     text-align: center;
     margin: 0 auto calc(4px* 5);
-}
-h1:not([class*="heading"]) {
     font-size: 1.8rem;
     line-height: 1.2;
 }
+/* h1:not([class*="heading"]) {
+    font-size: 1.8rem;
+    line-height: 1.2;
+} */
 @media(min-width:768px){
     .header h1{
         margin-bottom: calc(4px*10);
-    }
-}
-@media(min-width:768px){
-    h1:not([class*="heading"]) {
         font-size: 2.8rem;
         line-height: 1.2;
     }
 }
+/* @media(min-width:768px){
+    h1:not([class*="heading"]) {
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
+} */
 
 .main_article{
     box-sizing: border-box;
@@ -147,10 +151,10 @@ h1:not([class*="heading"]) {
         padding-top: calc(1rem*3.2)
     }
 }
-p, main a, p a {
+.legal p {
     font-family: Calibre,"Arial Calibre Fallback",sans-serif;
 }
-p {
+.legal p {
     font-size: 0.9rem;
     line-height: 1.5;
     color: #232434;
@@ -158,7 +162,7 @@ p {
     overflow-wrap: anywhere;
 }
 @media(min-width:768px){
-    p{
+   .legal p{
         font-size: 1.1rem;
         line-height: 1.5;
         color: #232434;
@@ -167,7 +171,7 @@ p {
     }
 }
 @media(min-width:1024px){
-    p{
+    .legal p{
         font-size: 1.2rem;
         line-height: 1.5;
         color: #232434;
@@ -235,13 +239,27 @@ td, th {
     overflow-x: auto;
   }
   
-  li ul{
+ .inside_listitem ul{
     margin-top: calc(4px*4);
-       
+ }
+ .inside_listitem ul li{
+    list-style-type: circle;
+ }
+  
+  
+ .topic {
+    padding-bottom: 7px;
+    line-height: 1.5;
+    font-size:1.3rem;
+
   }
-  
-  
-  h4 {
+ @media(min-width:768px){
+    .topic{
+        font-size:2rem;
+        padding-bottom: 15px;
+    }
+ }
+  /* h4 {
     padding-bottom: 7px;
     line-height: 1.5;
     font-size:1.3rem;
@@ -252,5 +270,5 @@ td, th {
         font-size:2rem;
         padding-bottom: 15px;
     }
- }
+ } */
   

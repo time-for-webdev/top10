@@ -17,13 +17,13 @@ function App() {
   return (
     <>
       <Router>
-        {/* {loading ? (    
+        {loading ? (    
           <div className="preloader">
             <PuffLoader color={"#ff9800"} loading={loading} size={40} />
           </div>
         ) : (
           ""
-        )} */}
+        )}
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

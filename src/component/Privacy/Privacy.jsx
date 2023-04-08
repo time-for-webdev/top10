@@ -130,7 +130,7 @@ export const Privacy = () => {
                     id={styles.block_text}
                   >
                     <div>
-                      <h4>Table of contents</h4>
+                      <h4 className={styles.topic}>Table of contents</h4>
                       <ul >
                         <li>
                           What information we collect, why we collect it, and
@@ -171,7 +171,7 @@ export const Privacy = () => {
                     className={styles.legal_content}
                   >
                     <div className={styles.table_container}>
-                      <h4>
+                      <h4 className={styles.topic}>
                         1. WHAT INFORMATION WE COLLECT, WHY WE COLLECT IT, AND
                         HOW IT IS USED
                       </h4>
@@ -412,7 +412,7 @@ export const Privacy = () => {
                     id={styles.block_text}
                     className={styles.legal_content}
                   >
-                    <h4>2. HOW WE PROTECT AND RETAIN YOUR INFORMATION</h4>
+                    <h4 className={styles.topic}>2. HOW WE PROTECT AND RETAIN YOUR INFORMATION</h4>
 
                     <ul>
                       <li>
@@ -444,7 +444,7 @@ export const Privacy = () => {
                     id={styles.block_text}
                     className={styles.legal_content}
                   >
-                    <h4>3. HOW WE SHARE YOUR PERSONAL DATA</h4>
+                    <h4 className={styles.topic}>3. HOW WE SHARE YOUR PERSONAL DATA</h4>
 
                     <p>
                       In addition to the recipients described above, we share
@@ -492,7 +492,7 @@ export const Privacy = () => {
                     id={styles.block_text}
                     className={styles.legal_content}
                   >
-                    <h4>
+                    <h4 className={styles.topic}>
                       4. ADDITIONAL INFORMATION REGARDING TRANSFERS OF PERSONAL
                       INFORMATION
                     </h4>
@@ -508,7 +508,7 @@ export const Privacy = () => {
                     id={styles.block_text}
                     className={styles.legal_content}
                   >
-                    <h4>5. YOUR PRIVACY RIGHTS. HOW TO DELETE YOUR ACCOUNT</h4>
+                    <h4 className={styles.topic}>5. YOUR PRIVACY RIGHTS. HOW TO DELETE YOUR ACCOUNT</h4>
 
                     <ul>
                       <li>
@@ -563,10 +563,10 @@ export const Privacy = () => {
                         agreements and/or other details may need to be partially
                         redacted for reasons of commercial confidentiality;
                       </li>
-                      <li>
+                      <li className={styles.inside_listitem}>
                         You have a right to lodge a complaint with your local
                         data protection supervisory authority.
-                        <ul>
+                        <ul >
                           <li>
                             The following rights (which may be subject to
                             certain exemptions or derogations) shall apply to
@@ -605,12 +605,12 @@ export const Privacy = () => {
                         treatment for the exercise of the privacy rights
                         conferred by the CCPA;
                       </li>
-                      <li>
+                      <li className={styles.inside_listitem}>
                         Where you have consented to the processing of your
                         Personal Information, you may withdraw that consent at
                         any time and prevent further processing by contacting us
                         as described in this Privacy Policy.
-                        <ul>
+                        <ul >
                           <li>
                             While we cannot guarantee privacy perfection, we
                             will address any requests to the best of our ability
@@ -641,7 +641,7 @@ export const Privacy = () => {
                     id={styles.block_text}
                     className={styles.legal_content}
                   >
-                    <h4>6. USE BY CHILDREN</h4>
+                    <h4 className={styles.topic}>6. USE BY CHILDREN</h4>
                     <p>
                       We do not offer our products or services for use by
                       children and, therefore, we do not knowingly collect
@@ -662,7 +662,7 @@ export const Privacy = () => {
                     id={styles.block_text}
                     className={styles.legal_content}
                   >
-                    <h4>7. INTERACTION WITH THIRD PARTY PRODUCTS</h4>
+                    <h4 className={styles.topic}>7. INTERACTION WITH THIRD PARTY PRODUCTS</h4>
                     <p>
                       We enable you to interact with third party websites,
                       mobile software applications and products or services that
@@ -680,7 +680,7 @@ export const Privacy = () => {
                     id={styles.block_text}
                     className={styles.legal_content}
                   >
-                    <h4>8. ANALYTIC TOOLS</h4>
+                    <h4 className={styles.topic}>8. ANALYTIC TOOLS</h4>
                     <ul>
                       <li>
                         <b>Google Analytics.</b> The Website uses a tool called <b>“Google
@@ -741,7 +741,7 @@ export const Privacy = () => {
                     id={styles.block_text}
                     className={styles.legal_content}
                   >
-                    <h4>
+                    <h4 className={styles.topic}>
                       10. SPECIFIC PROVISIONS APPLICABLE UNDER CALIFORNIA PRIVACY LAW
                     </h4>
 
@@ -759,7 +759,7 @@ export const Privacy = () => {
                     id={styles.block_text}
                     className={styles.legal_content}
                   >
-                    <h4>11. CONTACT US</h4>
+                    < h4 className={styles.topic}>11. CONTACT US</h4>
 
                     <p>
                       If you have any questions, concerns or complaints
