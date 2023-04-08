@@ -210,16 +210,16 @@ ul {
 }
 
 .list li:nth-of-type(1) {
-  animation-delay: 5000ms;
+  animation-delay: 2000ms;
 }
 .list li:nth-of-type(2) {
-  animation-delay: 6000ms;
+  animation-delay: 3000ms;
 }
 .list li:nth-of-type(3) {
-  animation-delay: 7000ms;
+  animation-delay: 4000ms;
 }
 .list li:nth-of-type(4) {
-  animation-delay: 8000ms;
+  animation-delay: 5000ms;
 }
 .tile {
   cursor: pointer;

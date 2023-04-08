@@ -44,3 +44,12 @@ export const getbyservicebyname = async (name, cb) => {
     .then((res) => cb(null, res))
     .catch((err) => cb(err, null));
 };
+
+/* FAQ */
+export const getFaq = async (cb) => {
+  const header = getHeaders();
+  await axios
+    .get(`${domain}/faq/`, { header })
+    .then((res) => cb(null, res))
+    .catch((err) => cb(err, null));
+};

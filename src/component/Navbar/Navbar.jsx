@@ -37,7 +37,10 @@ const Navbar = () => {
     <>
       <div className={styles.Nav_container}>
         <div className={styles.Nav_wrap}>
-          <div className={styles.nav_logo_right}>
+          <div
+            className={styles.nav_logo_right}
+            onClick={() => setLoading(true)}
+          >
             <Link to="/">
               <img src={c_logo} alt="company logo" />
             </Link>
@@ -59,120 +62,126 @@ const Navbar = () => {
               >
                 <li className={styles.drop1_list_location}>
                   <p>BY SERVICE </p>
-                  <ul>
-                    <li
-                      onClick={() => {
-                        setLoading(true);
-                        setdrop(1);
-                        setforVpn("Overall Best Vpn of 2023");
-                        setLoading(true);
-                      }}
-                    >
-                      <div className={styles.logo_wrap_like}>
-                        <img src={like} alt="" />
-                      </div>
-                      <p>Overall Best VPN of 2023 </p>
-                    </li>
-                  </ul>
+                  <Link to="/">
+                    <ul>
+                      <li
+                        onClick={() => {
+                          setLoading(true);
+                          setdrop(1);
+                          setforVpn("Overall Best Vpn of 2023");
+                          setLoading(true);
+                        }}
+                      >
+                        <div className={styles.logo_wrap_like}>
+                          <img src={like} alt="" />
+                        </div>
+                        <p>Overall Best VPN of 2023 </p>
+                      </li>
+                    </ul>
+                  </Link>
                 </li>
                 <li className={styles.drop1_list_location}>
                   <p>BY Location</p>
-                  <ul>
-                    {location.map((val, ind) => (
-                      <li
-                        key={ind}
-                        onClick={() => {
-                          setLoading(true);
-                          setdrop(2);
-                          setforVpn(val);
-                        }}
-                      >
-                        <span
-                          class={`fi fi-${lookup
-                            .byCountry(val)
-                            ?.iso2.toLocaleLowerCase()}`}
-                        ></span>
-                        <p>{val}</p>
-                      </li>
-                    ))}
-                  </ul>
+                  <Link to="/">
+                    <ul>
+                      {location.map((val, ind) => (
+                        <li
+                          key={ind}
+                          onClick={() => {
+                            setLoading(true);
+                            setdrop(2);
+                            setforVpn(val);
+                          }}
+                        >
+                          <span
+                            class={`fi fi-${lookup
+                              .byCountry(val)
+                              ?.iso2.toLocaleLowerCase()}`}
+                          ></span>
+                          <p>{val}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </Link>
                 </li>
                 <li className={styles.drop1_list_location}>
                   <p>BY device</p>
-                  <ul>
-                    <li
-                      onClick={() => {
-                        setLoading(true);
-                        setdrop(3);
-                        setforVpn("Andriod");
-                      }}
-                    >
-                      <div className={styles.logo_wrap}>
-                        <img src={os1} alt="" />
-                      </div>
-                      <p>Android </p>
-                    </li>
-                    <li
-                      onClick={() => {
-                        setLoading(true);
-                        setdrop(3);
-                        setforVpn("iPhone&iPad");
-                      }}
-                    >
-                      <div className={styles.logo_wrap}>
-                        <img src={os2} alt="" />
-                      </div>
-                      <p>iPhone & iPad </p>
-                    </li>
-                    <li
-                      onClick={() => {
-                        setLoading(true);
-                        setdrop(3);
-                        setforVpn("Mac");
-                      }}
-                    >
-                      <div className={styles.logo_wrap}>
-                        <img src={os3} alt="" />
-                      </div>
-                      <p>Mac </p>
-                    </li>
-                    <li
-                      onClick={() => {
-                        setLoading(true);
-                        setdrop(3);
-                        setforVpn("Routers");
-                      }}
-                    >
-                      <div className={styles.logo_wrap}>
-                        <img src={os4} alt="" />
-                      </div>
-                      <p>Routers </p>
-                    </li>
-                    <li
-                      onClick={() => {
-                        setLoading(true);
-                        setdrop(3);
-                        setforVpn("Pc");
-                      }}
-                    >
-                      <div className={styles.logo_wrap}>
-                        <img src={os5} alt="" />
-                      </div>
-                      <p>PC </p>
-                    </li>
-                    <li
-                      onClick={() => {
-                        setLoading(true);
-                        setdrop(3);
-                        setforVpn("Windows");
-                      }}
-                    >
-                      <div className={styles.logo_wrap}>
-                        <img src={os6} alt="" />
-                      </div>
-                      <p>Windows </p>
-                    </li>
-                  </ul>
+                  <Link to="/">
+                    <ul>
+                      <li
+                        onClick={() => {
+                          setLoading(true);
+                          setdrop(3);
+                          setforVpn("Andriod");
+                        }}
+                      >
+                        <div className={styles.logo_wrap}>
+                          <img src={os1} alt="" />
+                        </div>
+                        <p>Android </p>
+                      </li>
+                      <li
+                        onClick={() => {
+                          setLoading(true);
+                          setdrop(3);
+                          setforVpn("iPhone&iPad");
+                        }}
+                      >
+                        <div className={styles.logo_wrap}>
+                          <img src={os2} alt="" />
+                        </div>
+                        <p>iPhone & iPad </p>
+                      </li>
+                      <li
+                        onClick={() => {
+                          setLoading(true);
+                          setdrop(3);
+                          setforVpn("Mac");
+                        }}
+                      >
+                        <div className={styles.logo_wrap}>
+                          <img src={os3} alt="" />
+                        </div>
+                        <p>Mac </p>
+                      </li>
+                      <li
+                        onClick={() => {
+                          setLoading(true);
+                          setdrop(3);
+                          setforVpn("Routers");
+                        }}
+                      >
+                        <div className={styles.logo_wrap}>
+                          <img src={os4} alt="" />
+                        </div>
+                        <p>Routers </p>
+                      </li>
+                      <li
+                        onClick={() => {
+                          setLoading(true);
+                          setdrop(3);
+                          setforVpn("Pc");
+                        }}
+                      >
+                        <div className={styles.logo_wrap}>
+                          <img src={os5} alt="" />
+                        </div>
+                        <p>PC </p>
+                      </li>
+                      <li
+                        onClick={() => {
+                          setLoading(true);
+                          setdrop(3);
+                          setforVpn("Windows");
+                        }}
+                      >
+                        <div className={styles.logo_wrap}>
+                          <img src={os6} alt="" />
+                        </div>
+                        <p>Windows </p>
+                      </li>
+                    </ul>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -537,20 +546,24 @@ const Navbar = () => {
                       >
                         <span>BY SERVICE </span>
                       </div>
-                      <ul
-                        style={all ? { display: "block" } : { display: "none" }}
-                      >
-                        <li
-                          onClick={() => {
-                            setLoading(true);
-                            setdrop(1);
-                            setforVpn("Overall Best Vpn of 2023");
-                            setopen(false);
-                          }}
+                      <Link to="/">
+                        <ul
+                          style={
+                            all ? { display: "block" } : { display: "none" }
+                          }
                         >
-                          <p>Overall Best VPN of 2023 </p>
-                        </li>
-                      </ul>
+                          <li
+                            onClick={() => {
+                              setLoading(true);
+                              setdrop(1);
+                              setforVpn("Overall Best Vpn of 2023");
+                              setopen(false);
+                            }}
+                          >
+                            <p>Overall Best VPN of 2023 </p>
+                          </li>
+                        </ul>
+                      </Link>
                     </li>
                     <li className={styles.drop1_list_location}>
                       <div
@@ -565,27 +578,29 @@ const Navbar = () => {
                       >
                         <span>BY Location</span>
                       </div>
-                      <ul
-                        style={
-                          loaction_bool
-                            ? { display: "block" }
-                            : { display: "none" }
-                        }
-                      >
-                        {location.map((val, ind) => (
-                          <li
-                            key={ind}
-                            onClick={() => {
-                              setopen(false);
-                              setLoading(true);
-                              setdrop(2);
-                              setforVpn(val);
-                            }}
-                          >
-                            <p>{val}</p>
-                          </li>
-                        ))}
-                      </ul>
+                      <Link to="/">
+                        <ul
+                          style={
+                            loaction_bool
+                              ? { display: "block" }
+                              : { display: "none" }
+                          }
+                        >
+                          {location.map((val, ind) => (
+                            <li
+                              key={ind}
+                              onClick={() => {
+                                setopen(false);
+                                setLoading(true);
+                                setdrop(2);
+                                setforVpn(val);
+                              }}
+                            >
+                              <p>{val}</p>
+                            </li>
+                          ))}
+                        </ul>
+                      </Link>
                     </li>
                     <li className={styles.drop1_list_location}>
                       <div
@@ -600,72 +615,74 @@ const Navbar = () => {
                       >
                         <span>BY device</span>
                       </div>
-                      <ul
-                        style={
-                          device ? { display: "block" } : { display: "none" }
-                        }
-                      >
-                        <li
-                          onClick={() => {
-                            setLoading(true);
-                            setdrop(3);
-                            setforVpn("Andriod");
-                            setopen(false);
-                          }}
+                      <Link to="/">
+                        <ul
+                          style={
+                            device ? { display: "block" } : { display: "none" }
+                          }
                         >
-                          <p>Android </p>
-                        </li>
-                        <li
-                          onClick={() => {
-                            setLoading(true);
-                            setdrop(3);
-                            setforVpn("iPhone&iPad");
-                            setopen(false);
-                          }}
-                        >
-                          <p>iPhone & iPad </p>
-                        </li>
-                        <li
-                          onClick={() => {
-                            setLoading(true);
-                            setdrop(3);
-                            setforVpn("Mac");
-                            setopen(false);
-                          }}
-                        >
-                          <p>Mac </p>
-                        </li>
-                        <li
-                          onClick={() => {
-                            setLoading(true);
-                            setdrop(3);
-                            setforVpn("Routers");
-                            setopen(false);
-                          }}
-                        >
-                          <p>Routers </p>
-                        </li>
-                        <li
-                          onClick={() => {
-                            setLoading(true);
-                            setdrop(3);
-                            setforVpn("Pc");
-                            setopen(false);
-                          }}
-                        >
-                          <p>PC </p>
-                        </li>
-                        <li
-                          onClick={() => {
-                            setLoading(true);
-                            setdrop(3);
-                            setforVpn("Windows");
-                            setopen(false);
-                          }}
-                        >
-                          <p>Windows </p>
-                        </li>
-                      </ul>
+                          <li
+                            onClick={() => {
+                              setLoading(true);
+                              setdrop(3);
+                              setforVpn("Andriod");
+                              setopen(false);
+                            }}
+                          >
+                            <p>Android </p>
+                          </li>
+                          <li
+                            onClick={() => {
+                              setLoading(true);
+                              setdrop(3);
+                              setforVpn("iPhone&iPad");
+                              setopen(false);
+                            }}
+                          >
+                            <p>iPhone & iPad </p>
+                          </li>
+                          <li
+                            onClick={() => {
+                              setLoading(true);
+                              setdrop(3);
+                              setforVpn("Mac");
+                              setopen(false);
+                            }}
+                          >
+                            <p>Mac </p>
+                          </li>
+                          <li
+                            onClick={() => {
+                              setLoading(true);
+                              setdrop(3);
+                              setforVpn("Routers");
+                              setopen(false);
+                            }}
+                          >
+                            <p>Routers </p>
+                          </li>
+                          <li
+                            onClick={() => {
+                              setLoading(true);
+                              setdrop(3);
+                              setforVpn("Pc");
+                              setopen(false);
+                            }}
+                          >
+                            <p>PC </p>
+                          </li>
+                          <li
+                            onClick={() => {
+                              setLoading(true);
+                              setdrop(3);
+                              setforVpn("Windows");
+                              setopen(false);
+                            }}
+                          >
+                            <p>Windows </p>
+                          </li>
+                        </ul>
+                      </Link>
                     </li>
                   </ul>
                 </div>

@@ -22,40 +22,36 @@ import {
 import Item from "../Item/Item";
 const Home = () => {
   const [data, setdata] = useState([]);
-  // useEffect(() => {
-  //   getVpn((err, res) => {
-  //     if (err) return;
-  //     setdata(res.data);
-  //   });
-  // }, []);
-
-  /* for seven */
-  const { drop, forVpn, setLoading } = useStartupCtx();
+  const { drop, forVpn, setLoading, setvpn } = useStartupCtx();
   useEffect(() => {
     if (drop === 1) {
       getbyservicebyname(forVpn, (err, res) => {
         if (err) return;
         setdata(res.data);
-        // setLoading(false);
-        // document.body.style.overflow = "visible";
+        setvpn(res.data);
+        setLoading(false);
+        document.body.style.overflow = "visible";
       });
     } else if (drop === 2) {
       getbylocationbyname(forVpn, (err, res) => {
         if (err) return;
         setdata(res.data);
-        // setLoading(false);
-        //  document.body.style.overflow = "visible";
+        setvpn(res.data);
+        setLoading(false);
+        document.body.style.overflow = "visible";
       });
     } else if (drop === 3) {
       getbydevicebyname(forVpn, (err, res) => {
         if (err) return;
         setdata(res.data);
-        // setLoading(false);
-        //  document.body.style.overflow = "visible";
+        setvpn(res.data);
+        setLoading(false);
+        document.body.style.overflow = "visible";
       });
     }
   }, [forVpn]);
-  console.log(data);
+
+  // console.log(data);
   var count = 0;
 
   return (

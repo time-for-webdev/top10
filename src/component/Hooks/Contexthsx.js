@@ -12,22 +12,22 @@ const Vpncontext = ({ children }) => {
 
   if (loading) {
     document.body.style.overflow = "hidden";
-     setTimeout(() => {
-     setLoading(false);
-     document.body.style.overflow = "visible";
-   }, 3000);
+    setTimeout(() => {
+      setLoading(false);
+      document.body.style.overflow = "visible";
+    }, 3000);
   }
 
-  useEffect(() => {
-    getVpn((err, res) => {
-      if (err) return;
-      setvpn(res.data.data);
-    });
-    getbylocation((err, res) => {
-      if (err) return;
-      setlocation(res.data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   getVpn((err, res) => {
+  //     if (err) return;
+  //     setvpn(res.data.data);
+  //   });
+  //   getbylocation((err, res) => {
+  //     if (err) return;
+  //     setlocation(res.data);
+  //   });
+  // }, []);
   return (
     <vpncontext.Provider
       value={{
@@ -39,6 +39,7 @@ const Vpncontext = ({ children }) => {
         setdrop,
         loading,
         setLoading,
+        setvpn,
       }}
     >
       {children}
