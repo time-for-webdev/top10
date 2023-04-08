@@ -8,16 +8,18 @@ import Question from "./component/Question/Question";
 import PuffLoader from "react-spinners/HashLoader";
 import { useState, useEffect } from "react";
 import { FaCentercode } from "react-icons/fa";
+import Navbar from "./component/Navbar/Navbar";
 import useStartupCtx from "./component/Hooks/useContext";
 import { Privacy } from "./component/Privacy/Privacy";
-import Terms from './component/Terms/Terms'
+import Terms from "./component/Terms/Terms";
 function App() {
   const { loading } = useStartupCtx();
 
   return (
     <>
       <Router>
-        {loading ? (    
+        <Navbar />
+        {loading ? (
           <div className="preloader">
             <PuffLoader color={"#ff9800"} loading={loading} size={40} />
           </div>
@@ -28,9 +30,8 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/Privacy" element = {<Privacy></Privacy>}/>
-          <Route path="/Terms" element = {<Terms/>}/>
-
+          <Route path="/Privacy" element={<Privacy></Privacy>} />
+          <Route path="/Terms" element={<Terms />} />
         </Routes>
         <Footer />
       </Router>

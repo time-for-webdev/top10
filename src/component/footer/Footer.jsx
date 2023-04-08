@@ -14,7 +14,7 @@ const Footer = () => {
               <div className={styles.footer_top}>
                 <img src={c_logo} alt="" />
                 <p>
-                  <strong>Our mission:</strong> We started vpnMentor to offer
+                  <strong>Our mission:</strong> We started discountVpn to offer
                   users a really honest, committed and helpful tool when
                   navigating VPNs and web privacy.
                 </p>
