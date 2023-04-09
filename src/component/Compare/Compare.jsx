@@ -30,11 +30,11 @@ function Compare() {
     setsecond(vpn?.Second);
     setthird(vpn?.Third);
   }, [vpn]);
-  console.log("from the compare" + JSON.stringify(third));
+  // console.log("from the compare" + JSON.stringify(third));
   let count = 0;
-  if (first) count++;
-  if (second) count++;
-  if (third) count++;
+  if (first && first?.Comparision) count++;
+  if (second && second?.Comparision) count++;
+  if (third && third?.Comparision) count++;
 
   return (
     <>
