@@ -12,10 +12,16 @@ import Question from "../Question/Question";
 import Carousel from "../carousel/Carousel";
 import Compare from "../Compare/Compare";
 import useStartupCtx from "../Hooks/useContext";
+import { useState, useEffect } from "react";
 import Item from "../Item/Item";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Home = () => {
   /***********************VPN LIST*********************/
   const { data_list } = useStartupCtx();
+  useEffect(() => {
+    AOS.init({ duration: 800 });
+  }, [data_list]);
 
   return (
     <>
@@ -34,7 +40,12 @@ const Home = () => {
         </div>
         <div className={styles.vpn_card}>
           {data_list.map((val, ind) =>
-            val?.val ? <Card key={ind} val={val?.val} index={ind} /> : null
+            val?.val ? (
+              <div data-aos="zoom-in-up">
+                {" "}
+                <Card key={ind} val={val?.val} index={ind} />{" "}
+              </div>
+            ) : null
           )}
         </div>
         <Item />
