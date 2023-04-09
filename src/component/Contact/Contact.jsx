@@ -70,7 +70,6 @@ export default function Methodology() {
   };
   return (
     <>
-      <Navbar />
       <Discloser />
       <section className={styles.contact_us}>
         <div className={styles.contact_heading}>
