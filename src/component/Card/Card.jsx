@@ -25,13 +25,13 @@ function Card(prop) {
             ></a>
             <div
               className={styles.vendor_position}
-              id={prop.index > 0 ? `${styles.blue_position}` : ""}
+              id={prop.val?.rating < 9 ? `${styles.blue_position}` : ""}
             >
               {prop.index + 1}
             </div>
             <div
               className={styles.vendor_ribbon}
-              id={prop.index > 0 ? `${styles.blue_ribbon}` : ""}
+              id={prop.val?.rating < 9 ? `${styles.blue_ribbon}` : ""}
             >
               <div className={styles.vendor_ribbon_dynamic}>
                 <a
@@ -213,7 +213,7 @@ function Card(prop) {
                     target="_blank"
                     data-tracked="yes"
                   >
-                    {prop.val?.title}.com{" "}
+                    {prop.val?.title?.replace(/\s/g, "")?.toLowerCase()}.com{" "}
                   </a>
                 </div>
               </div>
