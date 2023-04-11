@@ -5,7 +5,7 @@ import Top7 from "../top7/Top7";
 import Discloser from "../Discloser/Discloser";
 import Top10btm from "../top10bottom/Top10btm";
 import Card from "../Card/Card";
-import web from "../../assects/Home/header_background_people_default.svg";
+import web from "../../assects/Home/GDPR-pana.png";
 import Category from "../Category/Category";
 import Rate from "../rate/Rate";
 import Question from "../Question/Question";
@@ -16,11 +16,12 @@ import { useState, useEffect } from "react";
 import Item from "../Item/Item";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Fade from "react-reveal/Fade";
 const Home = () => {
   /***********************VPN LIST*********************/
-  const { data_list } = useStartupCtx();
+  const { data_list, flag } = useStartupCtx();
   useEffect(() => {
-    AOS.init({ duration: 800 });
+    AOS.init({ duration: 600 });
   }, [data_list]);
 
   return (
@@ -28,13 +29,17 @@ const Home = () => {
       <div className={styles.home_container}>
         <Discloser />
         <div className={styles.first_box}>
-          <div className={styles.first_left}>
-            <Top7 />
-            <Top10btm />
-          </div>
+          <Fade left when={flag}>
+            <div className={styles.first_left}>
+              <Top7 />
+              <Top10btm />
+            </div>
+          </Fade>
           <div className={styles.second_left}>
             <div className={styles.hero__image}>
-              <img src={web} />
+              <Fade right when={flag}>
+                <img src={web} />
+              </Fade>
             </div>
           </div>
         </div>
