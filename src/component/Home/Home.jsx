@@ -5,7 +5,7 @@ import Top7 from "../top7/Top7";
 import Discloser from "../Discloser/Discloser";
 import Top10btm from "../top10bottom/Top10btm";
 import Card from "../Card/Card";
-import web from "../../assects/Home/header_background_people_default.svg";
+import web from "../../assects/Home/GDPR-pana.png";
 import Category from "../Category/Category";
 import Rate from "../rate/Rate";
 import Question from "../Question/Question";
@@ -20,7 +20,7 @@ const Home = () => {
   /***********************VPN LIST*********************/
   const { data_list } = useStartupCtx();
   useEffect(() => {
-    AOS.init({ duration: 800 });
+    AOS.init({ duration: 600 });
   }, [data_list]);
 
   return (
