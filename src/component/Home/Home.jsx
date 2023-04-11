@@ -16,9 +16,10 @@ import { useState, useEffect } from "react";
 import Item from "../Item/Item";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Fade from "react-reveal/Fade";
 const Home = () => {
   /***********************VPN LIST*********************/
-  const { data_list } = useStartupCtx();
+  const { data_list, flag } = useStartupCtx();
   useEffect(() => {
     AOS.init({ duration: 600 });
   }, [data_list]);
@@ -28,13 +29,17 @@ const Home = () => {
       <div className={styles.home_container}>
         <Discloser />
         <div className={styles.first_box}>
-          <div className={styles.first_left}>
-            <Top7 />
-            <Top10btm />
-          </div>
+          <Fade left when={flag}>
+            <div className={styles.first_left}>
+              <Top7 />
+              <Top10btm />
+            </div>
+          </Fade>
           <div className={styles.second_left}>
             <div className={styles.hero__image}>
-              <img src={web} />
+              <Fade right when={flag}>
+                <img src={web} />
+              </Fade>
             </div>
           </div>
         </div>

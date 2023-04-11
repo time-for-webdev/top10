@@ -15,14 +15,7 @@ const Vpncontext = ({ children }) => {
   const [forVpn, setforVpn] = useState("Overall Best Vpn of 2023");
   const [drop, setdrop] = useState(1);
   const [loading, setLoading] = useState(true);
-
-  if (loading) {
-    document.body.style.overflow = "hidden";
-    setTimeout(() => {
-      setLoading(false);
-      document.body.style.overflow = "visible";
-    }, 3000);
-  }
+  const [flag, setflag] = useState(false);
 
   useEffect(() => {
     getVpn((err, res) => {
@@ -36,6 +29,7 @@ const Vpncontext = ({ children }) => {
   }, []);
 
   useEffect(() => {
+    setflag(false);
     if (drop === 1) {
       getbyservicebyname(forVpn, (err, res) => {
         if (err) return;
@@ -47,6 +41,7 @@ const Vpncontext = ({ children }) => {
           { val: res.data.Forth },
         ]);
         setLoading(false);
+        setflag(true);
         document.body.style.overflow = "visible";
       });
     } else if (drop === 2) {
@@ -59,6 +54,7 @@ const Vpncontext = ({ children }) => {
           { val: res.data.Third },
         ]);
         setLoading(false);
+        setflag(true);
         document.body.style.overflow = "visible";
       });
     } else if (drop === 3) {
@@ -71,10 +67,21 @@ const Vpncontext = ({ children }) => {
           { val: res.data.Third },
         ]);
         setLoading(false);
+        setflag(true);
         document.body.style.overflow = "visible";
       });
     }
   }, [forVpn]);
+
+  if (loading) {
+    document.body.style.overflow = "hidden";
+    setTimeout(() => {
+      setLoading(false);
+      setflag(true);
+      document.body.style.overflow = "visible";
+    }, 3000);
+  }
+
   return (
     <vpncontext.Provider
       value={{
@@ -88,6 +95,7 @@ const Vpncontext = ({ children }) => {
         setLoading,
         setvpn,
         data_list,
+        flag,
       }}
     >
       {children}

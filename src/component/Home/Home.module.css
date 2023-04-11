@@ -41,6 +41,9 @@
   }
 }
 @media only screen and (max-width: 481px) {
+  .second_left {
+    display: none;
+  }
   .hero__image {
     max-width: 140px;
     height: 85px;
