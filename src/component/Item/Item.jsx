@@ -2,7 +2,16 @@ import React from "react";
 import styles from "./Item.module.css";
 import check from "../../assects/Card/check.png";
 import video from "../../assects/Item/hero.mp4";
+import useStartupCtx from "../Hooks/useContext";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Item = () => {
+  const { data_list } = useStartupCtx();
+  useEffect(() => {
+    AOS.init({ duration: 600 });
+  }, [data_list]);
   return (
     <main className={styles.app}>
       <div className={styles.home_intro_container}>
@@ -30,7 +39,7 @@ const Item = () => {
           <div className={styles.container}>
             <p className={styles.subhead}>Get VPNs by category</p>
             <ol className={styles.list}>
-              <li className={styles.list_item}>
+              <li className={styles.list_item} data-aos="zoom-in-up">
                 <div className={styles.tile}>
                   <div className={styles.roundup_tile}>
                     <div className={styles.roundup_img}>
@@ -114,7 +123,7 @@ const Item = () => {
                   </div>
                 </div>
               </li>
-              <li className={styles.list_item}>
+              <li className={styles.list_item} data-aos="zoom-in-up">
                 <div className={styles.tile}>
                   <div className={styles.roundup_tile}>
                     <div className={styles.roundup_img}>
@@ -154,7 +163,7 @@ const Item = () => {
                   </div>
                 </div>
               </li>
-              <li className={styles.list_item}>
+              <li className={styles.list_item} data-aos="zoom-in-up">
                 <div className={styles.tile}>
                   <div className={styles.roundup_tile}>
                     <div className={styles.roundup_img}>
@@ -244,7 +253,7 @@ const Item = () => {
                   </div>
                 </div>
               </li>
-              <li className={styles.list_item}>
+              <li className={styles.list_item} data-aos="zoom-in-up">
                 <div className={styles.tile}>
                   <div className={styles.roundup_tile}>
                     <div className={styles.roundup_img}>
