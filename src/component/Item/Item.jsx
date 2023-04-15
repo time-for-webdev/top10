@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./Item.module.css";
 import check from "../../assects/Card/check.png";
-import video from "../../assects/Item/hero.mp4";
+import video from "../../assects/Item/vpny.gif";
+import videox from "../../assects/Item/vpnx.mp4";
 import useStartupCtx from "../Hooks/useContext";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -12,6 +13,7 @@ const Item = () => {
   useEffect(() => {
     AOS.init({ duration: 600 });
   }, [data_list]);
+
   return (
     <main className={styles.app}>
       <div className={styles.home_intro_container}>
@@ -25,15 +27,16 @@ const Item = () => {
           </p>
         </div>
         <div className={styles.video_container}>
-          <video
+          {/* <video
             loop="true"
             autoplay="true"
             muted="true"
             preload="auto"
             playsinline="true"
-            src={video}
+            src={videox}
             class=""
-          ></video>
+          ></video> */}
+          <img src={video} />
         </div>
         <div className={styles.roundup_tiles}>
           <div className={styles.container}>

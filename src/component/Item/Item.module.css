@@ -125,14 +125,14 @@
   .video_container {
     position: absolute;
     top: calc(4px * 50);
-    left: calc(50vw - 36px);
+    left: calc(55vw - 36px);
     z-index: -1;
     width: 420px;
   }
 }
 @media (min-width: 1024px) {
   .video_container {
-    width: 550px;
+    width: 480px;
     top: calc(4px * 45);
   }
 }
