@@ -193,10 +193,10 @@ export default function Carousel() {
               />
             </div>
             <div className={styles.brand_review}>
-              <h3>{data_list[0]?.val.title}</h3>
+              <h3>{data_list[0]?.val?.title}</h3>
               <img
                 src={
-                  parseFloat(data_list[0]?.val.user_rating) > 4.5
+                  parseFloat(data_list[0]?.val?.user_rating) > 4.5
                     ? fivestar
                     : fourhalfstar
                 }
