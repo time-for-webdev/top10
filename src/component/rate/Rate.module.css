@@ -27,11 +27,18 @@
 .rate_type svg {
   width: 20px;
 }
-.rate_wrap p {
+.rate_wrap p,
+.rate_wrap span {
   line-height: 24px;
   font-size: 16px;
   font-family: Cabin, Arial, Sans-Serif;
 }
+/* .rate_wrap p :last-child {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden; */
+/* } */
 .rate_wrap h1 {
   font-size: 32px;
   color: #fff;
@@ -57,10 +64,25 @@
   justify-content: space-between;
   margin-bottom: 5px;
 }
+.rate_type li span {
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .rate_body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.rate_body p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.rate_body p:last-child {
+  -webkit-line-clamp: 5;
 }
 
 @media only screen and (max-width: 1200px) {

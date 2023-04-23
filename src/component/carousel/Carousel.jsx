@@ -39,14 +39,14 @@ export default function Carousel() {
 
   /*****************VPN LIST*************************/
   const { data_list } = useStartupCtx();
-  console.log(data_list);
+  // console.log(data_list);
   useEffect(() => {
     data_list.map((el, ind) => {
       if (el.val) {
         setcardcnt(ind);
       }
     });
-    console.log(cardcnt);
+    // console.log(cardcnt);
   }, [data_list]);
 
   //*************** drag for touchscreen************/

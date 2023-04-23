@@ -4,7 +4,9 @@ import c_logo from "../../assects/discount-vpn.png";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaYoutubeSquare } from "react-icons/fa";
+import { useState } from "react";
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <>
       <footer>
@@ -57,7 +59,7 @@ const Footer = () => {
             </div>
             <hr />
             <div className={styles.copyright}>
-              <p>© 2023 discountVPN | All Rights Reserved</p>
+              <p>{`© ${currentYear} discountVpn | All Rights Reserved`}</p>
             </div>
           </div>
         </div>

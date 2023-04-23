@@ -95,7 +95,8 @@
 }
 @media (min-width: 1024px) {
   .underlined_header {
-    font-size: 39.77px;
+    font-size: 32px;
+    line-height: 32px;
     max-width: 100%;
     margin: 0 auto calc(4px * 6) 0;
     text-align: left;
@@ -120,6 +121,8 @@
 
 .video_container {
   margin-bottom: calc(4px * 2);
+  display: flex;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   .video_container {

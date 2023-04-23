@@ -413,8 +413,8 @@ svg:not(:root) {
 .vendor__mark {
   display: none;
 }
-.vendor__mark_else{
-  display:none;
+.vendor__mark_else {
+  display: none;
 }
 @media (min-width: 768px) {
   .vendor__mark {
