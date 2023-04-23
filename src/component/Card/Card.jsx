@@ -25,34 +25,39 @@ function Card(prop) {
             ></a>
             <div
               className={styles.vendor_position}
-              id={prop.val?.rating < 9 ? `${styles.blue_position}` : ""}
+              id={prop.val?.rating < 9.5 ? `${styles.blue_position}` : ""}
             >
               {prop.index + 1}
             </div>
-            <div
-              className={styles.vendor_ribbon}
-              id={prop.val?.rating < 9 ? `${styles.blue_ribbon}` : ""}
-            >
-              <div className={styles.vendor_ribbon_dynamic}>
-                <a
-                  href={prop.val?.website_url}
-                  rel="nofollow noopener noreferrer"
-                  target="_blank"
-                  data-tracked="yes"
-                />
+            {prop.val?.riben_text ? (
+              <div
+                className={styles.vendor_ribbon}
+                id={prop.val?.rating < 9.5 ? `${styles.blue_ribbon}` : ""}
+              >
+                <div className={styles.vendor_ribbon_dynamic}>
+                  <a
+                    href={prop.val?.website_url}
+                    rel="nofollow noopener noreferrer"
+                    target="_blank"
+                    data-tracked="yes"
+                  />
 
-                <a
-                  className={styles.dynamic__text_ribbon2}
-                  href={prop.val?.website_url}
-                  onclick="clickedLinkExternal('Windows - Best Ribbon', 'ExpressVPN')"
-                  rel="nofollow noopener noreferrer"
-                  target="_blank"
-                  data-tracked="yes"
-                >
-                  <span>{prop.val?.riben_text}</span>
-                </a>
+                  <a
+                    className={styles.dynamic__text_ribbon2}
+                    href={prop.val?.website_url}
+                    onclick="clickedLinkExternal('Windows - Best Ribbon', 'ExpressVPN')"
+                    rel="nofollow noopener noreferrer"
+                    target="_blank"
+                    data-tracked="yes"
+                  >
+                    <span>{prop.val?.riben_text}</span>
+                  </a>
+                </div>
               </div>
-            </div>
+            ) : (
+              ""
+            )}
+
             <div className={styles.vendor_logoSection}>
               <div className={styles.vendor__logoSection_logo}>
                 <img
@@ -156,7 +161,7 @@ function Card(prop) {
                     ></circle>
                     <circle
                       className={
-                        prop.val?.rating < 9
+                        prop.val?.rating < 9.5
                           ? `${styles.donut_segment_else}`
                           : `${styles.donut_segment}`
                       }
@@ -181,7 +186,7 @@ function Card(prop) {
                   </svg>
                   <div
                     className={
-                      prop.val?.rating < 9
+                      prop.val?.rating < 9.5
                         ? `${styles.vendor__mark_else}`
                         : `${styles.vendor__mark}`
                     }

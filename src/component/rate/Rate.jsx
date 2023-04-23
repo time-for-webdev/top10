@@ -18,31 +18,31 @@ const Rate = () => {
                 <div className={styles.logo_wrap}>
                   <BiSlider />
                 </div>
-                <p>Features</p>
+                <span>Features</span>
               </li>
               <li>
                 <div className={styles.logo_wrap}>
                   <IoAccessibility />
                 </div>
-                <p>Ease of Use</p>
+                <span>Ease of Use</span>
               </li>
               <li>
                 <div className={styles.logo_wrap}>
                   <FaMoneyCheckAlt />
                 </div>
-                <p>Pricing</p>
+                <span>Pricing</span>
               </li>
               <li>
                 <div className={styles.logo_wrap}>
                   <BsFillQuestionCircleFill />
                 </div>
-                <p>Support</p>
+                <span>Support</span>
               </li>
               <li>
                 <div className={styles.logo_wrap}>
                   <AiFillStar />
                 </div>
-                <p>User Score</p>
+                <span>User Score</span>
               </li>
             </div>
             <p>

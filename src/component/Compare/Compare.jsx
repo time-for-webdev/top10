@@ -56,11 +56,11 @@ function Compare() {
                     >
                       <a
                         className={styles.top_three__tab_a}
-                        href="#tab_expressvpn"
+                        // href="#tab_expressvpn"
                       >
                         <img
                           loading="lazy"
-                          src={val?.val?.logo}
+                          src={val?.val?.icon}
                           alt={
                             val?.val?.title?.charAt(0).toUpperCase() +
                             val?.val?.title?.slice(1)
@@ -324,18 +324,19 @@ function Compare() {
                         >
                           Visit website
                         </a>
-
-                        <a
-                          className={styles.top_three__item_cta_site_link}
-                          href={val?.val?.website_url}
-                          rel="nofollow noopener noreferrer"
-                          target="_blank"
-                          data-tracked="yes"
-                        >
-                          {`${val?.val?.Comparision?.vpn
-                            ?.replace(/\s/g, "")
-                            ?.toLowerCase()}.com`}
-                        </a>
+                        <div className={styles.wraplinkText}>
+                          <a
+                            className={styles.top_three__item_cta_site_link}
+                            href={val?.val?.website_url}
+                            rel="nofollow noopener noreferrer"
+                            target="_blank"
+                            data-tracked="yes"
+                          >
+                            {`${val?.val?.Comparision?.vpn
+                              ?.replace(/\s/g, "")
+                              ?.toLowerCase()}.com`}
+                          </a>
+                        </div>
                       </div>
                     </div>
                   ) : null

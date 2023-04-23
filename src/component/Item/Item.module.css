@@ -120,6 +120,8 @@
 
 .video_container {
   margin-bottom: calc(4px * 2);
+  display: flex;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   .video_container {

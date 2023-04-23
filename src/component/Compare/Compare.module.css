@@ -423,7 +423,27 @@ small {
     text-align: center;
     z-index: 4;
   }
+  .top_three__item_cta_wrap a:last-child {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #37474f;
+    opacity: 0.8;
+    text-decoration: underline;
+    max-width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
+/* .wraplinkText {
+  max-width: 180px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0 auto;
+} */
 @media (min-width: 768px) and (max-width: 992px) {
   .top_three__item_cta_wrap {
     display: none;
