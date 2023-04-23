@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const domain = "http://backend.discountvpn.com/api";
+const domain = "https://backend.discountvpn.com/api";
 
 const getHeaders = () => {
   const headers = {
