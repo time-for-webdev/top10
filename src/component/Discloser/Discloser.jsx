@@ -21,7 +21,7 @@ const Discloser = () => {
               <span>Professional Reviews</span>
             </summary>
             <p>
-              vpnMentor contains reviews that are written by our community
+              discountVpn contains reviews that are written by our community
               reviewers, and are based on the reviewers' independent and
               professional examination of the products/services.{" "}
             </p>
@@ -32,7 +32,7 @@ const Discloser = () => {
             </summary>
 
             <p>
-              vpnMentor is owned by Kape Technologies PLC, which owns the
+              discountVpn is owned by Kape Technologies PLC, which owns the
               following products: ExpressVPN, CyberGhost, ZenMate, Private
               Internet Access, and Intego, which may be reviewed on this
               website.{" "}
@@ -45,7 +45,7 @@ const Discloser = () => {
             </summary>
 
             <p>
-              vpnMentor contains reviews that were written by our experts and
+              discountVpn contains reviews that were written by our experts and
               follow the strict reviewing standards, including ethical
               standards, that we have adopted. Such standards require that each
               review will be based on an independent, honest and professional
@@ -62,7 +62,7 @@ const Discloser = () => {
             </summary>
 
             <p>
-              The reviews published on vpnMentor are written by experts that
+              The reviews published on discountVpn are written by experts that
               examine the products according to our strict reviewing standards.
               Such standards ensure that each review is based on the
               independent, professional and honest examination of the reviewer,

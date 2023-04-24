@@ -5,8 +5,10 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaYoutubeSquare } from "react-icons/fa";
 import { useState } from "react";
+import useStartupCtx from "../Hooks/useContext";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { contact } = useStartupCtx();
   return (
     <>
       <footer>
@@ -22,15 +24,15 @@ const Footer = () => {
                 </p>
               </div>
               <div className={styles.social}>
-                <p>Follow vpnMentor</p>
+                <p>Follow discountVpn</p>
                 <div className={styles.social_link}>
-                  <a href="" target="_blank">
+                  <a href={contact?.Facebook} target="_blank">
                     <FaFacebookSquare />
                   </a>
-                  <a href="" target="_blank">
+                  <a href={contact?.Twitter} target="_blank">
                     <FaTwitterSquare />
                   </a>
-                  <a href="" target="_blank">
+                  <a href={contact?.Youtube} target="_blank">
                     <FaYoutubeSquare />
                   </a>
                 </div>
@@ -45,7 +47,9 @@ const Footer = () => {
                 <a href="/contact">Contact Us</a>
               </li>
               <li>
-                <a href="/">Blogs</a>
+                <a href="https://blog.discountvpn.com/" target="_blank">
+                  Blogs
+                </a>
               </li>
               <li>
                 <a href="/Privacy">Privacy Policy</a>

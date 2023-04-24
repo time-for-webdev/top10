@@ -36,7 +36,17 @@
 .drop1_list_location {
   min-width: 220px;
   padding: 0 5px;
+  max-height: 13.2rem;
+  overflow: hidden;
 }
+.drop1_location_scroll {
+  /* max-height: 13.2rem; */
+  overflow-y: scroll;
+}
+
+/* .drop1_list_location::-webkit-scrollbar {
+  width: 10px;
+} */
 .drop1_list_location p {
   color: #37474f;
   /* cursor: pointer; */

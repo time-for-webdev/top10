@@ -76,7 +76,7 @@ function Compare() {
               </div>
               <div className={styles.top_three__list}>
                 {data_list.map((val, ind) =>
-                  val?.val && val?.val?.Comparision ? (
+                  val?.val && val?.val?.Comparision && ind < 3 ? (
                     <div
                       className={
                         linkclass === ind + 1

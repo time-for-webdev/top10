@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
-import { getVpn } from "../API/Vpn";
+import { getVpn, ownerContact } from "../API/Vpn";
 import { getbylocation } from "../API/Vpn";
 import {
   getbylocationbyname,
@@ -16,6 +16,15 @@ const Vpncontext = ({ children }) => {
   const [drop, setdrop] = useState(1);
   const [loading, setLoading] = useState(true);
   const [flag, setflag] = useState(false);
+  const [contact, setcontact] = useState();
+  useEffect(() => {
+    ownerContact((err, res) => {
+      if (err) {
+        return;
+      }
+      setcontact(res.data);
+    });
+  }, []);
 
   useEffect(() => {
     getVpn((err, res) => {
@@ -39,6 +48,9 @@ const Vpncontext = ({ children }) => {
           { val: res.data.Second },
           { val: res.data.Third },
           { val: res.data.Forth },
+          { val: res.data.Fifth },
+          { val: res.data.Sixth },
+          { val: res.data.Seventh },
         ]);
         setLoading(false);
         setflag(true);
@@ -52,6 +64,10 @@ const Vpncontext = ({ children }) => {
           { val: res.data.First },
           { val: res.data.Second },
           { val: res.data.Third },
+          { val: res.data.Forth },
+          { val: res.data.Fifth },
+          { val: res.data.Sixth },
+          { val: res.data.Seventh },
         ]);
         setLoading(false);
         setflag(true);
@@ -65,6 +81,10 @@ const Vpncontext = ({ children }) => {
           { val: res.data.First },
           { val: res.data.Second },
           { val: res.data.Third },
+          { val: res.data.Forth },
+          { val: res.data.Fifth },
+          { val: res.data.Sixth },
+          { val: res.data.Seventh },
         ]);
         setLoading(false);
         setflag(true);
@@ -96,6 +116,7 @@ const Vpncontext = ({ children }) => {
         setvpn,
         data_list,
         flag,
+        contact,
       }}
     >
       {children}

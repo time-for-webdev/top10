@@ -11,19 +11,16 @@ import { useState } from "react";
 import { postContact } from "../API/contact";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-//import secured from "../../assects/Contact/secured.png";
+import useStartupCtx from "../Hooks/useContext";
+
 export default function Methodology() {
+  const { contact } = useStartupCtx();
+
   const [data, setdata] = useState({
     Name: "",
     email: "",
     Comment: "",
   });
-
-  const showToastMessage = () => {
-    toast.success("Success Notification !", {
-      position: toast.POSITION.TOP_RIGHT,
-    });
-  };
 
   const handleChnage = (event) => {
     // console.log(event.target.name);
@@ -50,21 +47,31 @@ export default function Methodology() {
     }
     postContact(formData, (err, res) => {
       console.log(res);
-      if (err || res.data === "err") {
+      if (err) {
         // alert("something went wrong! ");
         toast.error("Enter a valid email address!", {
-          position: toast.POSITION.TOP_RIGHT,
+          position: "bottom-left",
+          theme: "dark",
         });
         return;
       } else {
-        toast.success("sent successfully!", {
-          position: toast.POSITION.TOP_RIGHT,
-        });
-        setdata({
-          Name: "",
-          email: "",
-          Comment: "",
-        });
+        if (!res.data?.success) {
+          toast.error("Enter a valid email address!", {
+            position: "bottom-left",
+            theme: "dark",
+          });
+          return;
+        } else {
+          toast.success("sent successfully!", {
+            position: "bottom-left",
+            theme: "dark",
+          });
+          setdata({
+            Name: "",
+            email: "",
+            Comment: "",
+          });
+        }
       }
     });
   };
@@ -135,19 +142,19 @@ export default function Methodology() {
                     <h5>You can also follow us on social media:</h5>
                   </div>
                   <div className="social_acc">
-                    <a href="https://facebook.com">
+                    <a href={contact?.Facebook}>
                       <img src={fb} alt="fb" />
                     </a>
-                    <a href="https://twitter.com">
+                    <a href={contact?.Twitter}>
                       <img src={twitter} alt="twitter" />
                     </a>
-                    <a href="https:/youtube.com">
+                    <a href={contact?.Youtube}>
                       <img src={youtube} alt="youtube" />
                     </a>
                   </div>
                   <div>
                     <h5>Our email address:</h5>
-                    <p>info@discountvpn.com</p>
+                    <p>{contact?.Email}</p>
                   </div>
                 </div>
               </div>

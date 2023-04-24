@@ -5,7 +5,7 @@ import useStartupCtx from "../Hooks/useContext";
 import { useState } from "react";
 import { useEffect } from "react";
 const Top7 = () => {
-  const { drop, forVpn } = useStartupCtx();
+  const { drop, forVpn, data_list } = useStartupCtx();
   const currentDate = new Date().getFullYear();
   const [tittle, setTittle] = useState();
   const getval = () => {
@@ -19,7 +19,7 @@ const Top7 = () => {
   };
   useEffect(() => {
     getval();
-  }, [drop]);
+  }, [data_list]);
 
   return (
     <>

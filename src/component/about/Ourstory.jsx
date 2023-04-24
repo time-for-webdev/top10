@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Ourstory.module.css";
 import people from "../../assects/about/ourStory.svg";
+
 export default function Ourstory() {
   return (
     <>

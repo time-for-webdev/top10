@@ -80,7 +80,9 @@ const Navbar = () => {
                     </ul>
                   </Link>
                 </li>
-                <li className={styles.drop1_list_location}>
+                <li
+                  className={`${styles.drop1_list_location} ${styles.drop1_location_scroll}`}
+                >
                   <p>BY Location</p>
                   <Link to="/">
                     <ul>

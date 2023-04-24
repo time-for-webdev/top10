@@ -8,13 +8,6 @@ const Terms = () => {
           <div>
             <div className={styles.header}>
               <div className={styles.container}>
-                <div className={styles.breadcrumbs}>
-                  <ol className={styles.top}>
-                    <li></li>
-                    <li>/</li>
-                    <li>Terms Of Use</li>
-                  </ol>
-                </div>
                 <div className={styles.row}>
                   <h1 className={styles.heading}>Terms Of Use</h1>
                 </div>

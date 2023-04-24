@@ -2,8 +2,16 @@ import React from "react";
 import styles from "./WeAre.module.css";
 import blog from "../../assects/about/blog.png";
 import people from "../../assects/about/1769041.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import useStartupCtx from "../Hooks/useContext";
+import { useEffect } from "react";
 
 export default function WeAre({ ref1 }) {
+  const { data_list, flag } = useStartupCtx();
+  useEffect(() => {
+    AOS.init({ duration: 600 });
+  }, [data_list]);
   return (
     <>
       <section ref={ref1} className={styles.we_are} id="weare">
@@ -26,7 +34,7 @@ export default function WeAre({ ref1 }) {
                   <a
                     className={styles.button}
                     data-qa-id="vendor_button"
-                    href=""
+                    href="https://blog.discountvpn.com/"
                     onclick="clickedLinkExternal('Windows - Visit website', 'ExpressVPN')"
                     rel="nofollow noopener noreferrer"
                     target="_blank"
@@ -38,7 +46,7 @@ export default function WeAre({ ref1 }) {
               </div>
             </div>
           </div>
-          <div className={styles.wacontent}>
+          <div className={styles.wacontent} data-aos="zoom-in-up">
             <img className={styles.wamap} src={blog} alt="map" />
           </div>
         </div>
