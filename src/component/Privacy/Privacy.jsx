@@ -3,19 +3,12 @@ import styles from "./Privacy.module.css";
 
 export const Privacy = () => {
   return (
-    <div>
+    <div className={styles.privacy}>
       <main className={styles.app}>
         <div className={styles.legal}>
           <div>
             <div className={styles.header}>
               <div className={styles.container}>
-                <div className={styles.breadcrumbs}>
-                  <ol className={styles.top}>
-                    <li></li>
-                    <li>/</li>
-                    <li>Privacy Policy</li>
-                  </ol>
-                </div>
                 <div className={styles.row}>
                   <h1 className={styles.heading}>Privacy Policy</h1>
                 </div>
@@ -131,7 +124,7 @@ export const Privacy = () => {
                   >
                     <div>
                       <h4 className={styles.topic}>Table of contents</h4>
-                      <ul >
+                      <ul>
                         <li>
                           What information we collect, why we collect it, and
                           how it is used
@@ -386,33 +379,33 @@ export const Privacy = () => {
                           </tr>
                         </table>
                       </div>
-                      
                     </div>
                     <p style={{ marginTop: "40px" }}>
-                        Finally, please note that some of the abovementioned
-                        Personal Information will be used for detecting,
-                        preventing, and prosecution of fraud or other illegal
-                        activity, to identify and repair errors, to conduct
-                        audits, and for security purposes. Personal Information
-                        may also be used to comply with applicable laws, with
-                        investigations performed by the relevant authorities,
-                        law enforcement purposes, and/or to exercise or defend
-                        legal claims. In certain cases, we may or will anonymize
-                        or de-identify your Personal Information. “Anonymous
-                        Information” means information which does not enable
-                        identification of an individual user, such as aggregated
-                        information about the use of our services. We may use
-                        Anonymous Information and/or disclose it to third
-                        parties without restrictions (for example, in order to
-                        improve our services and enhance your experience with
-                        them).
-                      </p>
+                      Finally, please note that some of the abovementioned
+                      Personal Information will be used for detecting,
+                      preventing, and prosecution of fraud or other illegal
+                      activity, to identify and repair errors, to conduct
+                      audits, and for security purposes. Personal Information
+                      may also be used to comply with applicable laws, with
+                      investigations performed by the relevant authorities, law
+                      enforcement purposes, and/or to exercise or defend legal
+                      claims. In certain cases, we may or will anonymize or
+                      de-identify your Personal Information. “Anonymous
+                      Information” means information which does not enable
+                      identification of an individual user, such as aggregated
+                      information about the use of our services. We may use
+                      Anonymous Information and/or disclose it to third parties
+                      without restrictions (for example, in order to improve our
+                      services and enhance your experience with them).
+                    </p>
                   </section>
                   <section
                     id={styles.block_text}
                     className={styles.legal_content}
                   >
-                    <h4 className={styles.topic}>2. HOW WE PROTECT AND RETAIN YOUR INFORMATION</h4>
+                    <h4 className={styles.topic}>
+                      2. HOW WE PROTECT AND RETAIN YOUR INFORMATION
+                    </h4>
 
                     <ul>
                       <li>
@@ -444,7 +437,9 @@ export const Privacy = () => {
                     id={styles.block_text}
                     className={styles.legal_content}
                   >
-                    <h4 className={styles.topic}>3. HOW WE SHARE YOUR PERSONAL DATA</h4>
+                    <h4 className={styles.topic}>
+                      3. HOW WE SHARE YOUR PERSONAL DATA
+                    </h4>
 
                     <p>
                       In addition to the recipients described above, we share
@@ -508,7 +503,9 @@ export const Privacy = () => {
                     id={styles.block_text}
                     className={styles.legal_content}
                   >
-                    <h4 className={styles.topic}>5. YOUR PRIVACY RIGHTS. HOW TO DELETE YOUR ACCOUNT</h4>
+                    <h4 className={styles.topic}>
+                      5. YOUR PRIVACY RIGHTS. HOW TO DELETE YOUR ACCOUNT
+                    </h4>
 
                     <ul>
                       <li>
@@ -566,7 +563,7 @@ export const Privacy = () => {
                       <li className={styles.inside_listitem}>
                         You have a right to lodge a complaint with your local
                         data protection supervisory authority.
-                        <ul >
+                        <ul>
                           <li>
                             The following rights (which may be subject to
                             certain exemptions or derogations) shall apply to
@@ -610,7 +607,7 @@ export const Privacy = () => {
                         Personal Information, you may withdraw that consent at
                         any time and prevent further processing by contacting us
                         as described in this Privacy Policy.
-                        <ul >
+                        <ul>
                           <li>
                             While we cannot guarantee privacy perfection, we
                             will address any requests to the best of our ability
@@ -662,7 +659,9 @@ export const Privacy = () => {
                     id={styles.block_text}
                     className={styles.legal_content}
                   >
-                    <h4 className={styles.topic}>7. INTERACTION WITH THIRD PARTY PRODUCTS</h4>
+                    <h4 className={styles.topic}>
+                      7. INTERACTION WITH THIRD PARTY PRODUCTS
+                    </h4>
                     <p>
                       We enable you to interact with third party websites,
                       mobile software applications and products or services that
@@ -683,54 +682,59 @@ export const Privacy = () => {
                     <h4 className={styles.topic}>8. ANALYTIC TOOLS</h4>
                     <ul>
                       <li>
-                        <b>Google Analytics.</b> The Website uses a tool called <b>“Google
-                        Analytics”</b> to collect information about use of the
-                        Website. Google Analytics collects information such as
-                        how often users visit this Website, what pages they
-                        visit when they do so, and what other websites they used
-                        prior to coming to this Website. We use the information
-                        we get from Google Analytics to maintain and improve the
-                        Website and our products. We do not combine the
-                        information collected through the use of Google
-                        Analytics with Personal Information we collect. Google’s
-                        ability to use and share information collected by Google
-                        Analytics about your visits to this Website is
+                        <b>Google Analytics.</b> The Website uses a tool called{" "}
+                        <b>“Google Analytics”</b> to collect information about
+                        use of the Website. Google Analytics collects
+                        information such as how often users visit this Website,
+                        what pages they visit when they do so, and what other
+                        websites they used prior to coming to this Website. We
+                        use the information we get from Google Analytics to
+                        maintain and improve the Website and our products. We do
+                        not combine the information collected through the use of
+                        Google Analytics with Personal Information we collect.
+                        Google’s ability to use and share information collected
+                        by Google Analytics about your visits to this Website is
                         restricted by the Google Analytics Terms of Service,
                         available at
                         <br></br>
-                        <a href="https://marketingplatform.google.com/about/analytics/terms/us/">click here</a>
-                        ,
-                        and the Google Privacy Policy, available at
+                        <a href="https://marketingplatform.google.com/about/analytics/terms/us/">
+                          click here
+                        </a>
+                        , and the Google Privacy Policy, available at
                         <br></br>
-                        <a href=" http://www.google.com/policies/privacy/"> click here</a>
-                       . You may learn
-                        more about how Google collects and processes data
-                        specifically in connection with Google Analytics at
+                        <a href=" http://www.google.com/policies/privacy/">
+                          {" "}
+                          click here
+                        </a>
+                        . You may learn more about how Google collects and
+                        processes data specifically in connection with Google
+                        Analytics at
                         <br />
-                        <a href="http://www.google.com/policies/privacy/partners/">click here</a>
-                        . You
-                        may prevent your data from being used by Google
+                        <a href="http://www.google.com/policies/privacy/partners/">
+                          click here
+                        </a>
+                        . You may prevent your data from being used by Google
                         Analytics by downloading and installing the Google
                         Analytics Opt-out Facebook Pixels and SDKs. We use
-                        <b>Facebook pixels or SDKs</b>
-                        , which are tools that provide
-                        help to website owners and publishers, developers,
-                        advertisers, business partners (and their customers) and
-                        others integrate, use and exchange information with
-                        Facebook, as such the collection and use of information
-                        for ad targeting. Please note that third parties,
-                        including Facebook, use cookies, web beacons, and other
-                        storage technologies to collect or receive information
-                        from your websites and elsewhere on the internet and use
-                        that information to provide measurement services and
-                        target ads. Facebook’s ability to use and share
-                        information is governed by the Facebook Tools Terms,
-                        available at:
+                        <b>Facebook pixels or SDKs</b>, which are tools that
+                        provide help to website owners and publishers,
+                        developers, advertisers, business partners (and their
+                        customers) and others integrate, use and exchange
+                        information with Facebook, as such the collection and
+                        use of information for ad targeting. Please note that
+                        third parties, including Facebook, use cookies, web
+                        beacons, and other storage technologies to collect or
+                        receive information from your websites and elsewhere on
+                        the internet and use that information to provide
+                        measurement services and target ads. Facebook’s ability
+                        to use and share information is governed by the Facebook
+                        Tools Terms, available at:
                         <br></br>
-                        <a href="https://www.facebook.com/legal/technology_terms/">click here</a>
-                        . You
-                        can prevent your data from being used by Facebook Pixels
-                        and SDKs{" "}
+                        <a href="https://www.facebook.com/legal/technology_terms/">
+                          click here
+                        </a>
+                        . You can prevent your data from being used by Facebook
+                        Pixels and SDKs{" "}
                       </li>
                     </ul>
                     <p>
@@ -742,7 +746,8 @@ export const Privacy = () => {
                     className={styles.legal_content}
                   >
                     <h4 className={styles.topic}>
-                      10. SPECIFIC PROVISIONS APPLICABLE UNDER CALIFORNIA PRIVACY LAW
+                      10. SPECIFIC PROVISIONS APPLICABLE UNDER CALIFORNIA
+                      PRIVACY LAW
                     </h4>
 
                     <p>
@@ -759,7 +764,7 @@ export const Privacy = () => {
                     id={styles.block_text}
                     className={styles.legal_content}
                   >
-                    < h4 className={styles.topic}>11. CONTACT US</h4>
+                    <h4 className={styles.topic}>11. CONTACT US</h4>
 
                     <p>
                       If you have any questions, concerns or complaints

@@ -53,3 +53,19 @@ export const getFaq = async (cb) => {
     .then((res) => cb(null, res))
     .catch((err) => cb(err, null));
 };
+/* owner contact */
+export const ownerContact = async (cb) => {
+  const header = getHeaders();
+  await axios
+    .get(`${domain}/owner_contact/`, { header })
+    .then((res) => cb(null, res))
+    .catch((err) => cb(err, null));
+};
+/* Update time */
+export const last_update_time = async (cb) => {
+  const header = getHeaders();
+  await axios
+    .get(`${domain}/last_update_time/`, { header })
+    .then((res) => cb(null, res))
+    .catch((err) => cb(err, null));
+};

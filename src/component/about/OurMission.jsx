@@ -4,10 +4,17 @@ import pin from "../../assects/about/pin.jpg";
 import browser from "../../assects/about/browser.jpg";
 import ipadd from "../../assects/about/ipadd.jpg";
 import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import useStartupCtx from "../Hooks/useContext";
 export default function OurMission() {
   const [ipAddress, setIpAddress] = useState("");
   const [browserDevice, setBrowser] = useState("");
   const [country, setCountry] = useState("");
+  const { data_list, flag } = useStartupCtx();
+  useEffect(() => {
+    AOS.init({ duration: 600 });
+  }, [data_list]);
   useEffect(() => {
     const getIpAddress = async () => {
       try {
@@ -86,7 +93,7 @@ export default function OurMission() {
       <section className={styles.our_mission}>
         <div className={styles.omcontainer}>
           <div className={styles.omcards}>
-            <div className={styles.card}>
+            <div className={styles.card} data-aos="zoom-in-up">
               <div className={styles.imgdiv}>
                 <img src={ipadd} alt="IP" />
               </div>
@@ -97,7 +104,7 @@ export default function OurMission() {
                 </p>
               </div>
             </div>
-            <div className={styles.card}>
+            <div className={styles.card} data-aos="zoom-in-up">
               <div className={styles.imgdiv}>
                 <img src={pin} alt="location" />
               </div>
@@ -108,7 +115,7 @@ export default function OurMission() {
                 </p>
               </div>
             </div>
-            <div className={styles.card}>
+            <div className={styles.card} data-aos="zoom-in-up">
               <div className={styles.imgdiv}>
                 <img src={browser} alt="browser" />
               </div>

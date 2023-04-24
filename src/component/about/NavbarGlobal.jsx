@@ -75,7 +75,10 @@ const Navbar = () => {
                     </li>
                   </ul>
                 </li>
-                <li className={styles.drop1_list_location}>
+                <li
+                  className={styles.drop1_list_location}
+                  id={styles.drop1_location_scroll}
+                >
                   <p>BY Location</p>
                   <ul>
                     {location.map((val, ind) => (
