@@ -42,7 +42,7 @@ function Compare() {
               >{`Compare Our Top ${count} VPNs `}</h3>
               <div className={styles.top_three__tabs}>
                 {data_list.map((val, ind) =>
-                  val?.val && val?.val?.Comparision ? (
+                  val?.val && val?.val?.Comparision && ind<3 ? (
                     <div
                       className={
                         linkclass === ind + 1

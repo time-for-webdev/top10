@@ -12,7 +12,7 @@
 #sticky_nav {
   position: fixed;
   top: 0;
-  z-index: 0;
+  z-index: 1;
   transition-duration: 2.5s;
 }
 
@@ -36,6 +36,7 @@
   text-align: center;
   box-sizing: border-box;
   color: #1d69a7;
+  z-index: 50;
 }
 
 .page_nav_link ul li a:hover {
@@ -79,6 +80,7 @@
     border: 1px solid#1d69a7;
     overflow: hidden;
     position: relative;
+    z-index: 50;
   }
 
   #sticky_about_drop {
@@ -103,6 +105,7 @@
     text-align: center;
     box-sizing: border-box;
     color: #1d69a7;
+    z-index: 50;
   }
 
   .drop_items:hover {
