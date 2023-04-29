@@ -1,6 +1,6 @@
 {
   "name": "top10",
-  "homepage":"https://discountvpn.com",
+  "homepage": "https://discountvpn.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
