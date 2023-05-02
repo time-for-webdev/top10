@@ -192,7 +192,7 @@ function Card(prop) {
                     }
                     data-qa-id="vendor_mark"
                   >
-                    {prop.val?.remark?.remarks}
+                    {prop.val?.remark}
                   </div>
                 </div>
               </div>
