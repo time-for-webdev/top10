@@ -13,7 +13,6 @@ import os6 from "../../assects/Home/icons8-windows-10-30.png";
 import like from "../../assects/Home/icons8-facebook-like-50.png";
 import useStartupCtx from "../Hooks/useContext";
 import lookup from "country-code-lookup";
-
 const Navbar = () => {
   const [drop1, setdrop1] = useState(false);
   const [drop2, setdrop2] = useState(false);
@@ -28,7 +27,8 @@ const Navbar = () => {
 
   /* API CALL*/
 
-  const { location, setdrop, setforVpn, setLoading } = useStartupCtx();
+  const { location, setdrop, setforVpn, setLoading, forVpn } = useStartupCtx();
+
   // console.log("-----------> " + location);
   // const code = lookup.byCountry(location[0])?.iso2;
   // console.log(code.toLowerCase());
@@ -62,7 +62,7 @@ const Navbar = () => {
               >
                 <li className={styles.drop1_list_location}>
                   <p>BY SERVICE </p>
-                  <Link to="/">
+                  <Link to={`/Overall Best Vpn of 2023`}>
                     <ul>
                       <li
                         onClick={() => {
@@ -108,8 +108,8 @@ const Navbar = () => {
                 </li>
                 <li className={styles.drop1_list_location}>
                   <p>BY device</p>
-                  <Link to="/">
-                    <ul>
+                  <ul>
+                    <Link to="/android">
                       <li
                         onClick={() => {
                           setLoading(true);
@@ -122,6 +122,8 @@ const Navbar = () => {
                         </div>
                         <p>Android </p>
                       </li>
+                    </Link>
+                    <Link to="/iPhone&iPad">
                       <li
                         onClick={() => {
                           setLoading(true);
@@ -134,6 +136,8 @@ const Navbar = () => {
                         </div>
                         <p>iPhone & iPad </p>
                       </li>
+                    </Link>
+                    <Link to="/Mac">
                       <li
                         onClick={() => {
                           setLoading(true);
@@ -146,6 +150,8 @@ const Navbar = () => {
                         </div>
                         <p>Mac </p>
                       </li>
+                    </Link>
+                    <Link to="/Routers">
                       <li
                         onClick={() => {
                           setLoading(true);
@@ -158,6 +164,8 @@ const Navbar = () => {
                         </div>
                         <p>Routers </p>
                       </li>
+                    </Link>
+                    <Link to="/Pc">
                       <li
                         onClick={() => {
                           setLoading(true);
@@ -170,6 +178,8 @@ const Navbar = () => {
                         </div>
                         <p>PC </p>
                       </li>
+                    </Link>
+                    <Link to="/Windows">
                       <li
                         onClick={() => {
                           setLoading(true);
@@ -182,8 +192,8 @@ const Navbar = () => {
                         </div>
                         <p>Windows </p>
                       </li>
-                    </ul>
-                  </Link>
+                    </Link>
+                  </ul>
                 </li>
               </ul>
             </div>
@@ -617,12 +627,12 @@ const Navbar = () => {
                       >
                         <span>BY device</span>
                       </div>
-                      <Link to="/">
-                        <ul
-                          style={
-                            device ? { display: "block" } : { display: "none" }
-                          }
-                        >
+                      <ul
+                        style={
+                          device ? { display: "block" } : { display: "none" }
+                        }
+                      >
+                        <Link to="/Andriod">
                           <li
                             onClick={() => {
                               setLoading(true);
@@ -633,6 +643,8 @@ const Navbar = () => {
                           >
                             <p>Android </p>
                           </li>
+                        </Link>
+                        <Link to="iPhone&iPad">
                           <li
                             onClick={() => {
                               setLoading(true);
@@ -643,6 +655,8 @@ const Navbar = () => {
                           >
                             <p>iPhone & iPad </p>
                           </li>
+                        </Link>
+                        <Link to="Mac">
                           <li
                             onClick={() => {
                               setLoading(true);
@@ -653,6 +667,8 @@ const Navbar = () => {
                           >
                             <p>Mac </p>
                           </li>
+                        </Link>
+                        <Link to="Routers">
                           <li
                             onClick={() => {
                               setLoading(true);
@@ -663,6 +679,8 @@ const Navbar = () => {
                           >
                             <p>Routers </p>
                           </li>
+                        </Link>
+                        <Link to="Pc">
                           <li
                             onClick={() => {
                               setLoading(true);
@@ -673,6 +691,8 @@ const Navbar = () => {
                           >
                             <p>PC </p>
                           </li>
+                        </Link>
+                        <Link to="Windows">
                           <li
                             onClick={() => {
                               setLoading(true);
@@ -683,8 +703,8 @@ const Navbar = () => {
                           >
                             <p>Windows </p>
                           </li>
-                        </ul>
-                      </Link>
+                        </Link>
+                      </ul>
                     </li>
                   </ul>
                 </div>
