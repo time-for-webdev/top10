@@ -4,6 +4,8 @@ import styles from "./Carousel.module.css";
 import fivestar from "../../assects/Home/fivestar.png";
 import fourhalfstar from "../../assects/Home/fourhalfstar.png";
 import useStartupCtx from "../Hooks/useContext";
+import { BsStarFill } from "react-icons/bs";
+import { BsStarHalf } from "react-icons/bs";
 
 export default function Carousel() {
   const [activecard, setactivecard] = useState(0);
@@ -131,14 +133,35 @@ export default function Carousel() {
             </div>
             <div className={styles.brand_review}>
               <h3>{data_list[cardcnt]?.val?.title}</h3>
-              <img
+              {/* <img
                 src={
                   parseFloat(data_list[cardcnt]?.val?.user_rating) > 4.5
                     ? fivestar
                     : fourhalfstar
                 }
                 alt="5 star review"
-              />
+              /> */}
+              <div className={styles?.starswrap}>
+                {parseFloat(data_list[cardcnt]?.val?.user_rating) > 4.5 ? (
+                  <div className={styles.floorstar}>
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                  </div>
+                ) : (
+                  <div className={styles.floorstar}>
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarHalf />
+                  </div>
+                )}
+              </div>
               <p className={styles.user_review}>
                 {data_list[cardcnt]?.val?.user_comment}
               </p>
@@ -160,14 +183,28 @@ export default function Carousel() {
                 </div>
                 <div className={styles.brand_review}>
                   <h3>{el.val?.title}</h3>
-                  <img
-                    src={
-                      parseFloat(el.val?.user_rating) > 4.5
-                        ? fivestar
-                        : fourhalfstar
-                    }
-                    alt="5 star review"
-                  />
+                  <div className={styles?.starswrap}>
+                    {parseFloat(el.val?.user_rating) > 4.5 ? (
+                      <div className={styles.floorstar}>
+                        <BsStarFill />
+                        <BsStarFill />
+                        <BsStarFill />
+                        <BsStarFill />
+                        <BsStarFill />
+                        <BsStarFill />
+                      </div>
+                    ) : (
+                      <div className={styles.floorstar}>
+                        <BsStarFill />
+                        <BsStarFill />
+                        <BsStarFill />
+                        <BsStarFill />
+                        <BsStarFill />
+                        <BsStarHalf />
+                      </div>
+                    )}
+                  </div>
+
                   <p className={styles.user_review}>{el.val?.user_comment}</p>
                   <p className={styles.user_name}>{el.val?.user_name}</p>
                   <a className={styles.button} href={el.val?.website_url}>
@@ -184,14 +221,35 @@ export default function Carousel() {
             </div>
             <div className={styles.brand_review}>
               <h3>{data_list[0]?.val?.title}</h3>
-              <img
+              {/* <img
                 src={
                   parseFloat(data_list[0]?.val?.user_rating) > 4.5
                     ? fivestar
                     : fourhalfstar
                 }
                 alt="5 star review"
-              />
+              /> */}
+              <div className={styles?.starswrap}>
+                {parseFloat(data_list[0]?.val?.user_rating) > 4.5 ? (
+                  <div className={styles.floorstar}>
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                  </div>
+                ) : (
+                  <div className={styles.floorstar}>
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarHalf />
+                  </div>
+                )}
+              </div>
               <p className={styles.user_review}>
                 {data_list[0]?.val?.user_comment}
               </p>
