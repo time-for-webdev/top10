@@ -35,6 +35,15 @@ const Vpncontext = ({ children }) => {
       slug === "Windows"
     ) {
       setdrop(3);
+    } else if (
+      slug === "China" ||
+      slug === "unitedStates" ||
+      slug === "india" ||
+      slug === "australia" ||
+      slug === "burundi" ||
+      slug === "unitedArabEmirates"
+    ) {
+      setdrop(2);
     } else {
       setforVpn(`Overall Best Vpn of ${date}`);
       setdrop(1);

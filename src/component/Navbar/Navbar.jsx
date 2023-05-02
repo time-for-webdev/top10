@@ -84,9 +84,8 @@ const Navbar = () => {
                   className={`${styles.drop1_list_location} ${styles.drop1_location_scroll}`}
                 >
                   <p>BY Location</p>
-                  <Link to="/">
-                    <ul>
-                      {location.map((val, ind) => (
+                  <ul>
+                    {/* {location.map((val, ind) => (
                         <li
                           key={ind}
                           onClick={() => {
@@ -102,9 +101,80 @@ const Navbar = () => {
                           ></span>
                           <p>{val}</p>
                         </li>
-                      ))}
-                    </ul>
-                  </Link>
+                      ))} */}
+                    <Link to="/China">
+                      <li
+                        onClick={() => {
+                          setLoading(true);
+                          setdrop(2);
+                          setforVpn("China");
+                        }}
+                      >
+                        <span class={`fi fi-cn`}></span>
+                        <p>China</p>
+                      </li>
+                    </Link>
+                    <Link to="/unitedStates">
+                      <li
+                        onClick={() => {
+                          setLoading(true);
+                          setdrop(2);
+                          setforVpn("unitedStates");
+                        }}
+                      >
+                        <span class={`fi fi-us`}></span>
+                        <p>United States</p>
+                      </li>
+                    </Link>
+                    <Link to="/india">
+                      <li
+                        onClick={() => {
+                          setLoading(true);
+                          setdrop(2);
+                          setforVpn("india");
+                        }}
+                      >
+                        <span class={`fi fi-in`}></span>
+                        <p>India</p>
+                      </li>
+                    </Link>
+                    <Link to="/australia">
+                      <li
+                        onClick={() => {
+                          setLoading(true);
+                          setdrop(2);
+                          setforVpn("australia");
+                        }}
+                      >
+                        <span class={`fi fi-au`}></span>
+                        <p>Australia</p>
+                      </li>
+                    </Link>
+                    <Link to="/burundi">
+                      <li
+                        onClick={() => {
+                          setLoading(true);
+                          setdrop(2);
+                          setforVpn("burundi");
+                        }}
+                      >
+                        <span class={`fi fi-bi`}></span>
+                        <p>Burundi</p>
+                      </li>
+                    </Link>
+                    <Link to="/unitedArabEmirates">
+                      <li
+                        onClick={() => {
+                          setLoading(true);
+                          setdrop(2);
+                          setforVpn("unitedArabEmirates");
+                        }}
+                      >
+                        <span class={`fi fi-ae`}></span>
+                        <p>United Arab Emirates</p>
+                      </li>
+                    </Link>
+                  </ul>
                 </li>
                 <li className={styles.drop1_list_location}>
                   <p>BY device</p>
@@ -590,15 +660,14 @@ const Navbar = () => {
                       >
                         <span>BY Location</span>
                       </div>
-                      <Link to="/">
-                        <ul
-                          style={
-                            loaction_bool
-                              ? { display: "block" }
-                              : { display: "none" }
-                          }
-                        >
-                          {location.map((val, ind) => (
+                      <ul
+                        style={
+                          loaction_bool
+                            ? { display: "block" }
+                            : { display: "none" }
+                        }
+                      >
+                        {/* {location.map((val, ind) => (
                             <li
                               key={ind}
                               onClick={() => {
@@ -610,9 +679,87 @@ const Navbar = () => {
                             >
                               <p>{val}</p>
                             </li>
-                          ))}
-                        </ul>
-                      </Link>
+                          ))} */}
+
+                        <Link to="/China">
+                          <li
+                            onClick={() => {
+                              setopen(false);
+
+                              setLoading(true);
+                              setdrop(2);
+                              setforVpn("China");
+                            }}
+                          >
+                            <p>China</p>
+                          </li>
+                        </Link>
+                        <Link to="/unitedStates">
+                          <li
+                            onClick={() => {
+                              setopen(false);
+
+                              setLoading(true);
+                              setdrop(2);
+                              setforVpn("unitedStates");
+                            }}
+                          >
+                            <p>United States</p>
+                          </li>
+                        </Link>
+                        <Link to="/india">
+                          <li
+                            onClick={() => {
+                              setopen(false);
+
+                              setLoading(true);
+                              setdrop(2);
+                              setforVpn("india");
+                            }}
+                          >
+                            <p>India</p>
+                          </li>
+                        </Link>
+                        <Link to="/australia">
+                          <li
+                            onClick={() => {
+                              setopen(false);
+
+                              setLoading(true);
+                              setdrop(2);
+                              setforVpn("australia");
+                            }}
+                          >
+                            <p>Australia</p>
+                          </li>
+                        </Link>
+                        <Link to="/burundi">
+                          <li
+                            onClick={() => {
+                              setLoading(true);
+                              setdrop(2);
+                              setopen(false);
+
+                              setforVpn("burundi");
+                            }}
+                          >
+                            <p>Burundi</p>
+                          </li>
+                        </Link>
+                        <Link to="/unitedArabEmirates">
+                          <li
+                            onClick={() => {
+                              setLoading(true);
+                              setdrop(2);
+                              setopen(false);
+
+                              setforVpn("unitedArabEmirates");
+                            }}
+                          >
+                            <p>United Arab Emirates</p>
+                          </li>
+                        </Link>
+                      </ul>
                     </li>
                     <li className={styles.drop1_list_location}>
                       <div
