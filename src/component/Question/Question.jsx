@@ -1,4 +1,4 @@
-import { useEffect, useState , useRef} from "react";
+import { useEffect, useState, useRef } from "react";
 import styles from "./Question.module.css";
 import { getFaq } from "../API/Vpn";
 function Question() {
@@ -22,7 +22,7 @@ function Question() {
     if (myRef.current && !myRef.current.contains(e.target)) {
       setshow(0);
     }
-  })
+  });
   return (
     <>
       <div className={styles.faqs} id="faqs">
@@ -30,14 +30,25 @@ function Question() {
           <h3 className={styles.faqs__title}>Frequently Asked Questions</h3>
           <div ref={myRef} className={styles.faqs__list}>
             {faq.map((value, ind) => (
-              <div onClick={() => { setshow(show ==ind+1 ?0 :ind+1) }} className={styles.faq} key={ind} >
-                <div  className={styles.faq__title}>
-                  {value?.Question}
-                </div>
-                {show === ind+1 ? 
-                <div className={styles.faq__text}>
-                  <p>{value?.Answer}</p>
-                </div> :""}
+              <div
+                onClick={() => {
+                  setshow(show == ind + 1 ? 0 : ind + 1);
+                }}
+                className={
+                  show === ind + 1
+                    ? `${styles.faq} ${styles.open}`
+                    : `${styles.faq}`
+                }
+                key={ind}
+              >
+                <div className={styles.faq__title}>{value?.Question}</div>
+                {show === ind + 1 ? (
+                  <div className={styles.faq__text}>
+                    <p>{value?.Answer}</p>
+                  </div>
+                ) : (
+                  ""
+                )}
               </div>
             ))}
             {/* <div className={styles.faq}>
