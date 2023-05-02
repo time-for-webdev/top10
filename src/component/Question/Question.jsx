@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState , useRef} from "react";
 import styles from "./Question.module.css";
 import { getFaq } from "../API/Vpn";
 function Question() {
@@ -15,28 +15,35 @@ function Question() {
   }, []);
 
   // console.log("from faq" + JSON.stringify(faq));
-
+  const myRef = useRef();
+  const [show, setshow] = useState(0);
+  const [toggle, settoggle] = useState(0);
+  document.addEventListener("click", function (e) {
+    if (myRef.current && !myRef.current.contains(e.target)) {
+      setshow(0);
+    }
+  })
   return (
     <>
       <div className={styles.faqs} id="faqs">
         <div className={styles.container}>
           <h3 className={styles.faqs__title}>Frequently Asked Questions</h3>
-          <div className={styles.faqs__list}>
+          <div ref={myRef} className={styles.faqs__list}>
             {faq.map((value, ind) => (
-              <details className={styles.faq} key={ind}>
-                <summary className={styles.faq__title}>
+              <div onClick={() => { setshow(show ==ind+1 ?0 :ind+1) }} className={styles.faq} key={ind} >
+                <div  className={styles.faq__title}>
                   {value?.Question}
-                </summary>
-
+                </div>
+                {show === ind+1 ? 
                 <div className={styles.faq__text}>
                   <p>{value?.Answer}</p>
-                </div>
-              </details>
+                </div> :""}
+              </div>
             ))}
-            {/* <details className={styles.faq}>
-              <summary className={styles.faq__title}>
+            {/* <div className={styles.faq}>
+              <div className={styles.faq__title}>
                 Why do I need a VPN?
-              </summary>
+              </div>
 
               <div className={styles.faq__text}>
                 The most important reasons to use a VPN are to secure your
@@ -49,11 +56,11 @@ function Question() {
                 a public wi-fi network, your private data is guaranteed to be
                 protected."
               </div>
-            </details>
-            <details className={styles.faq}>
-              <summary className={styles.faq__title}>
+            </div>
+            <div className={styles.faq}>
+              <div className={styles.faq__title}>
                 How can I get the best price for a VPN?
-              </summary>
+              </div>
 
               <div className={styles.faq__text}>
                 <p>
@@ -96,11 +103,11 @@ function Question() {
                   .
                 </p>
               </div>
-            </details>
-            <details className={styles.faq}>
-              <summary className={styles.faq__title}>
+            </div>
+            <div className={styles.faq}>
+              <div className={styles.faq__title}>
                 How do I connect a VPN?
-              </summary>
+              </div>
 
               <div className={styles.faq__text}>
                 <p>
@@ -121,11 +128,11 @@ function Question() {
                   today!
                 </p>
               </div>
-            </details>
-            <details className={styles.faq}>
-              <summary className={styles.faq__title}>
+            </div>
+            <div className={styles.faq}>
+              <div className={styles.faq__title}>
                 Can I set up a VPN on my smartphone?
-              </summary>
+              </div>
 
               <div className={styles.faq__text}>
                 <p>Of Course!</p>
@@ -158,7 +165,7 @@ function Question() {
                   .
                 </p>
               </div>
-            </details> */}
+            </div> */}
           </div>
         </div>
       </div>
