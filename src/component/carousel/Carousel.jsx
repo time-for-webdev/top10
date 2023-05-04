@@ -44,7 +44,7 @@ export default function Carousel() {
   // console.log(data_list);
   useEffect(() => {
     data_list.map((el, ind) => {
-      if (el.val) {
+      if (el?.val) {
         setcardcnt(ind);
       }
     });
