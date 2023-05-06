@@ -103,3 +103,21 @@ p {
   margin: 0;
   padding: 0;
 }
+
+@media only screen and (max-width: 480px) {
+  .faq__title {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+  .faqs__title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 29px;
+    margin: 38px 0 28px;
+    text-align: left;
+  }
+}

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const domain = "https://backend.discountvpn.com/api";
+const domain = process.env.REACT_APP_DOMAIN;
 
 const getHeaders = () => {
   const headers = {

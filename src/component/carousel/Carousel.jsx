@@ -149,11 +149,9 @@ export default function Carousel() {
                     <BsStarFill />
                     <BsStarFill />
                     <BsStarFill />
-                    <BsStarFill />
                   </div>
                 ) : (
                   <div className={styles.floorstar}>
-                    <BsStarFill />
                     <BsStarFill />
                     <BsStarFill />
                     <BsStarFill />
@@ -191,11 +189,9 @@ export default function Carousel() {
                         <BsStarFill />
                         <BsStarFill />
                         <BsStarFill />
-                        <BsStarFill />
                       </div>
                     ) : (
                       <div className={styles.floorstar}>
-                        <BsStarFill />
                         <BsStarFill />
                         <BsStarFill />
                         <BsStarFill />
@@ -237,11 +233,9 @@ export default function Carousel() {
                     <BsStarFill />
                     <BsStarFill />
                     <BsStarFill />
-                    <BsStarFill />
                   </div>
                 ) : (
                   <div className={styles.floorstar}>
-                    <BsStarFill />
                     <BsStarFill />
                     <BsStarFill />
                     <BsStarFill />
