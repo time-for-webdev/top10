@@ -27,7 +27,7 @@ const Vpncontext = ({ children }) => {
     )
       setdrop(1);
     else if (
-      slug === "android" ||
+      slug === "Andriod" ||
       slug === "iPhone&iPad" ||
       slug === "Mac" ||
       slug === "Routers" ||
@@ -84,6 +84,9 @@ const Vpncontext = ({ children }) => {
           { val: res.data.Fifth },
           { val: res.data.Sixth },
           { val: res.data.Seventh },
+          { val: res.data.Eighth },
+          { val: res.data.Nineth },
+          { val: res.data.Tenth },
         ]);
         setLoading(false);
         setflag(true);
@@ -101,6 +104,9 @@ const Vpncontext = ({ children }) => {
           { val: res.data.Fifth },
           { val: res.data.Sixth },
           { val: res.data.Seventh },
+          { val: res.data.Eighth },
+          { val: res.data.Nineth },
+          { val: res.data.Tenth },
         ]);
         setLoading(false);
         setflag(true);
@@ -118,6 +124,9 @@ const Vpncontext = ({ children }) => {
           { val: res.data.Fifth },
           { val: res.data.Sixth },
           { val: res.data.Seventh },
+          { val: res.data.Eighth },
+          { val: res.data.Nineth },
+          { val: res.data.Tenth },
         ]);
         setLoading(false);
         setflag(true);

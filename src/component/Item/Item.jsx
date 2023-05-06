@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Item.module.css";
 import check from "../../assects/Card/check.png";
 import video from "../../assects/Item/vpny.gif";
@@ -9,7 +9,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Item = () => {
-  const { data_list } = useStartupCtx();
+  const { data_list, forVpn } = useStartupCtx();
+
   useEffect(() => {
     AOS.init({ duration: 600 });
   }, [data_list]);
@@ -27,7 +28,7 @@ const Item = () => {
           </p>
         </div>
         <div className={styles.video_container}>
-          {/* <video
+          <video
             loop="true"
             autoplay="true"
             muted="true"
@@ -35,8 +36,8 @@ const Item = () => {
             playsinline="true"
             src={videox}
             class=""
-          ></video> */}
-          <img src={video} />
+          ></video>
+          {/* <img src={video} /> */}
         </div>
         <div className={styles.roundup_tiles}>
           <div className={styles.container}>
@@ -120,7 +121,7 @@ const Item = () => {
                         </g>
                       </svg>
                     </div>
-                    <a href="" className="">
+                    <a href="/" className="">
                       Best VPNs of 2023
                     </a>
                   </div>
@@ -160,8 +161,12 @@ const Item = () => {
                         </g>
                       </svg>
                     </div>
-                    <a href="" className="">
-                      Best VPNs by country
+                    <a
+                      href={forVpn != "China" ? "/China" : "/unitedState"}
+                      className=""
+                    >
+                      Best VPNs for{" "}
+                      {forVpn != "China" ? "China" : "unitedState"}
                     </a>
                   </div>
                 </div>
@@ -250,8 +255,12 @@ const Item = () => {
                         ></circle>
                       </svg>
                     </div>
-                    <a href="" className="">
-                      Best VPNs by Device
+                    <a
+                      href={forVpn != "Andriod" ? "/Andriod" : "/Windows"}
+                      className=""
+                    >
+                      Best VPNs for{" "}
+                      {forVpn != "Andriod" ? "Andriod" : "Windows"}
                     </a>
                   </div>
                 </div>
@@ -321,7 +330,7 @@ const Item = () => {
                         ></rect>
                       </svg>
                     </div>
-                    <a href="" className="">
+                    <a href="/" className="">
                       Fastest VPNs
                     </a>
                   </div>

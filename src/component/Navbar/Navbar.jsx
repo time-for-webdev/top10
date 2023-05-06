@@ -114,12 +114,12 @@ const Navbar = () => {
                         <p>China</p>
                       </li>
                     </Link>
-                    <Link to="/unitedStates">
+                    <Link to="/unitedState">
                       <li
                         onClick={() => {
                           setLoading(true);
                           setdrop(2);
-                          setforVpn("unitedStates");
+                          setforVpn("unitedState");
                         }}
                       >
                         <span class={`fi fi-us`}></span>
@@ -179,7 +179,7 @@ const Navbar = () => {
                 <li className={styles.drop1_list_location}>
                   <p>BY device</p>
                   <ul>
-                    <Link to="/android">
+                    <Link to="/Andriod">
                       <li
                         onClick={() => {
                           setLoading(true);
@@ -694,14 +694,14 @@ const Navbar = () => {
                             <p>China</p>
                           </li>
                         </Link>
-                        <Link to="/unitedStates">
+                        <Link to="/unitedState">
                           <li
                             onClick={() => {
                               setopen(false);
 
                               setLoading(true);
                               setdrop(2);
-                              setforVpn("unitedStates");
+                              setforVpn("unitedState");
                             }}
                           >
                             <p>United States</p>
