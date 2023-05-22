@@ -25,40 +25,14 @@ export default function Methodology({ ref3 }) {
           </div>
 
           <div className={styles.block_content_desc}>
-            <h2 className={styles.title_content_block}>Review Methodology</h2>
+            <h2 className={styles.title_content_block}>Our Assessment Approach</h2>
 
             <p>
-              Below are all the criteria we use to test, research, analyze, and
-              track the performance of every VPN we review. As a leading
-              authority on VPNs, we aim to build and maintain trust between
-              consumers and the industry. Our expert team has published
-              thousands of real user reviews that are backed by diligent testing
-              and research.
+            As a prominent website in the field of VPNs, we are dedicated to fostering and preserving trust between consumers and the industry. Our highly skilled reviewers conduct rigorous testing and comprehensive research to generate thousands of authentic user reviews. These reviews are founded on 
+            meticulous analysis and serve as a reliable resource for individuals seeking insightful information on VPN services.
             </p>
 
-            <div className={styles.methodology_cards}>
-              <div className={styles.methodology_card} data-aos="fade-right">
-                <div className={styles.methodology_card_img}>
-                  <img src={secured} alt="VPN" />
-                </div>
-
-                <div className={styles.methodology_card_info}>
-                  <span className={styles.methodology_card_num}>316</span>
-                  <p> VPNs Reviewed </p>{" "}
-                </div>
-              </div>
-
-              <div className={styles.methodology_card} data-aos="fade-left">
-                <div className={styles.methodology_card_img}>
-                  <img src={review} alt="User Review" />
-                </div>
-
-                <div className={styles.methodology_card_info}>
-                  <span className={styles.methodology_card_num}>17,591</span>
-                  <p> Real User Reviews, Ratings </p>{" "}
-                </div>
-              </div>
-            </div>
+           
           </div>
         </div>
       </section>
