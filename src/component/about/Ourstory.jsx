@@ -7,19 +7,24 @@ export default function Ourstory() {
     <>
       <section className={styles.ossection}>
         <div className={styles.oscontainer}>
-          <h1>Our Story</h1>
+          <h1>Our Journey</h1>
           <p>
-            It’s pretty simple — we started discount-vpn back in 2023 as a way
-            to help people protect their online privacy.
-          </p>
+          Our journey began with a passion for helping users navigate the complex world of VPNs and protect their online privacy.
+           Frustrated with the lack of honest and committed resources available, 
+           we founded discountVpn to fill this gap. Our dedicated team is committed to providing unbiased and helpful information, 
+           guiding users towards the best VPN solutions tailored to their needs. 
+</p>
         </div>
         <div className={styles.oscontainer}>
           <img src={people} alt="people" />
         </div>
         <div className={styles.oscontainer}>
-          As governments and companies around the world increasingly track and
-          limit our online movements, it’s a no-brainer why many people want to
-          maintain ownership of their online presence.
+        Take Charge of Your Online Presence: Defy Restrictions and Embrace Freedom! <br /> <br />
+As the world tightens its grip on our digital lives, reclaiming ownership of your online presence becomes paramount. 
+Don't let governments and corporations dictate your movements - break free from limitations and seize control of your digital destiny. 
+With discountVpn, you can trust that you're getting reliable insights and tools to safeguard your online journey
+Join the revolution and experience the true meaning of online freedom. 
+
         </div>
       </section>
     </>

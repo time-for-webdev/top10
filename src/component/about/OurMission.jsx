@@ -125,21 +125,16 @@ export default function OurMission() {
             </div>
           </div>
           <div className={styles.ompara}>
-            <h2>Our Mission</h2>
-            <p className={styles.para1}>
-              It’s important to us that we not only provide expert reviews, but
-              ones that are very much based on an average user’s experience. We
-              perform ongoing tests to ensure we’re providing the most detailed
-              and up-to-date VPN reviews an d guides — and translate them into
-              29 languages.
-            </p>
-            <br />
+            <h2>Digital Empowerment</h2>
+            
             <p className={styles.para2}>
-              As part of our mission to promote internet freedom to people
-              around the world, we’ve also created free tools to help verify
-              your online security. Overall, we want to be your trusted source
-              when it comes to finding the best VPNs, so you can browse the web
-              protected, and on your own terms.
+              Our mission is to empower individuals with the knowledge and tools they need to protect their online privacy and security.
+               We strive to provide reliable, unbiased information about VPNs, encryption, data protection, and related topics. 
+               <br /> <br />
+               Through our content, resources, and guides, we aim to educate and guide users towards making informed decisions that enhance 
+               their online privacy. We are committed to promoting digital freedom, advocating for strong privacy standards, and empowering 
+               individuals to take control of their online presence. <br /><br />
+              Join us on our mission to create a safer and more private digital world for everyone.
             </p>
           </div>
         </div>

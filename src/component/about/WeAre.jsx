@@ -21,11 +21,14 @@ export default function WeAre({ ref1 }) {
               <img src={people} alt="people" className={styles.waicon} />
               <div className={styles.wafirst}>
                 <h2>Our Blogs</h2>
-                <p>Introduction to VPNs and their importance. </p>
-                <p>How to choose the right VPN for you.</p>
-                <p>Common misconceptions about VPNs debunked.</p>
-                <p>Setting up and using a VPN.</p>
-                <p>Additional resources for learning more about VPNs.</p>
+                <p>Looking for insights and tips on VPNs and online privacy? </p>
+                <p>
+                  Our blog is the perfect place to stay up-to-date on the latest trends, news, and developments in
+                  the world of online security. From reviews of the best VPNs on the market to in-depth analysis of online privacy
+                  issues, our expert writers provide informative and engaging content that will help you navigate the often
+                  confusing landscape of online privacy and security.</p>
+                <p> Join our community of like-minded individuals and learn how to take control of your digital life.
+                </p>
               </div>
             </div>
             <div className={styles.wacontent}>
@@ -46,7 +49,7 @@ export default function WeAre({ ref1 }) {
               </div>
             </div>
           </div>
-          <div className={styles.wacontent} data-aos="zoom-in-up">
+          <div className={styles.waconten} data-aos="zoom-in-up">
             <img className={styles.wamap} src={blog} alt="map" />
           </div>
         </div>
