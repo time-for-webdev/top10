@@ -58,7 +58,7 @@ const Footer = () => {
                 <a href="/Terms">Terms and Conditions of Use</a>
               </li>
               <li>
-                <a href="/">DMCA Policy</a>
+                <a href="/Dmca">DMCA Policy</a>
               </li>
             </div>
             <hr />
