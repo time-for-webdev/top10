@@ -6,7 +6,7 @@ const Discloser = () => {
     if (myRef.current && !myRef.current.contains(e.target)) {
       setshow(0);
     }
-  })
+  });
 
   const [show, setshow] = useState(0);
   const myRef = useRef();
@@ -17,61 +17,69 @@ const Discloser = () => {
         <div className={styles.discloser_wrap}>
           <span className={styles.disclosure__label}>Disclosure: </span>
           <div className={styles.disclosure__item}>
-            <div className={styles.Discloser_group} >
-              <span onClick={(e) => { setshow(1) }}>Professional Reviews</span>
+            <div className={styles.Discloser_group}>
+              <span
+                onClick={(e) => {
+                  setshow(1);
+                }}
+              >
+                Professional Reviews
+              </span>
             </div>
-            {show === 1 ?
+            {show === 1 ? (
               <p>
-                discountVpn contains reviews that are written by our community
-                reviewers, and are based on the reviewers' independent and
-                professional examination of the products/services.{" "}
-              </p> : ""}
+                Discount VPN features reviews authored by members of our
+                community of reviewers. These reviews are derived from the
+                reviewers' impartial and expert evaluation of the products and
+                services
+              </p>
+            ) : (
+              ""
+            )}
           </div>
           <div className={styles.disclosure__item}>
             <div className={styles.Discloser_group}>
-              <span onClick={(e) => { setshow(2) }}>Ownership</span>
+              <span
+                onClick={(e) => {
+                  setshow(2);
+                }}
+              >
+                Ownership
+              </span>
             </div>
-            {show === 2 ?
+            {show === 2 ? (
               <p>
-                discountVpn is owned by Kape Technologies PLC, which owns the
-                following products: ExpressVPN, CyberGhost, ZenMate, Private
-                Internet Access, and Intego, which may be reviewed on this
-                website.{" "}
-              </p> : ""}
+                DiscountVPN.com originated as a platform dedicated to evaluating
+                VPN services. Presently, our team of researchers, writers, and
+                editors remains committed to delivering reviews that reflect the
+                evolving dynamics of the market
+              </p>
+            ) : (
+              ""
+            )}
           </div>
           <div className={styles.disclosure__item}>
             <div className={styles.Discloser_group}>
-              <span onClick={(e) => { setshow(3) }} className="original">Affiliate Commissions</span>
-              {/* <span onClick={(e)=>{setshow(3)}} className="us">Advertising</span> */}
+              <span
+                onClick={(e) => {
+                  setshow(3);
+                }}
+                className="original"
+              >
+                Affiliate
+              </span>
             </div>
-            {show === 3 ?
+            {show === 3 ? (
               <p>
-                discountVpn contains reviews that were written by our experts and
-                follow the strict reviewing standards, including ethical
-                standards, that we have adopted. Such standards require that each
-                review will be based on an independent, honest and professional
-                examination of the reviewer. That being said, we may earn a
-                commission when a user completes an action using our links, which
-                will however not affect the review but might affect the rankings.
-                The latter are determined on the basis of customer satisfaction of
-                previous sales and compensation received.{" "}
-              </p> : ""}
-          </div>
-          <div className={styles.disclosure__item}>
-            <div className={styles.Discloser_group}>
-              <span onClick={(e) => { setshow(4) }}>Reviews Guidelines</span>
-            </div>
-            {show === 4 ?
-              <p>
-                The reviews published on discountVpn are written by experts that
-                examine the products according to our strict reviewing standards.
-                Such standards ensure that each review is based on the
-                independent, professional and honest examination of the reviewer,
-                and takes into account the technical capabilities and qualities of
-                the product together with its commercial value for users. The
-                rankings we publish may take into consideration the affiliate
-                commissions we earn for purchases through links on our website.{" "}
-              </p> : ""}
+                DiscountVPN.com features expert-written reviews based on
+                independent evaluations following strict ethical standards.
+                While we may earn commissions from user actions, our reviews
+                remain unbiased, although rankings may be influenced by customer
+                satisfaction and compensation
+              </p>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>

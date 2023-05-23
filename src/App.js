@@ -12,6 +12,7 @@ import Navbar from "./component/Navbar/Navbar";
 import useStartupCtx from "./component/Hooks/useContext";
 import { Privacy } from "./component/Privacy/Privacy";
 import Terms from "./component/Terms/Terms";
+import Dmca from "./component/Dmca/Dmca";
 function App() {
   const { loading } = useStartupCtx();
 
@@ -31,8 +32,9 @@ function App() {
           <Route path="/:slug" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/Privacy" element={<Privacy />} />
-          <Route path="/Terms" element={<Terms />} />
+          <Route path="/privacy-policy" element={<Privacy />} />
+          <Route path="/terms-and-conditions-of-use" element={<Terms />} />
+          <Route path="/dmca-policy" element={<Dmca />} />
         </Routes>
         <Footer />
       </Router>
