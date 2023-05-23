@@ -12,15 +12,23 @@ import { postContact } from "../API/contact";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useStartupCtx from "../Hooks/useContext";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Methodology() {
   const { contact } = useStartupCtx();
+
+  const [verify, setverify] = useState(false);
 
   const [data, setdata] = useState({
     Name: "",
     email: "",
     Comment: "",
   });
+
+  function onChange(value) {
+    // console.log("Captcha value:", value);
+    setverify(true);
+  }
 
   const handleChnage = (event) => {
     // console.log(event.target.name);
@@ -66,6 +74,7 @@ export default function Methodology() {
             position: "bottom-left",
             theme: "dark",
           });
+          setverify(false);
           setdata({
             Name: "",
             email: "",
@@ -99,7 +108,6 @@ export default function Methodology() {
                   onChange={handleChnage}
                   required
                 />
-
                 <label htmlFor="lname">Email</label>
                 <input
                   type="text"
@@ -110,7 +118,6 @@ export default function Methodology() {
                   onChange={handleChnage}
                   required
                 />
-
                 <label htmlFor="subject">Questions or Comments?</label>
                 <textarea
                   id="subject"
@@ -121,8 +128,20 @@ export default function Methodology() {
                   onChange={handleChnage}
                   required
                 ></textarea>
+                <ReCAPTCHA
+                  sitekey={"6LcPMxEmAAAAACoI3qz0VsgImTN4IbRtjVO0rBIb"}
+                  onChange={onChange}
+                />
 
-                <input type="submit" value="Submit"></input>
+                <input
+                  type="submit"
+                  value="Submit"
+                  style={
+                    verify ? {} : { cursor: "not-allowed", opacity: "0.7" }
+                  }
+                  className={verify ? styles.submitBtn : ""}
+                  disabled={!verify}
+                ></input>
               </form>
             </div>
 
