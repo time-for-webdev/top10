@@ -10,7 +10,7 @@ export const Privacy = () => {
             <div className={styles.header}>
               <div className={styles.container}>
                 <div className={styles.row}>
-                  <h1 className={styles.heading}>Privacy Policy</h1>
+                  <h1 className={styles.heading}>DISCOUNTVPN PRIVACY POLICY</h1>
                 </div>
               </div>
             </div>

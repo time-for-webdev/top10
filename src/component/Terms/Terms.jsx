@@ -9,7 +9,7 @@ const Terms = () => {
             <div className={styles.header}>
               <div className={styles.container}>
                 <div className={styles.row}>
-                  <h1 className={styles.heading}>Dmca</h1>
+                  <h1 className={styles.heading}>Terms of Use</h1>
                 </div>
               </div>
             </div>
@@ -21,7 +21,7 @@ const Terms = () => {
                     id={styles.block_text}
                   >
                     <div>
-                    <p>
+                      <p>
                         BY USING THIS WEBSITE (“WEBSITE”), YOU AGREE AND CONFIRM
                         THAT YOU HAVE READ AND ACCEPT THESE TERMS OF USE. IF YOU
                         DO NOT ACCEPT THESE TERMS OF USE, PLEASE DO NOT USE THIS
@@ -70,7 +70,6 @@ const Terms = () => {
                         THE COMPANY or by the owners of rights to content of the
                         Website, in a separate agreement.
                       </p>
-                      
                     </div>
                   </section>
                   <section

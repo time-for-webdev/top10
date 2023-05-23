@@ -18,13 +18,13 @@ const Footer = () => {
               <div className={styles.footer_top}>
                 <img src={c_logo} alt="" />
                 <p>
-                  <strong>Our mission:</strong> We started discountVpn to offer
-                  users a really honest, committed and helpful tool when
-                  navigating VPNs and web privacy.
+                  <strong>Our Goal:</strong> At DiscountVpn.com , we aim to
+                  provide users with a transparent and reliable platform to help
+                  navigate VPNs and ensure web privacy
                 </p>
               </div>
               <div className={styles.social}>
-                <p>Follow discountVpn</p>
+                <p>Follow DiscountVpn</p>
                 <div className={styles.social_link}>
                   <a href={contact?.Facebook} target="_blank">
                     <FaFacebookSquare />
@@ -52,18 +52,20 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/Privacy">Privacy Policy</a>
+                <a href="/privacy-policy">Privacy Policy</a>
               </li>
               <li>
-                <a href="/Terms">Terms and Conditions of Use</a>
+                <a href="/terms-and-conditions-of-use">
+                  Terms and Conditions of Use
+                </a>
               </li>
               <li>
-                <a href="/Dmca">DMCA Policy</a>
+                <a href="/dmca-policy">DMCA Policy</a>
               </li>
             </div>
             <hr />
             <div className={styles.copyright}>
-              <p>{`© ${currentYear} discountVpn | All Rights Reserved`}</p>
+              <p>{`© ${currentYear} DiscountVpn | All Rights Reserved`}</p>
             </div>
           </div>
         </div>

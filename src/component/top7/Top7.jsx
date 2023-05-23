@@ -27,9 +27,9 @@ const Top7 = () => {
         <div className={styles.top_wrap}>
           <h1>{tittle}</h1>
           <p className={styles.top_desc}>
-            Excellent security features, widespread server networks, and
-            reliable refund policies — secure internet access is just a few
-            clicks away.
+            with outstanding security features, extensive server networks, and
+            dependable refund policies, accessing the internet securely is just
+            a few clicks away.
           </p>
           <ul>
             <span>

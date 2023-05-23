@@ -11,7 +11,7 @@ const Rate = () => {
     <>
       <div className={styles.rate_container}>
         <div className={styles.rate_wrap}>
-          <h1>How We Rate Our VPNs</h1>
+          <h1>Expert Rating Method: Unlocking the Best VPNs</h1>
           <div className={styles.rate_body}>
             <div className={styles.rate_type}>
               <li>
@@ -46,24 +46,18 @@ const Rate = () => {
               </li>
             </div>
             <p>
-              To figure out which VPNs are worth your money, we looked at what
-              each VPN offers, starting with features.
+              Discover the top VPNs as we evaluate their features, including
+              robust security measures like military-grade encryption,
+              protocols, DNS leak protection, and kill-switches. We also
+              scrutinize their performance, examining factors such as speed and
+              server locations.
             </p>
             <p>
-              When using a VPN, your priority should be security. That's why we
-              chose VPNs that have military-grade encryption, a range of
-              protocols (OpenVPN, L2TP, IKEv2, and more), DNS leak protection,
-              and a kill-switch. We also looked at the number of servers and
-              locations, and we tested each VPN for speed.
-            </p>
-            <p>
-              We then tested each VPN's ease-of-use, from downloading and
-              installing the software to connecting to the right server.
-              Customer support is also a crucial aspect, so we examined each
-              VPN's availability, what forms of contact are available, and how
-              efficient their support team is. We compared all of that to the
-              price to see if it was worthwhile or not. Last but not least, we
-              analyzed our users' reviews, both the positive and the negative.
+              Our comprehensive assessment considers user experience, ensuring
+              easy setup and seamless usage. We assess customer support
+              availability, responsiveness, and pricing to provide the best
+              value. Real user reviews further guide our evaluations, allowing
+              you to make an informed decision on the best VPN for your needs
             </p>
           </div>
         </div>

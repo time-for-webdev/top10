@@ -44,7 +44,7 @@ const Top10btm = () => {
   return (
     <div className={styles.bottom_container}>
       <div className={styles.btm_wrap}>
-        <div className={styles.btm_para}>discountVpn has been featured on:</div>
+        {/* <div className={styles.btm_para}>discountVpn has been featured on:</div> */}
         {/* <img src={web} /> */}
         <div className={styles.updateDate}>
           <img src={web2} />
