@@ -181,7 +181,7 @@ const Item = () => {
               </li>
               <li className={styles.list_item} data-aos="zoom-in-up">
                 <a
-                  href={forVpn != "Andriod" ? "/Andriod" : "/Windows"}
+                  href={forVpn != "Android" ? "/Android" : "/Windows"}
                   className=""
                 >
                   <div className={styles.tile}>
@@ -268,11 +268,11 @@ const Item = () => {
                         </svg>
                       </div>
                       <a
-                        href={forVpn != "Andriod" ? "/Andriod" : "/Windows"}
+                        href={forVpn != "Android" ? "/Android" : "/Windows"}
                         className=""
                       >
                         Best VPNs for{" "}
-                        {forVpn != "Andriod" ? "Andriod" : "Windows"}
+                        {forVpn != "Android" ? "Android" : "Windows"}
                       </a>
                     </div>
                   </div>

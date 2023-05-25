@@ -179,12 +179,12 @@ const Navbar = () => {
                 <li className={styles.drop1_list_location}>
                   <p>BY device</p>
                   <ul>
-                    <Link to="/Andriod">
+                    <Link to="/Android">
                       <li
                         onClick={() => {
                           setLoading(true);
                           setdrop(3);
-                          setforVpn("Andriod");
+                          setforVpn("Android");
                         }}
                       >
                         <div className={styles.logo_wrap}>
@@ -779,12 +779,12 @@ const Navbar = () => {
                           device ? { display: "block" } : { display: "none" }
                         }
                       >
-                        <Link to="/Andriod">
+                        <Link to="/Android">
                           <li
                             onClick={() => {
                               setLoading(true);
                               setdrop(3);
-                              setforVpn("Andriod");
+                              setforVpn("Android");
                               setopen(false);
                             }}
                           >

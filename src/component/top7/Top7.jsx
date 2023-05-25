@@ -5,7 +5,7 @@ import useStartupCtx from "../Hooks/useContext";
 import { useState } from "react";
 import { useEffect } from "react";
 const Top7 = () => {
-  const { drop, forVpn, data_list } = useStartupCtx();
+  const { drop, forVpn, data_list, specification } = useStartupCtx();
   const currentDate = new Date().getFullYear();
   const [tittle, setTittle] = useState();
   const getval = () => {
@@ -32,31 +32,12 @@ const Top7 = () => {
             a few clicks away.
           </p>
           <ul>
-            <span>
-              <img src={tick} />
-              <li>
-                <b>Fast servers </b> to browse without interruptions
-              </li>
-            </span>
-            <span>
-              <img src={tick} />
-              <li>
-                <b>Strict no-logs policies </b> keep your data private online
-              </li>
-            </span>
-            <span>
-              <img src={tick} />
-              <li>
-                <b>Large server networks </b> to connect to any location
-              </li>
-            </span>
-            <span>
-              <img src={tick} />
-              <li>
-                <b>Free trials, discounts, and refund policies </b> to test them
-                out risk-free
-              </li>
-            </span>
+            {specification?.map((value, ind) => (
+              <span>
+                <img src={tick} />
+                <li>{value?.val}</li>
+              </span>
+            ))}
           </ul>
         </div>
       </div>

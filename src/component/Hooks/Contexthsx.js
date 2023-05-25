@@ -17,6 +17,7 @@ const Vpncontext = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [flag, setflag] = useState(false);
   const [contact, setcontact] = useState();
+  const [specification, setspecification] = useState();
   useEffect(() => {
     const slug = window.location.pathname.split("/")[1];
     setforVpn(slug);
@@ -27,7 +28,7 @@ const Vpncontext = ({ children }) => {
     )
       setdrop(1);
     else if (
-      slug === "Andriod" ||
+      slug === "Android" ||
       slug === "iPhone&iPad" ||
       slug === "Mac" ||
       slug === "Routers" ||
@@ -37,7 +38,7 @@ const Vpncontext = ({ children }) => {
       setdrop(3);
     } else if (
       slug === "China" ||
-      slug === "unitedStates" ||
+      slug === "unitedState" ||
       slug === "india" ||
       slug === "australia" ||
       slug === "burundi" ||
@@ -88,6 +89,12 @@ const Vpncontext = ({ children }) => {
           { val: res.data.Nineth },
           { val: res.data.Tenth },
         ]);
+        setspecification([
+          { val: res.data.Specification1 },
+          { val: res.data.Specification2 },
+          { val: res.data.Specification3 },
+          { val: res.data.Specification4 },
+        ]);
         setLoading(false);
         setflag(true);
         document.body.style.overflow = "visible";
@@ -108,6 +115,12 @@ const Vpncontext = ({ children }) => {
           { val: res.data.Nineth },
           { val: res.data.Tenth },
         ]);
+        setspecification([
+          { val: res.data.Specification1 },
+          { val: res.data.Specification2 },
+          { val: res.data.Specification3 },
+          { val: res.data.Specification4 },
+        ]);
         setLoading(false);
         setflag(true);
         document.body.style.overflow = "visible";
@@ -127,6 +140,12 @@ const Vpncontext = ({ children }) => {
           { val: res.data.Eighth },
           { val: res.data.Nineth },
           { val: res.data.Tenth },
+        ]);
+        setspecification([
+          { val: res.data.Specification1 },
+          { val: res.data.Specification2 },
+          { val: res.data.Specification3 },
+          { val: res.data.Specification4 },
         ]);
         setLoading(false);
         setflag(true);
@@ -159,6 +178,7 @@ const Vpncontext = ({ children }) => {
         data_list,
         flag,
         contact,
+        specification,
       }}
     >
       {children}
