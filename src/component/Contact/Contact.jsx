@@ -13,8 +13,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useStartupCtx from "../Hooks/useContext";
 import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 export default function Methodology() {
+  console.log(process.env.REACT_APP_SITE_KEY);
+  const form = useRef();
   const { contact } = useStartupCtx();
 
   const [verify, setverify] = useState(false);
@@ -41,6 +45,25 @@ export default function Methodology() {
       };
     });
   };
+
+  const sendData = (e) => {
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICES_KEY,
+        process.env.REACT_APP_TEMPLATE_KEY,
+        form.current,
+        process.env.REACT_APP_EMAIL_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text, "send sucessfully ");
+        },
+        (error) => {
+          console.log(error.text, "something wend wrong");
+        }
+      );
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -54,8 +77,9 @@ export default function Methodology() {
       formData.append("Ques_comment", data.Comment);
     }
     postContact(formData, (err, res) => {
-      console.log(res);
+      //console.log(res);
       if (err) {
+        console.log("from err");
         // alert("something went wrong! ");
         toast.error("Enter a valid email address!", {
           position: "bottom-left",
@@ -63,13 +87,15 @@ export default function Methodology() {
         });
         return;
       } else {
-        if (!res.data?.success) {
+        console.log(res.data?.success);
+        if (res.data?.success === false) {
           toast.error("Enter a valid email address!", {
             position: "bottom-left",
             theme: "dark",
           });
           return;
         } else {
+          sendData(e);
           toast.success("sent successfully!", {
             position: "bottom-left",
             theme: "dark",
@@ -97,7 +123,7 @@ export default function Methodology() {
         <div className={styles.contact_content}>
           <div className={styles.contact_wrapper}>
             <div className={styles.form_container}>
-              <form action="" onSubmit={handleSubmit}>
+              <form ref={form} action="" onSubmit={handleSubmit}>
                 <label htmlFor="fname">Name</label>
                 <input
                   type="text"
@@ -129,7 +155,7 @@ export default function Methodology() {
                   required
                 ></textarea>
                 <ReCAPTCHA
-                  sitekey={"6LcPMxEmAAAAACoI3qz0VsgImTN4IbRtjVO0rBIb"}
+                  sitekey={process.env.REACT_APP_SITE_KEY}
                   onChange={onChange}
                 />
 
