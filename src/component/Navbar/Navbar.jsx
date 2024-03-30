@@ -27,6 +27,8 @@ const Navbar = () => {
 
   /* API CALL*/
 
+  const date = new Date().getFullYear();
+
   const { location, setdrop, setforVpn, setLoading, forVpn } = useStartupCtx();
 
   // console.log("-----------> " + location);
@@ -75,7 +77,7 @@ const Navbar = () => {
                         <div className={styles.logo_wrap_like}>
                           <img src={like} alt="" />
                         </div>
-                        <p>Overall Best VPN of 2023 </p>
+                        <p>Overall Best VPN of {date} </p>
                       </li>
                     </ul>
                   </Link>
