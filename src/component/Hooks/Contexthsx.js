@@ -23,8 +23,8 @@ const Vpncontext = ({ children }) => {
     setforVpn(slug);
     const date = new Date().getFullYear();
     if (
-      slug === `Overall Best Vpn of ${date}` ||
-      slug === `Overall%20Best%20Vpn%20of%20${date}`
+      slug === `Overall Best Vpn of 2023` ||
+      slug === `Overall%20Best%20Vpn%20of%202023`
     )
       setdrop(1);
     else if (
@@ -46,10 +46,10 @@ const Vpncontext = ({ children }) => {
     ) {
       setdrop(2);
     } else {
-      setforVpn(`Overall Best Vpn of ${date}`);
+      setforVpn(`Overall Best Vpn of 2023`);
       setdrop(1);
     }
-    console.log(slug + " " + drop);
+    // console.log(slug + " " + drop);
   }, []);
   useEffect(() => {
     ownerContact((err, res) => {

@@ -22,7 +22,6 @@ import useStartupCtx from "../Hooks/useContext";
 function Compare() {
   const [linkclass, setClass] = useState(1);
   const { data_list } = useStartupCtx();
-  console.log(data_list);
   let count = 0;
 
   data_list.forEach((val) => {
